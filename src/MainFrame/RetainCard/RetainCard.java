@@ -2,7 +2,7 @@
  * Created by JFormDesigner on Fri Dec 15 16:30:20 CST 2023
  */
 
-package MainFrame;
+package MainFrame.RetainCard;
 
 import java.awt.*;
 import javax.swing.*;

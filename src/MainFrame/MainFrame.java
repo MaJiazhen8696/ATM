@@ -4,17 +4,23 @@
 
 package MainFrame;
 
+import MainFrame.Login.Login;
+import global.global;
+
 import java.awt.*;
+import java.util.ResourceBundle;
 import javax.swing.*;
 
 /**
  * @author MJZ
  */
 public class MainFrame extends JFrame {
-
+    public static int ST;
+    private ResourceBundle bundle ;
     Welcome wel=new Welcome(this);
     Login login=new Login(this);
     public MainFrame() {
+        bundle = global.BUNDLE;
         initComponents();
         add(wel);add(login);
         wel.setEnabled(true);
@@ -39,7 +45,6 @@ public class MainFrame extends JFrame {
         pack();
         setLocationRelativeTo(getOwner());
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
-
 
     }
 
