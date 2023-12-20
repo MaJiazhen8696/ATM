@@ -21,11 +21,13 @@ import User.User;
  */
 public class Login extends JPanel {
     MainFrame Father=null;
+    Login THIS;
     private int cnt=0;
     private static  int Error_Counter=0;
     private ActionEvent e;
     ResourceBundle bundle ;
     public Login(MainFrame fa) {
+        THIS=this;
         bundle = ResourceBundle.getBundle("lang.Login",global.LOCALE);
         initComponents();
 
@@ -60,19 +62,25 @@ public class Login extends JPanel {
             //登陆成功
             Error_Counter=0;
             JL_Failed.setVisible(false);
+            JL_Hint.setVisible(false);
+
             JL_Success.setVisible(true);
 
             //愚蠢，不会提示就不要提示
-            Timer counter = null;
-            Timer finalCounter = counter;
-            counter = new Timer(10000, new ActionListener() {
+
+            Timer counter = new Timer(1000, new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
 
                     JL_Success.setVisible(false);
-                    finalCounter.stop();
+                    Father.toBussinessSelect(THIS);
+                    //noinspection ReassignedVariable
+                    ((Timer)e.getSource()).stop();
+
                 }
             });
+            counter.start();
+
 
         }
         else{
@@ -97,7 +105,7 @@ public class Login extends JPanel {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         ResourceBundle bundle = ResourceBundle.getBundle("lang.Login");
         JL_Success = new JLabel();
-        label1 = new JLabel();
+        JL_Hint = new JLabel();
         BT_Confirm = new JButton();
         BT_Modify = new JButton();
         JT_Password = new JPasswordField();
@@ -112,10 +120,10 @@ public class Login extends JPanel {
         add(JL_Success);
         JL_Success.setBounds(155, 170, 235, 155);
 
-        //---- label1 ----
-        label1.setText(bundle.getString("Login.label1.text"));
-        add(label1);
-        label1.setBounds(185, 215, 219, label1.getPreferredSize().height);
+        //---- JL_Hint ----
+        JL_Hint.setText(bundle.getString("Login.JL_Hint.text"));
+        add(JL_Hint);
+        JL_Hint.setBounds(185, 215, 219, JL_Hint.getPreferredSize().height);
 
         //---- BT_Confirm ----
         BT_Confirm.setText(bundle.getString("Login.BT_Confirm.text"));
@@ -155,7 +163,7 @@ public class Login extends JPanel {
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
     private JLabel JL_Success;
-    private JLabel label1;
+    private JLabel JL_Hint;
     private JButton BT_Confirm;
     private JButton BT_Modify;
     private JPasswordField JT_Password;

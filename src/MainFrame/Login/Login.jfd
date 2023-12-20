@@ -20,8 +20,8 @@ new FormModel {
 				"height": 155
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
-				name: "label1"
-				"text": new FormMessage( null, "Login.label1.text" )
+				name: "JL_Hint"
+				"text": new FormMessage( null, "Login.JL_Hint.text" )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 185
 				"y": 215

@@ -39,8 +39,8 @@ public class Main {
         //通过mysql读入用户数据
         //会抛出异常记得处理
 
-        //MainFrame cur=new MainFrame();
-        //cur.setVisible(true);
+        MainFrame cur=new MainFrame();
+        cur.setVisible(true);
         //通过在MainFrame 中切换Planel实现页面切换
     }
 }

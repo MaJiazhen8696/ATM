@@ -31,7 +31,7 @@ public class global {
         LOCALE=Locale.getDefault();
         CONFIG = ResourceBundle.getBundle("config.cfg");
         URL=CONFIG.getString("url");
-        BUNDLE=ResourceBundle.getBundle("",LOCALE);
+        //BUNDLE=ResourceBundle.getBundle("",LOCALE);
     }
     public static void Disable(JPanel p){
         p.setVisible(false);
