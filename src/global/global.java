@@ -1,36 +1,47 @@
 package global;
 
+import User.User;
+
+import javax.swing.*;
+import java.sql.Connection;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class global {
     public static Locale LOCALE;//默认语言
-    public static ResourceBundle CONFIG ;;
+    public static ResourceBundle CONFIG ;
     public static String URL;
     public static ResourceBundle BUNDLE;
+
+    // 添加被吞卡条件
+    public final static int Failed_Three_Times=1;
+    public final static int AFK=2;
+    public final  static  int SAFE=0;
+
+
+
+    public final static int Savings = 1;
+    public final static int Check  = 2;
+    public final static int Credits = 3;
+
+    public static String ID;
+    public static Connection CNN;
+    public static User USER;
     public global(){
         LOCALE=Locale.getDefault();
         CONFIG = ResourceBundle.getBundle("config.cfg");
         URL=CONFIG.getString("url");
-        BUNDLE=ResourceBundle.getBundle("lang.Login",LOCALE);
+        BUNDLE=ResourceBundle.getBundle("",LOCALE);
     }
-    /*
-    #
-# Created by JFormDesigner on Fri Dec 15 15:30:25 CST 2023
-#
+    public static void Disable(JPanel p){
+        p.setVisible(false);
+        p.setEnabled(false);
+    }
+    public static void Enable(JPanel p){
+        p.setEnabled(true);
+        p.setVisible(true);
+    }
 
-Login.BT_Confirm.text=确认
-Login.BT_Modify.text=更正
-Login.label1.text=请输入密码
-Login.JL_Failed.text=密码错误，
-Login.JL_Failed.text2=次机会
-Login.JL_Success=\u767B\u5F55\u6210\u529F
-
-
-
-
-
-     */
 
 
 }

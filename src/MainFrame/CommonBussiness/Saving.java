@@ -1,13 +1,8 @@
 /*
- * Created by JFormDesigner on Fri Dec 15 16:30:20 CST 2023
+ * Created by JFormDesigner on Wed Dec 20 17:30:12 CST 2023
  */
 
-package MainFrame.RetainCard;
-
-import java.util.*;
-
-import MainFrame.MainFrame;
-import global.global;
+package MainFrame.CommonBussiness;
 
 import java.awt.*;
 import javax.swing.*;
@@ -15,44 +10,15 @@ import javax.swing.*;
 /**
  * @author MJZ
  */
-public class RetainCard extends JPanel {
-    private ResourceBundle bundle = global.BUNDLE;
-    private MainFrame Father;
-    public RetainCard(MainFrame fa) {
-
+public class Saving extends JPanel {
+    public Saving() {
         initComponents();
-        Father = fa;
-        bundle = ResourceBundle.getBundle("lang.RetainCard",global.LOCALE);
+    }
 
-    }
-    public void Show(int ERROR_CODE){
-        switch(ERROR_CODE){
-            case global.Failed_Three_Times :{
-                JL_Retain.setText(bundle.getString("Failed_Three_Times"));
-                break;
-            }
-            case global.AFK:{
-                JL_Retain.setText(bundle.getString("AFK"));
-                break;
-            }
-            case global.SAFE:{
-                return;
-            }
-            default: break;
-        }
-        JL_Hint.setText(bundle.getString("JL_Hint.text"));
-    }
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
-        JL_Retain = new JLabel();
-        JL_Hint = new JLabel();
-
         //======== this ========
         setLayout(null);
-        add(JL_Retain);
-        JL_Retain.setBounds(85, 80, 160, 50);
-        add(JL_Hint);
-        JL_Hint.setBounds(125, 190, 125, JL_Hint.getPreferredSize().height);
 
         {
             // compute preferred size
@@ -72,7 +38,5 @@ public class RetainCard extends JPanel {
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
-    private JLabel JL_Retain;
-    private JLabel JL_Hint;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

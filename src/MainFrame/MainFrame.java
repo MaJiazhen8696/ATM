@@ -4,7 +4,10 @@
 
 package MainFrame;
 
+import MainFrame.BussinessSelect.BussinessSelect;
 import MainFrame.Login.Login;
+import MainFrame.RetainCard.RetainCard;
+import MainFrame.Welcome.Welcome;
 import global.global;
 
 import java.awt.*;
@@ -19,22 +22,39 @@ public class MainFrame extends JFrame {
     private ResourceBundle bundle ;
     Welcome wel=new Welcome(this);
     Login login=new Login(this);
+    RetainCard retainCard = new RetainCard(this);
+    BussinessSelect bussinessSelect= new BussinessSelect(this);
     public MainFrame() {
         bundle = global.BUNDLE;
         initComponents();
         add(wel);add(login);
-        wel.setEnabled(true);
-        login.setEnabled(false);
+        add(retainCard);add(bussinessSelect);
+        global.Disable(bussinessSelect);
+        global.Disable(login);
+        global.Disable(retainCard);
+        global.Enable(wel);
+
     }
     public void toLogin(JPanel p){
-        p.setEnabled(false);
-        login.setEnabled(true);
+        global.Disable(p);
+        global.Enable(login);
     }
-    public void RetainCard(){
-
+    public void RetainCard(JPanel p,int ERROR_CODE){
+        if(ERROR_CODE!=global.SAFE){
+            global.Disable(p);
+            global.Enable(retainCard);
+            retainCard.Show(ERROR_CODE);
+        }
     }
     public void toWelcome(){
 
+    }
+    public void Quit(JPanel p){
+
+    }
+    public void toBussinessSelect(JPanel p){
+        global.Disable(p);
+        global.Enable(bussinessSelect);
     }
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off

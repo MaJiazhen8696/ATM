@@ -8,14 +8,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 import MainFrame.MainFrame;
-import com.sun.tools.javac.Main;
 import global.global;
-
+import User.User;
 /**
  * @author MJZ
  */
@@ -26,7 +26,7 @@ public class Login extends JPanel {
     private ActionEvent e;
     ResourceBundle bundle ;
     public Login(MainFrame fa) {
-        bundle = global.BUNDLE;
+        bundle = ResourceBundle.getBundle("lang.Login",global.LOCALE);
         initComponents();
 
         JL_Failed.setVisible(false);
@@ -37,13 +37,17 @@ public class Login extends JPanel {
 
         try {
             java.sql.Connection cnn = DriverManager.getConnection(global.URL, User, Password);
+            LOAD(User,cnn);
         }catch (SQLException e){
             return false;
         }
         return true;
     }
 
+    private void LOAD(String id, Connection cnn){
 
+        global.USER=new User(id,cnn);
+    }
     private void Modify_Password(ActionEvent e) {
         JT_Password.setText("");
     }
@@ -75,12 +79,14 @@ public class Login extends JPanel {
 
             if(++Error_Counter==3){
                 Error_Counter=0;
-                Father.RetainCard();
+
+                Father.RetainCard(this,global.Failed_Three_Times);
 
             }
             else if(Error_Counter>0){
                 JL_Failed.setVisible(true);
                 JL_Failed.setText(bundle.getString("Login.JL_Failed.text")+" "+(3-Error_Counter)+" "+bundle.getString("Login.JL_Failed.text2"));
+                JT_Password.setText("");
             }
         }
 
