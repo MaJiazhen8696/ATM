@@ -9,6 +9,7 @@ import java.util.*;
 import MainFrame.MainFrame;
 
 import java.awt.*;
+import java.util.Timer;
 import javax.swing.*;
 
 /**
@@ -25,6 +26,7 @@ public class BussinessSelect extends JPanel {
 
     private void JB_Save(ActionEvent e) {
         // TODO add your code here
+        FATHER.toSaving(this);
 
     }
 

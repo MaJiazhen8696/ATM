@@ -5,6 +5,7 @@
 package MainFrame;
 
 import MainFrame.BussinessSelect.BussinessSelect;
+import MainFrame.CommonBussiness.Saving.Saving;
 import MainFrame.Login.Login;
 import MainFrame.RetainCard.RetainCard;
 import MainFrame.Welcome.Welcome;
@@ -24,20 +25,30 @@ public class MainFrame extends JFrame {
     Login login=new Login(this);
     RetainCard retainCard = new RetainCard(this);
     BussinessSelect bussinessSelect= new BussinessSelect(this);
+    Saving saving = new Saving(this);
     public MainFrame() {
         bundle = global.BUNDLE;
         initComponents();
         add(wel);add(login);
         add(retainCard);add(bussinessSelect);
+        add(saving);
         global.Disable(bussinessSelect);
         global.Disable(login);
         global.Disable(retainCard);
+        global.Disable(saving);
+
+
         global.Enable(wel);
 
     }
     public void toLogin(JPanel p){
         global.Disable(p);
         global.Enable(login);
+    }
+    public void toSaving(JPanel p){
+        global.Disable(p);
+        global.Enable(saving);
+        saving.Timer_Start();
     }
     public void RetainCard(JPanel p,int ERROR_CODE){
         if(ERROR_CODE!=global.SAFE){
