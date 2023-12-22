@@ -14,6 +14,7 @@ public class MainFrame extends JFrame {
 
     Welcome wel=new Welcome(this);
     Login login=new Login(this);
+    Login test;
     public MainFrame() {
         initComponents();
         add(wel);add(login);
@@ -34,7 +35,7 @@ public class MainFrame extends JFrame {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         //======== this ========
         setPreferredSize(new Dimension(800, 600));
-        var contentPane = getContentPane();
+        Container contentPane = getContentPane();
         contentPane.setLayout(new FlowLayout());
         pack();
         setLocationRelativeTo(getOwner());
