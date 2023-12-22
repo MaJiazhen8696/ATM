@@ -2,19 +2,29 @@ package User;
 
 import global.global;
 
+import java.util.Date;
+import java.util.List;
+
 public class Account {
     public double Money;
     private String Name,ID;
+    private List<Record> record;
     public Account(){
 
 
 
 
     }
-    public boolean ChangeMoney(int op,double num,String id,int Source){
+    public boolean ChangeMoney(int op,double num,String id,int Source,String... S){
         if(op== global.Income){
             this.Money+=num;
-            SetRecord();
+            if(Source==global.FromCash){
+                record.add(new Record(op,num,id,Source));
+            }
+            if(Source==global.FromTransfer){
+
+            }
+
             return true;
 
         }
@@ -31,20 +41,18 @@ public class Account {
     private void SetRecord(){
 
     }
-    public void get_PayRecord(){
+    public void getRecord(Date st){
 
 
     }
+    public void getRecord(Date st,Date ed){
+
+
+    }
+
     public boolean Payable(double cost){
         return Money>cost;
     }
 
-    public boolean Cost(double cost){
-        if(Payable(cost)){
-            Money-=cost;
-            return true;
-        }
-        return false;
-    }
 
 }
