@@ -2,7 +2,9 @@
  * Created by JFormDesigner on Fri Dec 15 15:30:10 CST 2023
  */
 
-package MainFrame;
+package MainFrame.Welcome;
+
+import MainFrame.MainFrame;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -14,10 +16,10 @@ import javax.swing.*;
  */
 public class Welcome extends JPanel {
     MainFrame Father=null;
-    public Welcome(MainFrame p) {
+    public Welcome(MainFrame fa) {
         initComponents();
 
-        Father=p;
+        Father=fa;
     }
     
 

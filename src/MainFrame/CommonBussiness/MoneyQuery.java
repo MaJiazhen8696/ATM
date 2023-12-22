@@ -1,8 +1,8 @@
 /*
- * Created by JFormDesigner on Fri Dec 15 16:30:20 CST 2023
+ * Created by JFormDesigner on Wed Dec 20 17:32:29 CST 2023
  */
 
-package MainFrame;
+package MainFrame.CommonBussiness;
 
 import java.awt.*;
 import javax.swing.*;
@@ -10,8 +10,8 @@ import javax.swing.*;
 /**
  * @author MJZ
  */
-public class RetainCard extends JPanel {
-    public RetainCard() {
+public class MoneyQuery extends JPanel {
+    public MoneyQuery() {
         initComponents();
     }
 

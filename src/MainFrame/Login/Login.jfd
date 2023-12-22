@@ -10,24 +10,27 @@ new FormModel {
 		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
 			name: "this"
 			add( new FormComponent( "javax.swing.JLabel" ) {
-				name: "label1"
-				"text": new FormMessage( null, "Login.label1.text" )
+				name: "JL_Success"
+				"horizontalAlignment": 0
+				"text": new FormMessage( null, "Login.JL_Success.text" )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 155
+				"y": 170
+				"width": 235
+				"height": 155
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "JL_Hint"
+				"text": new FormMessage( null, "Login.JL_Hint.text" )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 185
 				"y": 215
 				"width": 219
 			} )
-			add( new FormComponent( "javax.swing.JTextField" ) {
-				name: "JT_Password"
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 160
-				"y": 290
-				"width": 134
-			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
-				name: "button1"
-				"text": new FormMessage( null, "Login.button1.text" )
-				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "Confire_Password", true ) )
+				name: "BT_Confirm"
+				"text": new FormMessage( null, "Login.BT_Confirm.text" )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "BT_Confirm", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 550
 				"y": 410
@@ -39,6 +42,22 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 550
 				"y": 450
+			} )
+			add( new FormComponent( "javax.swing.JPasswordField" ) {
+				name: "JT_Password"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 170
+				"y": 270
+				"width": 130
+				"height": 30
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "JL_Failed"
+				"text": new FormMessage( null, "Login.JL_Failed.text" )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 180
+				"y": 305
+				"width": 175
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
