@@ -27,11 +27,10 @@ public class BussinessSelect extends JPanel {
     private void JB_Save(ActionEvent e) {
         // TODO add your code here
         FATHER.toSaving(this);
-
     }
 
     private void JB_Withdraw(ActionEvent e) {
-        // TODO add your code here
+        FATHER.toWithdraw(this);
     }
 
     private void JB_MoneyQuery(ActionEvent e) {
@@ -57,6 +56,7 @@ public class BussinessSelect extends JPanel {
     private void JB_Back(ActionEvent e) {
         // TODO add your code here
     }
+
 
 
 

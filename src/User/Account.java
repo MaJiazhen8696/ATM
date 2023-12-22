@@ -1,12 +1,12 @@
 package User;
 
 public class Account {
-    private double Money;
-    private String Name,ID;
+    public double Money;
+    public String Name,ID;
     public Account(){
-
-
-
+        this.Money=50;
+        this.Name="cfs";
+        this.ID="01210013";
 
     }
     public double getMoney(){

@@ -15,6 +15,7 @@ public class User {
     public User(String id, Connection cnn){
         global.ID=id;
         global.CNN=cnn;
+        CurrentAccount= new Account();
         try {
             Statement st = cnn.createStatement();
             String sql = "SELECT * FROM users where ID =" +id;

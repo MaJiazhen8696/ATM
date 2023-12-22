@@ -6,6 +6,8 @@ package MainFrame;
 
 import MainFrame.BussinessSelect.BussinessSelect;
 import MainFrame.CommonBussiness.Saving.Saving;
+import MainFrame.CommonBussiness.Withdraw.Withdraw;
+import MainFrame.CommonBussiness.Withdraw.Withdraw_failed;
 import MainFrame.Login.Login;
 import MainFrame.RetainCard.RetainCard;
 import MainFrame.Welcome.Welcome;
@@ -23,22 +25,27 @@ public class MainFrame extends JFrame {
     private ResourceBundle bundle ;
     Welcome wel=new Welcome(this);
     Login login=new Login(this);
+    Withdraw_failed withdraw_failed = new Withdraw_failed(this);
     RetainCard retainCard = new RetainCard(this);
     BussinessSelect bussinessSelect= new BussinessSelect(this);
     Saving saving = new Saving(this);
+    Withdraw withdraw = new Withdraw(this);
     public MainFrame() {
         bundle = global.BUNDLE;
         initComponents();
         add(wel);add(login);
         add(retainCard);add(bussinessSelect);
         add(saving);
+        add(withdraw);
+        add(withdraw_failed);
         global.Disable(bussinessSelect);
         global.Disable(login);
         global.Disable(retainCard);
         global.Disable(saving);
-
-
+        global.Disable(withdraw);
+        global.Disable(withdraw_failed);
         global.Enable(wel);
+
 
     }
     public void toLogin(JPanel p){
@@ -49,6 +56,14 @@ public class MainFrame extends JFrame {
         global.Disable(p);
         global.Enable(saving);
         saving.Timer_Start();
+    }
+    public void toWithdraw(JPanel p){
+        global.Disable(p);
+        global.Enable(withdraw);
+    }
+    public void toWithdraw_failed(JPanel p){
+        global.Disable(p);
+        global.Enable(withdraw_failed);
     }
     public void RetainCard(JPanel p,int ERROR_CODE){
         if(ERROR_CODE!=global.SAFE){
@@ -71,7 +86,7 @@ public class MainFrame extends JFrame {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         //======== this ========
         setPreferredSize(new Dimension(800, 600));
-        var contentPane = getContentPane();
+        Container contentPane = getContentPane();
         contentPane.setLayout(new FlowLayout());
         pack();
         setLocationRelativeTo(getOwner());

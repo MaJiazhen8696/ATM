@@ -37,13 +37,14 @@ public class Login extends JPanel {
     }
     private boolean Sign_In(String User,String Password){
 
-        try {
-            java.sql.Connection cnn = DriverManager.getConnection(global.URL, User, Password);
-            LOAD(User,cnn);
-        }catch (SQLException e){
-            return false;
-        }
         return true;
+//        try {
+//            java.sql.Connection cnn = DriverManager.getConnection(global.URL, User, Password);
+//            LOAD(User,cnn);
+//        }catch (SQLException e){
+//            return false;
+//        }
+
     }
 
     private void LOAD(String id, Connection cnn){
