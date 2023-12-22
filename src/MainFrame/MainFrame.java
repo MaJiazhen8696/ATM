@@ -4,7 +4,9 @@
 
 package MainFrame;
 
+import MainFrame.AccountSelect.AccountSelect;
 import MainFrame.BussinessSelect.BussinessSelect;
+import MainFrame.CommonBussiness.Saving.Confirm_Money;
 import MainFrame.CommonBussiness.Saving.Saving;
 import MainFrame.Login.Login;
 import MainFrame.RetainCard.RetainCard;
@@ -26,17 +28,19 @@ public class MainFrame extends JFrame {
     RetainCard retainCard = new RetainCard(this);
     BussinessSelect bussinessSelect= new BussinessSelect(this);
     Saving saving = new Saving(this);
+    Confirm_Money confirmMoney=new Confirm_Money(this);
+    AccountSelect accountSelect=new AccountSelect(this);
     public MainFrame() {
         bundle = global.BUNDLE;
         initComponents();
         add(wel);add(login);
         add(retainCard);add(bussinessSelect);
-        add(saving);
+        add(saving);add(accountSelect);
         global.Disable(bussinessSelect);
         global.Disable(login);
         global.Disable(retainCard);
         global.Disable(saving);
-
+        global.Disable(accountSelect);
 
         global.Enable(wel);
 
@@ -50,6 +54,11 @@ public class MainFrame extends JFrame {
         global.Enable(saving);
         saving.Timer_Start();
     }
+    public void toSavingConfirm(JPanel p,int money){
+        global.Disable(p);
+        global.Enable(confirmMoney);
+        confirmMoney.SetMoney(money);
+    }
     public void RetainCard(JPanel p,int ERROR_CODE){
         if(ERROR_CODE!=global.SAFE){
             global.Disable(p);
@@ -62,6 +71,10 @@ public class MainFrame extends JFrame {
     }
     public void Quit(JPanel p){
 
+    }
+    public void toAccountSelect(JPanel p){
+        global.Disable(p);
+        global.Enable(accountSelect);
     }
     public void toBussinessSelect(JPanel p){
         global.Disable(p);

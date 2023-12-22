@@ -36,14 +36,15 @@ public class Login extends JPanel {
         Father=fa;
     }
     private boolean Sign_In(String User,String Password){
-
-        try {
-            java.sql.Connection cnn = DriverManager.getConnection(global.URL, User, Password);
-            LOAD(User,cnn);
-        }catch (SQLException e){
-            return false;
-        }
+        LOAD(User,null);
         return true;
+//        try {
+//            java.sql.Connection cnn = DriverManager.getConnection(global.URL, User, Password);
+//            LOAD(User,cnn);
+//        }catch (SQLException e){
+//            return false;
+//        }
+//        return true;
     }
 
     private void LOAD(String id, Connection cnn){
@@ -73,8 +74,7 @@ public class Login extends JPanel {
                 public void actionPerformed(ActionEvent e) {
 
                     JL_Success.setVisible(false);
-                    Father.toBussinessSelect(THIS);
-                    //noinspection ReassignedVariable
+                    Father.toAccountSelect(THIS);
                     ((Timer)e.getSource()).stop();
 
                 }

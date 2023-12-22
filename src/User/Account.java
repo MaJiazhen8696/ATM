@@ -1,7 +1,7 @@
 package User;
 
 public class Account {
-    private double Money;
+    public double Money;
     private String Name,ID;
     public Account(){
 

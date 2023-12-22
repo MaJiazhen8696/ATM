@@ -33,6 +33,10 @@ public class Welcome extends JPanel {
         // TODO add your code here
     }
 
+    private void Active(KeyEvent e) {
+        // TODO add your code here
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         ResourceBundle bundle = ResourceBundle.getBundle("lang.Welcome");
@@ -41,6 +45,12 @@ public class Welcome extends JPanel {
         label1 = new JLabel();
 
         //======== this ========
+        addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                Active(e);
+            }
+        });
         addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -53,12 +63,12 @@ public class Welcome extends JPanel {
         button1.setText(bundle.getString("Welcome.button1.text"));
         button1.addActionListener(e -> button1(e));
         add(button1);
-        button1.setBounds(new Rectangle(new Point(550, 355), button1.getPreferredSize()));
+        button1.setBounds(470, 355, 158, button1.getPreferredSize().height);
 
         //---- button2 ----
         button2.setText(bundle.getString("Welcome.button2.text"));
         add(button2);
-        button2.setBounds(new Rectangle(new Point(570, 415), button2.getPreferredSize()));
+        button2.setBounds(465, 415, 183, button2.getPreferredSize().height);
 
         //---- label1 ----
         label1.setText(bundle.getString("Welcome.label1.text"));
