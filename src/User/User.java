@@ -15,17 +15,21 @@ public class User {
     public User(String id, Connection cnn){
         global.ID=id;
         global.CNN=cnn;
-        CurrentAccount= new Account();
-        try {
-            Statement st = cnn.createStatement();
-            String sql = "SELECT * FROM users where ID =" +id;
-            ResultSet result = st.executeQuery(sql);
-            if (result.next()) {
-                //
-            }
-        }catch(Exception e){
-            ;
-        }
+//        try {
+//            Statement st = cnn.createStatement();
+//            String sql = "SELECT * FROM users where ID =" +id;
+//            ResultSet result = st.executeQuery(sql);
+//            if (result.next()) {
+//                //
+//            }
+//        }catch(Exception e){
+//            ;
+//        }
+        CurrentAccount=new Account();
+        CurrentAccount.Money=100;
+        Savings_Account=CurrentAccount;
+        Check_Account=CurrentAccount;
+        Credits_Account=CurrentAccount;
     }
     public void SwitchAccount(int op){
         switch (op){
