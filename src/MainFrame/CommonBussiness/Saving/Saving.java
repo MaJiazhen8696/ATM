@@ -6,6 +6,7 @@ package MainFrame.CommonBussiness.Saving;
 
 import java.awt.event.*;
 import MainFrame.MainFrame;
+import global.global;
 
 import java.awt.*;
 import java.util.*;
@@ -19,6 +20,7 @@ public class Saving extends JPanel {
     Timer timer;
     MainFrame Father;
     int cnt=31;
+    int MoneyCNT=0;
     ResourceBundle bundle;
     Saving THIS;
     public Saving(MainFrame fa) {
@@ -48,6 +50,7 @@ public class Saving extends JPanel {
         // TODO add your code here
         //JP_TEST.setVisible(true);
         timer.cancel();
+        Father.toSavingConfirm(this,MoneyCNT);
 
     }
 
@@ -55,40 +58,27 @@ public class Saving extends JPanel {
         // TODO add your code here
     }
 
+    private void MouseClicked(MouseEvent e) {
+        // TODO add your code here
+        MoneyCNT++;
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         ResourceBundle bundle = ResourceBundle.getBundle("lang.Saving");
-        JP_TEST = new JPanel();
         JL_Hint = new JLabel();
         JL_Timer = new JLabel();
         JB_Confirm = new JButton();
         JB_Back = new JButton();
 
         //======== this ========
-        setLayout(null);
-
-        //======== JP_TEST ========
-        {
-            JP_TEST.setPreferredSize(new Dimension(400, 300));
-            JP_TEST.setLayout(null);
-
-            {
-                // compute preferred size
-                Dimension preferredSize = new Dimension();
-                for(int i = 0; i < JP_TEST.getComponentCount(); i++) {
-                    Rectangle bounds = JP_TEST.getComponent(i).getBounds();
-                    preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
-                    preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
-                }
-                Insets insets = JP_TEST.getInsets();
-                preferredSize.width += insets.right;
-                preferredSize.height += insets.bottom;
-                JP_TEST.setMinimumSize(preferredSize);
-                JP_TEST.setPreferredSize(preferredSize);
+        addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                MouseClicked(e);
             }
-        }
-        add(JP_TEST);
-        JP_TEST.setBounds(100, 110, JP_TEST.getPreferredSize().width, 235);
+        });
+        setLayout(null);
 
         //---- JL_Hint ----
         JL_Hint.setText(bundle.getString("Saving.JL_Hint.text"));
@@ -132,7 +122,6 @@ public class Saving extends JPanel {
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
-    private JPanel JP_TEST;
     private JLabel JL_Hint;
     private JLabel JL_Timer;
     private JButton JB_Confirm;
