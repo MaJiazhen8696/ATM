@@ -35,13 +35,13 @@ public class MainFrame extends JFrame {
         initComponents();
         add(wel);add(login);
         add(retainCard);add(bussinessSelect);
-        add(saving);add(accountSelect);
+        add(saving);add(accountSelect);add(confirmMoney);
         global.Disable(bussinessSelect);
         global.Disable(login);
         global.Disable(retainCard);
         global.Disable(saving);
         global.Disable(accountSelect);
-
+        global.Disable(confirmMoney);
         global.Enable(wel);
 
     }

@@ -4,32 +4,39 @@
 
 package MainFrame.CommonBussiness.Saving;
 
+import java.awt.event.*;
 import MainFrame.MainFrame;
+import global.global;
 
 import java.awt.*;
 import java.util.*;
 import javax.swing.*;
 
-
 /**
  * @author MJZ
  */
 public class Confirm_Money extends JPanel {
-    MainFrame Father;
+    MainFrame Father ;
     ResourceBundle bundle=ResourceBundle.getBundle("lang.Saving");
-    int MoneyCNT=0;
+    private int MoneyCount=0,MoneyTotal=0;
     public Confirm_Money(MainFrame fa) {
 
+        initComponents();
         Father = fa;
 
+        
+    }
 
-        initComponents();
+    private void JB_Confirm(ActionEvent e) {
+        global.USER.CurrentAccount.Money+=MoneyTotal;
     }
     public void SetMoney(int cnt){
-        MoneyCNT=cnt;
-        JL_Count.setText(cnt+bundle.getString("Saving.Confirm_Money.JL_Count.text"));
-        JL_Total.setText(100*cnt+bundle.getString("Saving.Confirm_Money.JL_Total.text"));
+        MoneyCount=cnt;
+        MoneyTotal=cnt*100;
+        JL_Count.setText(MoneyCount+bundle.getString("Saving.Confirm_Money.JL_Count.text"));
+        JL_Total.setText(MoneyTotal+bundle.getString("Saving.Confirm_Money.JL_Total.text"));
     }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         ResourceBundle bundle = ResourceBundle.getBundle("lang.Saving");
@@ -41,6 +48,8 @@ public class Confirm_Money extends JPanel {
         JL_Value = new JLabel();
         JL_Count = new JLabel();
         JL_Total = new JLabel();
+        JB_Confirm = new JButton();
+        JB_Cancel = new JButton();
 
         //======== this ========
         setPreferredSize(new Dimension(800, 600));
@@ -77,6 +86,17 @@ public class Confirm_Money extends JPanel {
         add(JP_Table);
         JP_Table.setBounds(120, 120, 265, JP_Table.getPreferredSize().height);
 
+        //---- JB_Confirm ----
+        JB_Confirm.setText(bundle.getString("Saving.Confirm_Money.JB_Confirm.text"));
+        JB_Confirm.addActionListener(e -> JB_Confirm(e));
+        add(JB_Confirm);
+        JB_Confirm.setBounds(new Rectangle(new Point(415, 215), JB_Confirm.getPreferredSize()));
+
+        //---- JB_Cancel ----
+        JB_Cancel.setText(bundle.getString("Saving.Confirm_Money.JB_Cancel.text"));
+        add(JB_Cancel);
+        JB_Cancel.setBounds(new Rectangle(new Point(415, 255), JB_Cancel.getPreferredSize()));
+
         {
             // compute preferred size
             Dimension preferredSize = new Dimension();
@@ -103,5 +123,7 @@ public class Confirm_Money extends JPanel {
     private JLabel JL_Value;
     private JLabel JL_Count;
     private JLabel JL_Total;
+    private JButton JB_Confirm;
+    private JButton JB_Cancel;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

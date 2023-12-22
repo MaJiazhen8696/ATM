@@ -1,5 +1,7 @@
 package User;
 
+import global.global;
+
 public class Account {
     public double Money;
     private String Name,ID;
@@ -9,8 +11,25 @@ public class Account {
 
 
     }
+    public boolean ChangeMoney(int op,double num,String id,int Source){
+        if(op== global.Income){
+            this.Money+=num;
+            SetRecord();
+            return true;
+
+        }
+        if(op==global.Outcome){
+            this.Money-=num;
+            SetRecord();
+            return true;
+        }
+        return false;
+    }
     public double getMoney(){
         return Money;
+    }
+    private void SetRecord(){
+
     }
     public void get_PayRecord(){
 
