@@ -31,10 +31,7 @@ public class LOG extends JPanel {
             bundle.getString("LOG.JT_COL3.text")
     };
     public LOG(MainFrame fa) {
-
         Father=fa;
-
-
 
     }
     public void Show(){

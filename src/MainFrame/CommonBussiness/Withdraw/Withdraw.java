@@ -25,7 +25,7 @@ public class Withdraw extends JPanel {
 
     private void Withdraw_100(ActionEvent e) {
         if(global.USER.CurrentAccount.Money>=100){
-            global.USER.CurrentAccount.ChangeMoney(global.Taken,global.USER.getID(),null,100);
+            global.USER.CurrentAccount.ChangeMoney(global.Taken,global.USER.CurrentAccount.getAccountID(),null,100);
             System.out.println(global.USER.CurrentAccount.Money);
             Father.toWithdraw_success(this);
         }
