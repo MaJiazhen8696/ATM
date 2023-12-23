@@ -64,7 +64,6 @@ public class MainFrame extends JFrame {
     Withdraw withdraw = new Withdraw(this);
     Confirm_Money confirmMoney=new Confirm_Money(this);
     AccountSelect accountSelect=new AccountSelect(this);
-    Withdraw withdraw = new Withdraw(this);
     public MainFrame() {
         bundle = global.BUNDLE;
         initComponents();
@@ -130,11 +129,6 @@ public class MainFrame extends JFrame {
         global.Disable(p);
         global.Enable(saving);
         saving.Timer_Start();
-    }
-    public void toSavingConfirm(JPanel p,int money){
-        global.Disable(p);
-        global.Enable(confirmMoney);
-        confirmMoney.SetMoney(money);
     }
     public void toWithdraw_custom(JPanel p){
         global.Disable(p);

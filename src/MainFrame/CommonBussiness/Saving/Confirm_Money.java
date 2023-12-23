@@ -24,7 +24,7 @@ public class Confirm_Money extends JPanel {
         initComponents();
         Father = fa;
 
-        
+
     }
 
     private void JB_Confirm(ActionEvent e) {
