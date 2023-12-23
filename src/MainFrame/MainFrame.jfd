@@ -12,7 +12,7 @@ new FormModel {
 			"preferredSize": new java.awt.Dimension( 800, 600 )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 400, 300 )
+			"size": new java.awt.Dimension( 500, 360 )
 		} )
 	}
 }

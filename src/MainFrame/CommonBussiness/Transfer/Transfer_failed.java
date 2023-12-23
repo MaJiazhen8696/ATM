@@ -1,0 +1,67 @@
+/*
+ * Created by JFormDesigner on Fri Dec 22 19:40:50 CST 2023
+ */
+
+package MainFrame.CommonBussiness.Transfer;
+
+import java.awt.event.*;
+import MainFrame.MainFrame;
+
+import java.awt.*;
+import javax.swing.*;
+
+/**
+ * @author m'm
+ */
+public class Transfer_failed extends JPanel {
+    MainFrame FATHER;
+    public Transfer_failed(MainFrame fa) {
+        FATHER=fa;
+        initComponents();
+    }
+
+    private void JB_Back(ActionEvent e) {
+        FATHER.toBussinessSelect(this);
+    }
+
+    private void initComponents() {
+        // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
+        label1 = new JLabel();
+        JB_Back = new JButton();
+
+        //======== this ========
+        setLayout(null);
+
+        //---- label1 ----
+        label1.setText("\u8f6c\u8d26\u5931\u8d25!!!!!");
+        add(label1);
+        label1.setBounds(110, 80, 160, label1.getPreferredSize().height);
+
+        //---- JB_Back ----
+        JB_Back.setText("\u8fd4\u56de");
+        JB_Back.addActionListener(e -> JB_Back(e));
+        add(JB_Back);
+        JB_Back.setBounds(new Rectangle(new Point(385, 285), JB_Back.getPreferredSize()));
+
+        {
+            // compute preferred size
+            Dimension preferredSize = new Dimension();
+            for(int i = 0; i < getComponentCount(); i++) {
+                Rectangle bounds = getComponent(i).getBounds();
+                preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
+                preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
+            }
+            Insets insets = getInsets();
+            preferredSize.width += insets.right;
+            preferredSize.height += insets.bottom;
+            setMinimumSize(preferredSize);
+            setPreferredSize(preferredSize);
+        }
+        // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
+    }
+
+    // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
+    private JLabel label1;
+    private JButton JB_Back;
+    // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
+}

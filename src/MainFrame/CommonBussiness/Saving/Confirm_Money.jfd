@@ -1,0 +1,82 @@
+JFDML JFormDesigner: "8.2.0.0.331" Java: "17.0.8" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.autoExternalize": true
+	"i18n.bundlePackage": "lang"
+	"i18n.bundleName": "Saving"
+	"i18n.keyPrefix": "Saving.Confirm_Money"
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+			name: "this"
+			"preferredSize": new java.awt.Dimension( 800, 600 )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": new FormMessage( null, "Saving.Confirm_Money.label1.text" )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 180
+				"y": 55
+				"width": 105
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+				"columns": 3
+				"rows": 2
+			} ) {
+				name: "JP_Table"
+				"preferredSize": new java.awt.Dimension( 200, 100 )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "JL_MoneyValue"
+					"text": new FormMessage( null, "Saving.Confirm_Money.JL_MoneyValue.text" )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "JL_MoneyCount"
+					"text": new FormMessage( null, "Saving.Confirm_Money.JL_MoneyCount.text" )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "JL_MoneyTotal"
+					"text": new FormMessage( null, "Saving.Confirm_Money.JL_MoneyTotal.text" )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "JL_Value"
+					"text": new FormMessage( null, "Saving.Confirm_Money.JL_Value.text" )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "JL_Count"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "JL_Total"
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 120
+				"y": 120
+				"width": 265
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "JB_Confirm"
+				"text": new FormMessage( null, "Saving.Confirm_Money.JB_Confirm.text" )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "JB_Confirm", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 415
+				"y": 215
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "JB_Cancel"
+				"text": new FormMessage( null, "Saving.Confirm_Money.JB_Cancel.text" )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 415
+				"y": 255
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "JL_Success"
+				"text": new FormMessage( null, "Saving.Confirm_Money.JL_Success.text" )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 150
+				"y": 240
+				"width": 70
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 500, 300 )
+		} )
+	}
+}

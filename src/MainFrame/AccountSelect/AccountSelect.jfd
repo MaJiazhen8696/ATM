@@ -1,0 +1,61 @@
+JFDML JFormDesigner: "8.2.0.0.331" Java: "17.0.9" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.autoExternalize": true
+	"i18n.bundlePackage": "lang"
+	"i18n.bundleName": "AccountSelect"
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "JL_Hint"
+				"text": new FormMessage( null, "JL_Hint.text" )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 280
+				"y": 80
+				"width": 90
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "JB_SavingsAccount"
+				"text": new FormMessage( null, "JB_SavingsAccount.text" )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "JB_SavingsAccount", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 40
+				"y": 180
+				"width": 120
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "JB_CheckAccount"
+				"text": new FormMessage( null, "JB_CheckAccount.text" )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "JB_CheckAccount", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 120
+				"height": 30
+				"x": 35
+				"y": 245
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "JB_CreditsAccount"
+				"text": new FormMessage( null, "JB_CreditsAccount.text" )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "JB_CreditsAccount", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 120
+				"height": 30
+				"x": 545
+				"y": 200
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "JB_Quit"
+				"text": new FormMessage( null, "JB_Quit.text" )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "JB_Quit", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 580
+				"y": 370
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 690, 470 )
+		} )
+	}
+}
