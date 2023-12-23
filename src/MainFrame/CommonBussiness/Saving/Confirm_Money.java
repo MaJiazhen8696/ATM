@@ -29,12 +29,12 @@ public class Confirm_Money extends JPanel {
 
     private void JB_Confirm(ActionEvent e) {
         global.USER.CurrentAccount.ChangeMoney(global.Income,null,null,MoneyTotal);
-        try{
-            global.ST.close();
-            global.CNN.close();
-        }catch (Exception ex){
-            System.out.println("ERRRRRR");
-        }
+//        try{
+//            global.ST.close();
+//            global.CNN.close();
+//        }catch (Exception ex){
+//            System.out.println("ERRRRRR");
+//        }
 
     }
     public void SetMoney(int cnt){
