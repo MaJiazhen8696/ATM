@@ -21,6 +21,7 @@ public class Main {
             Class.forName("com.mysql.cj.jdbc.Driver");
             ResourceBundle cfg=global.CONFIG;
             java.sql.Connection cnn = DriverManager.getConnection(cfg.getString("url"),cfg.getString("user"),cfg.getString("password"));
+            global.CNN=cnn;
 //            Statement st =  cnn.createStatement();
 //            String sql="SELECT * FROM users";
 //            ResultSet result = st.executeQuery(sql);

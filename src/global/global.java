@@ -4,6 +4,7 @@ import User.User;
 
 import javax.swing.*;
 import java.sql.Connection;
+import java.sql.Statement;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
@@ -26,11 +27,14 @@ public class global {
 
     public final static int Income = 1;
     public final static int Outcome = 2;
-    public final static int FromTransfer = 1;
-    public final static int FromCash = 2;
+    public final static int Saving = 1;
+    public final static int Taken = 2;
+    public final static int Transer_in = 3;
+    public final static int Transer_out = 4;
     public static String ID;
     public static Connection CNN;
     public static User USER;
+    public static Statement ST;
     public global(){
         LOCALE=Locale.getDefault();
         CONFIG = ResourceBundle.getBundle("config.cfg");

@@ -8,9 +8,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ResourceBundle;
 
 import MainFrame.MainFrame;
@@ -36,37 +34,34 @@ public class Login extends JPanel {
         Father=fa;
     }
     private boolean Sign_In(String User,String Password){
-        LOAD(User,null);
-        System.out.println(User);
-        System.out.println(Password);
         try {
-            java.sql.Connection cnn = DriverManager.getConnection(global.URL, User, Password);
-            LOAD(User,cnn);
-        }catch (SQLException e){
-            return false;
+            global.ST = global.CNN.createStatement();
+            String sql="SELECT * FROM useraccounts where id="+User;
+            ResultSet result=global.ST.executeQuery(sql);
+            String tmp=null;
+            if(result.next()){
+                tmp=result.getString("password");
+                if( tmp.equals(Password) ){
+                    global.USER=new User(User);
+                    return true;
+                }
+                return false;
+            }
+        }catch (Exception e){
+            ;
         }
-        return true;
-//        try {
-//            java.sql.Connection cnn = DriverManager.getConnection(global.URL, User, Password);
-//            LOAD(User,cnn);
-//        }catch (SQLException e){
-//            return false;
-//        }
-//        return true;
+        return false;
     }
 
-    private void LOAD(String id, Connection cnn){
-
-        global.USER=new User(id,cnn);
-    }
     private void Modify_Password(ActionEvent e) {
         JT_Password.setText("");
     }
     private void BT_Confirm(ActionEvent e) {
         // TODO add your code here
+
         String Password=String.copyValueOf(JT_Password.getPassword()) ;
         // 登录
-        String User= global.CONFIG.getString("user");
+        String User= JT_User.getText();
         if( Sign_In(User,Password) ){
             //登陆成功
             Error_Counter=0;
@@ -118,7 +113,7 @@ public class Login extends JPanel {
         BT_Modify = new JButton();
         JT_Password = new JPasswordField();
         JL_Failed = new JLabel();
-        textField1 = new JTextField();
+        JT_User = new JTextField();
         label1 = new JLabel();
 
         //======== this ========
@@ -153,8 +148,8 @@ public class Login extends JPanel {
         JL_Failed.setText(bundle.getString("Login.JL_Failed.text"));
         add(JL_Failed);
         JL_Failed.setBounds(180, 335, 175, JL_Failed.getPreferredSize().height);
-        add(textField1);
-        textField1.setBounds(180, 205, 120, 33);
+        add(JT_User);
+        JT_User.setBounds(180, 205, 120, 33);
 
         //---- label1 ----
         label1.setText(bundle.getString("Login.label1.text"));
@@ -185,7 +180,7 @@ public class Login extends JPanel {
     private JButton BT_Modify;
     private JPasswordField JT_Password;
     private JLabel JL_Failed;
-    private JTextField textField1;
+    private JTextField JT_User;
     private JLabel label1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

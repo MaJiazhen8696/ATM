@@ -1,20 +1,19 @@
 package User;
 
-public class Record {
-    private String ID,Source_1;
+import java.sql.Date;
 
-    private double Num;
-    private int OP,Source;
-    Record(int op,double num,String id,int source){
-        OP=op;
-        Num=num;
-        ID=id;
-        Source=source;
+public class Record {
+    private String From,To;
+    private int Op;
+    private double Amount,Balance;
+    Date CurrentDate;
+    Record(int op, String op1, String op2, double amount, java.sql.Date currentdate,double balance){
+        Op=op;
+        From=op1;
+        To=op2;
+        Amount=amount;
+        CurrentDate=currentdate;
+        Balance=balance;
     }
-    Record(int op,double num,String id,int source,String S){
-        OP=op;
-        Num=num;
-        ID=id;
-        Source=source;
-    }
+
 }
