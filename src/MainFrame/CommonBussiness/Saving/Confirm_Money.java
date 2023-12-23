@@ -11,30 +11,38 @@ import global.global;
 import java.awt.*;
 import java.util.*;
 import javax.swing.*;
+import javax.swing.Timer;
 
 /**
  * @author MJZ
  */
 public class Confirm_Money extends JPanel {
     MainFrame Father ;
+    JPanel THIS;
     ResourceBundle bundle=ResourceBundle.getBundle("lang.Saving");
     private int MoneyCount=0,MoneyTotal=0;
     public Confirm_Money(MainFrame fa) {
 
         initComponents();
         Father = fa;
-
+        THIS=this;
 
     }
 
     private void JB_Confirm(ActionEvent e) {
-        global.USER.CurrentAccount.ChangeMoney(global.Income,null,null,MoneyTotal);
-//        try{
-//            global.ST.close();
-//            global.CNN.close();
-//        }catch (Exception ex){
-//            System.out.println("ERRRRRR");
-//        }
+        global.USER.CurrentAccount.ChangeMoney(global.Income,global.USER.getID(),null,MoneyTotal);
+        MoneyCount=0;MoneyTotal=0;
+        Timer counter = new Timer(1000, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                JL_Success.setVisible(true);
+                Father.toBussinessSelect(THIS);
+                ((Timer)e.getSource()).stop();
+
+            }
+        });
+        counter.start();
 
     }
     public void SetMoney(int cnt){
@@ -57,6 +65,7 @@ public class Confirm_Money extends JPanel {
         JL_Total = new JLabel();
         JB_Confirm = new JButton();
         JB_Cancel = new JButton();
+        JL_Success = new JLabel();
 
         //======== this ========
         setPreferredSize(new Dimension(800, 600));
@@ -104,6 +113,11 @@ public class Confirm_Money extends JPanel {
         add(JB_Cancel);
         JB_Cancel.setBounds(new Rectangle(new Point(415, 255), JB_Cancel.getPreferredSize()));
 
+        //---- JL_Success ----
+        JL_Success.setText(bundle.getString("Saving.Confirm_Money.JL_Success.text"));
+        add(JL_Success);
+        JL_Success.setBounds(150, 240, 70, JL_Success.getPreferredSize().height);
+
         {
             // compute preferred size
             Dimension preferredSize = new Dimension();
@@ -132,5 +146,6 @@ public class Confirm_Money extends JPanel {
     private JLabel JL_Total;
     private JButton JB_Confirm;
     private JButton JB_Cancel;
+    private JLabel JL_Success;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

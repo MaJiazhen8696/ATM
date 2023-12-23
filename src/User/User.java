@@ -4,6 +4,7 @@ import global.global;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
 
@@ -55,6 +56,15 @@ public class User {
     }
     public String getID(){
         return ID;
+    }
+    public void changePWD(String s){
+        char qt='\'';
+        String sql="update useraccounts set password ="+qt+s+qt+"where ID="+ID;
+        try{
+            global.ST.execute(sql);
+        }catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
     }
 
 }

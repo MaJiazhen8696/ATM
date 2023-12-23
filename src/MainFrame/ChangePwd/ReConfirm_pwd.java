@@ -6,6 +6,7 @@ package MainFrame.ChangePwd;
 
 import java.awt.event.*;
 import MainFrame.MainFrame;
+import global.global;
 
 import java.awt.*;
 import javax.swing.*;
@@ -23,8 +24,9 @@ public class ReConfirm_pwd extends JPanel {
     }
 
     private void Confirm(ActionEvent e) {
-        ReConfirm_pwd.secondPwd=textField1.getText();
+        secondPwd=textField1.getText();
         if(Confirm_pwd.firstPwd.equals(ReConfirm_pwd.secondPwd)){
+            global.USER.changePWD(secondPwd);
             FATHER.toChange_success(this);
         }
         else{

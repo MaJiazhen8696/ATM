@@ -66,6 +66,14 @@ new FormModel {
 				"x": 415
 				"y": 255
 			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "JL_Success"
+				"text": new FormMessage( null, "Saving.Confirm_Money.JL_Success.text" )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 150
+				"y": 240
+				"width": 70
+			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
 			"size": new java.awt.Dimension( 500, 300 )
