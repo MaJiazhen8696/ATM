@@ -67,9 +67,12 @@ public class Saving extends JPanel {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         ResourceBundle bundle = ResourceBundle.getBundle("lang.Saving");
         JL_Hint = new JLabel();
-        JL_Timer = new JLabel();
+        JL_Time = new JLabel();
         JB_Confirm = new JButton();
         JB_Back = new JButton();
+        JL_Timer = new JLabel();
+        JL_Name = new JLabel();
+        JL_Code = new JLabel();
 
         //======== this ========
         addMouseListener(new MouseAdapter() {
@@ -85,10 +88,10 @@ public class Saving extends JPanel {
         add(JL_Hint);
         JL_Hint.setBounds(170, 125, 265, JL_Hint.getPreferredSize().height);
 
-        //---- JL_Timer ----
-        JL_Timer.setText(bundle.getString("Saving.JL_Timer.text"));
-        add(JL_Timer);
-        JL_Timer.setBounds(130, 260, 120, JL_Timer.getPreferredSize().height);
+        //---- JL_Time ----
+        JL_Time.setText(bundle.getString("Saving.JL_Time.text"));
+        add(JL_Time);
+        JL_Time.setBounds(130, 260, 120, JL_Time.getPreferredSize().height);
 
         //---- JB_Confirm ----
         JB_Confirm.setText(bundle.getString("Saving.JB_Confirm.text"));
@@ -101,6 +104,21 @@ public class Saving extends JPanel {
         JB_Back.addActionListener(e -> JB_Back(e));
         add(JB_Back);
         JB_Back.setBounds(465, 380, 110, JB_Back.getPreferredSize().height);
+
+        //---- JL_Timer ----
+        JL_Timer.setText(bundle.getString("JL_Timer.text"));
+        add(JL_Timer);
+        JL_Timer.setBounds(455, 80, 95, JL_Timer.getPreferredSize().height);
+
+        //---- JL_Name ----
+        JL_Name.setText(bundle.getString("JL_Name.text"));
+        add(JL_Name);
+        JL_Name.setBounds(455, 110, 125, JL_Name.getPreferredSize().height);
+
+        //---- JL_Code ----
+        JL_Code.setText(bundle.getString("JL_Code.text"));
+        add(JL_Code);
+        JL_Code.setBounds(445, 140, 125, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size
@@ -123,8 +141,11 @@ public class Saving extends JPanel {
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
     private JLabel JL_Hint;
-    private JLabel JL_Timer;
+    private JLabel JL_Time;
     private JButton JB_Confirm;
     private JButton JB_Back;
+    public JLabel JL_Timer;
+    public JLabel JL_Name;
+    private JLabel JL_Code;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

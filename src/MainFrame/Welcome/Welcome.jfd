@@ -35,6 +35,25 @@ new FormModel {
 				"x": 285
 				"y": 185
 			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "JL_Timer"
+				"text": new FormMessage( null, "Welcome.JL_Timer.text" )
+				auxiliary() {
+					"JavaCodeGenerator.variableModifiers": 1
+				}
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 95
+				"x": 520
+				"y": 20
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "JL_Code"
+				"text": new FormMessage( null, "Welcome.JL_Code.text" )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 125
+				"x": 510
+				"y": 80
+			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
 			"size": new java.awt.Dimension( 655, 500 )

@@ -40,6 +40,9 @@ public class ReConfirm_pwd extends JPanel {
         label1 = new JLabel();
         textField1 = new JTextField();
         button1 = new JButton();
+        JL_Timer = new JLabel();
+        JL_Name = new JLabel();
+        JL_Code = new JLabel();
 
         //======== this ========
         setLayout(null);
@@ -56,6 +59,21 @@ public class ReConfirm_pwd extends JPanel {
         button1.addActionListener(e -> Confirm(e));
         add(button1);
         button1.setBounds(new Rectangle(new Point(390, 245), button1.getPreferredSize()));
+
+        //---- JL_Timer ----
+        JL_Timer.setText("text");
+        add(JL_Timer);
+        JL_Timer.setBounds(480, 30, 95, JL_Timer.getPreferredSize().height);
+
+        //---- JL_Name ----
+        JL_Name.setText("text");
+        add(JL_Name);
+        JL_Name.setBounds(480, 60, 125, JL_Name.getPreferredSize().height);
+
+        //---- JL_Code ----
+        JL_Code.setText("\u673a\u5668\u53f7\uff1aCUMT2023");
+        add(JL_Code);
+        JL_Code.setBounds(470, 90, 125, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size
@@ -78,5 +96,8 @@ public class ReConfirm_pwd extends JPanel {
     private JLabel label1;
     private JTextField textField1;
     private JButton button1;
+    public JLabel JL_Timer;
+    public JLabel JL_Name;
+    private JLabel JL_Code;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

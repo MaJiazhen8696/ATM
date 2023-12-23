@@ -104,6 +104,9 @@ public class Withdraw extends JPanel {
         button6 = new JButton();
         button7 = new JButton();
         button8 = new JButton();
+        JL_Timer = new JLabel();
+        JL_Name = new JLabel();
+        JL_Code = new JLabel();
 
         //======== this ========
         setLayout(null);
@@ -161,6 +164,21 @@ public class Withdraw extends JPanel {
         add(button8);
         button8.setBounds(new Rectangle(new Point(495, 440), button8.getPreferredSize()));
 
+        //---- JL_Timer ----
+        JL_Timer.setText("text");
+        add(JL_Timer);
+        JL_Timer.setBounds(570, 30, 95, JL_Timer.getPreferredSize().height);
+
+        //---- JL_Name ----
+        JL_Name.setText("text");
+        add(JL_Name);
+        JL_Name.setBounds(570, 60, 125, JL_Name.getPreferredSize().height);
+
+        //---- JL_Code ----
+        JL_Code.setText("\u673a\u5668\u53f7\uff1aCUMT2023");
+        add(JL_Code);
+        JL_Code.setBounds(560, 90, 125, JL_Code.getPreferredSize().height);
+
         {
             // compute preferred size
             Dimension preferredSize = new Dimension();
@@ -188,5 +206,8 @@ public class Withdraw extends JPanel {
     private JButton button6;
     private JButton button7;
     private JButton button8;
+    public JLabel JL_Timer;
+    public JLabel JL_Name;
+    private JLabel JL_Code;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

@@ -43,6 +43,8 @@ public class Welcome extends JPanel {
         button1 = new JButton();
         button2 = new JButton();
         label1 = new JLabel();
+        JL_Timer = new JLabel();
+        JL_Code = new JLabel();
 
         //======== this ========
         addKeyListener(new KeyAdapter() {
@@ -75,6 +77,16 @@ public class Welcome extends JPanel {
         add(label1);
         label1.setBounds(new Rectangle(new Point(285, 185), label1.getPreferredSize()));
 
+        //---- JL_Timer ----
+        JL_Timer.setText(bundle.getString("Welcome.JL_Timer.text"));
+        add(JL_Timer);
+        JL_Timer.setBounds(520, 20, 95, JL_Timer.getPreferredSize().height);
+
+        //---- JL_Code ----
+        JL_Code.setText(bundle.getString("Welcome.JL_Code.text"));
+        add(JL_Code);
+        JL_Code.setBounds(510, 80, 125, JL_Code.getPreferredSize().height);
+
         {
             // compute preferred size
             Dimension preferredSize = new Dimension();
@@ -96,5 +108,7 @@ public class Welcome extends JPanel {
     private JButton button1;
     private JButton button2;
     private JLabel label1;
+    public JLabel JL_Timer;
+    private JLabel JL_Code;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

@@ -52,6 +52,9 @@ public class PrintReceipt extends JPanel {
         L_wait = new JLabel();
         L_success = new JLabel();
         JB_Back = new JButton();
+        JL_Timer = new JLabel();
+        JL_Name = new JLabel();
+        JL_Code = new JLabel();
 
         //======== this ========
         addMouseListener(new MouseAdapter() {
@@ -78,6 +81,21 @@ public class PrintReceipt extends JPanel {
         add(JB_Back);
         JB_Back.setBounds(new Rectangle(new Point(375, 265), JB_Back.getPreferredSize()));
 
+        //---- JL_Timer ----
+        JL_Timer.setText("text");
+        add(JL_Timer);
+        JL_Timer.setBounds(440, 25, 95, JL_Timer.getPreferredSize().height);
+
+        //---- JL_Name ----
+        JL_Name.setText("text");
+        add(JL_Name);
+        JL_Name.setBounds(440, 55, 125, JL_Name.getPreferredSize().height);
+
+        //---- JL_Code ----
+        JL_Code.setText("\u673a\u5668\u53f7\uff1aCUMT2023");
+        add(JL_Code);
+        JL_Code.setBounds(430, 85, 125, JL_Code.getPreferredSize().height);
+
         {
             // compute preferred size
             Dimension preferredSize = new Dimension();
@@ -99,5 +117,8 @@ public class PrintReceipt extends JPanel {
     private JLabel L_wait;
     private JLabel L_success;
     private JButton JB_Back;
+    public JLabel JL_Timer;
+    public JLabel JL_Name;
+    private JLabel JL_Code;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

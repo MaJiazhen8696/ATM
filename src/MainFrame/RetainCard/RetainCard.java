@@ -44,8 +44,11 @@ public class RetainCard extends JPanel {
     }
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
+        ResourceBundle bundle = ResourceBundle.getBundle("lang.RetainCard");
         JL_Retain = new JLabel();
         JL_Hint = new JLabel();
+        JL_Timer = new JLabel();
+        JL_Code = new JLabel();
 
         //======== this ========
         setLayout(null);
@@ -53,6 +56,16 @@ public class RetainCard extends JPanel {
         JL_Retain.setBounds(85, 80, 160, 50);
         add(JL_Hint);
         JL_Hint.setBounds(125, 190, 125, JL_Hint.getPreferredSize().height);
+
+        //---- JL_Timer ----
+        JL_Timer.setText(bundle.getString("RetainCard.JL_Timer.text"));
+        add(JL_Timer);
+        JL_Timer.setBounds(265, 30, 95, JL_Timer.getPreferredSize().height);
+
+        //---- JL_Code ----
+        JL_Code.setText(bundle.getString("RetainCard.JL_Code.text"));
+        add(JL_Code);
+        JL_Code.setBounds(255, 90, 125, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size
@@ -74,5 +87,7 @@ public class RetainCard extends JPanel {
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
     private JLabel JL_Retain;
     private JLabel JL_Hint;
+    public JLabel JL_Timer;
+    private JLabel JL_Code;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

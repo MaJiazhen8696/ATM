@@ -66,6 +66,9 @@ public class Confirm_Money extends JPanel {
         JB_Confirm = new JButton();
         JB_Cancel = new JButton();
         JL_Success = new JLabel();
+        JL_Timer = new JLabel();
+        JL_Name = new JLabel();
+        JL_Code = new JLabel();
 
         //======== this ========
         setPreferredSize(new Dimension(800, 600));
@@ -118,6 +121,21 @@ public class Confirm_Money extends JPanel {
         add(JL_Success);
         JL_Success.setBounds(150, 240, 70, JL_Success.getPreferredSize().height);
 
+        //---- JL_Timer ----
+        JL_Timer.setText(bundle.getString("Saving.Confirm_Money.JL_Timer.text"));
+        add(JL_Timer);
+        JL_Timer.setBounds(445, 20, 95, JL_Timer.getPreferredSize().height);
+
+        //---- JL_Name ----
+        JL_Name.setText(bundle.getString("Saving.Confirm_Money.JL_Name.text"));
+        add(JL_Name);
+        JL_Name.setBounds(445, 50, 125, JL_Name.getPreferredSize().height);
+
+        //---- JL_Code ----
+        JL_Code.setText(bundle.getString("Saving.Confirm_Money.JL_Code.text"));
+        add(JL_Code);
+        JL_Code.setBounds(435, 80, 125, JL_Code.getPreferredSize().height);
+
         {
             // compute preferred size
             Dimension preferredSize = new Dimension();
@@ -147,5 +165,8 @@ public class Confirm_Money extends JPanel {
     private JButton JB_Confirm;
     private JButton JB_Cancel;
     private JLabel JL_Success;
+    public JLabel JL_Timer;
+    public JLabel JL_Name;
+    private JLabel JL_Code;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

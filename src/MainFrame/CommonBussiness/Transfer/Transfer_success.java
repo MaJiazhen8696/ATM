@@ -33,6 +33,9 @@ public class Transfer_success extends JPanel {
         label1 = new JLabel();
         JB_Print = new JButton();
         JB_Back = new JButton();
+        JL_Timer = new JLabel();
+        JL_Name = new JLabel();
+        JL_Code = new JLabel();
 
         //======== this ========
         setLayout(null);
@@ -53,6 +56,21 @@ public class Transfer_success extends JPanel {
         JB_Back.addActionListener(e -> JB_Back(e));
         add(JB_Back);
         JB_Back.setBounds(new Rectangle(new Point(385, 310), JB_Back.getPreferredSize()));
+
+        //---- JL_Timer ----
+        JL_Timer.setText("text");
+        add(JL_Timer);
+        JL_Timer.setBounds(370, 35, 95, JL_Timer.getPreferredSize().height);
+
+        //---- JL_Name ----
+        JL_Name.setText("text");
+        add(JL_Name);
+        JL_Name.setBounds(370, 65, 125, JL_Name.getPreferredSize().height);
+
+        //---- JL_Code ----
+        JL_Code.setText("\u673a\u5668\u53f7\uff1aCUMT2023");
+        add(JL_Code);
+        JL_Code.setBounds(360, 95, 125, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size
@@ -75,5 +93,8 @@ public class Transfer_success extends JPanel {
     private JLabel label1;
     private JButton JB_Print;
     private JButton JB_Back;
+    public JLabel JL_Timer;
+    public JLabel JL_Name;
+    private JLabel JL_Code;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

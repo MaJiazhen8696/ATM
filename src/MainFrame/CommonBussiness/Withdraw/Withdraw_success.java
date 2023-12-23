@@ -33,6 +33,10 @@ public class Withdraw_success extends JPanel {
         label1 = new JLabel();
         JB_Back = new JButton();
         JB_Print = new JButton();
+        button1 = new JButton();
+        JL_Timer = new JLabel();
+        JL_Name = new JLabel();
+        JL_Code = new JLabel();
 
         //======== this ========
         setLayout(null);
@@ -53,6 +57,21 @@ public class Withdraw_success extends JPanel {
         JB_Print.addActionListener(e -> JB_Print(e));
         add(JB_Print);
         JB_Print.setBounds(new Rectangle(new Point(380, 220), JB_Print.getPreferredSize()));
+
+        //---- JL_Timer ----
+        JL_Timer.setText("text");
+        add(JL_Timer);
+        JL_Timer.setBounds(430, 70, 95, JL_Timer.getPreferredSize().height);
+
+        //---- JL_Name ----
+        JL_Name.setText("text");
+        add(JL_Name);
+        JL_Name.setBounds(430, 100, 125, JL_Name.getPreferredSize().height);
+
+        //---- JL_Code ----
+        JL_Code.setText("\u673a\u5668\u53f7\uff1aCUMT2023");
+        add(JL_Code);
+        JL_Code.setBounds(420, 130, 125, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size
@@ -75,5 +94,9 @@ public class Withdraw_success extends JPanel {
     private JLabel label1;
     private JButton JB_Back;
     private JButton JB_Print;
+    private JButton button1;
+    public JLabel JL_Timer;
+    public JLabel JL_Name;
+    private JLabel JL_Code;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }
