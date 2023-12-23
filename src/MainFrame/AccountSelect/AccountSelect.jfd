@@ -53,6 +53,17 @@ new FormModel {
 				"x": 580
 				"y": 370
 			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "JL_Timer"
+				"text": new FormMessage( null, "JL_Timer.text" )
+				auxiliary() {
+					"JavaCodeGenerator.variableModifiers": 1
+				}
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 390
+				"y": 30
+				"width": 125
+			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
 			"size": new java.awt.Dimension( 690, 470 )

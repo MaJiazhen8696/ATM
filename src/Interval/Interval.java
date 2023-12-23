@@ -9,25 +9,30 @@ import MainFrame.MainFrame;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.SimpleDateFormat;
 import java.util.*;
 import javax.swing.*;
 import javax.swing.Timer;
 
+import global.global;
 /**
  * @author MJZ
  */
 public class Interval extends JPanel {
     MainFrame Father;
     JPanel THIS;
+    public  Calendar calendar= global.calendar;
+    public  SimpleDateFormat dateFormat=global.dateFormat;
     public Interval( MainFrame fa) {
         Father=fa;
         THIS=this;
         initComponents();
 
+
     }
     public void ST(){
         //播片
-        Timer counter = new Timer(1000, new ActionListener() {
+        Timer counter = new Timer(10000, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
@@ -58,12 +63,12 @@ public class Interval extends JPanel {
         //---- JL_Time ----
         JL_Time.setText(bundle.getString("Interval.JL_Time.text"));
         add(JL_Time);
-        JL_Time.setBounds(280, 15, 75, JL_Time.getPreferredSize().height);
+        JL_Time.setBounds(170, 15, 185, JL_Time.getPreferredSize().height);
 
         //---- JL_Name ----
         JL_Name.setText(bundle.getString("Interval.JL_Name.text"));
         add(JL_Name);
-        JL_Name.setBounds(new Rectangle(new Point(280, 45), JL_Name.getPreferredSize()));
+        JL_Name.setBounds(260, 45, 125, JL_Name.getPreferredSize().height);
 
         //---- JL_Code ----
         JL_Code.setText(bundle.getString("Interval.JL_Code.text"));
@@ -89,8 +94,8 @@ public class Interval extends JPanel {
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
     private JLabel JL_waiting;
-    private JLabel JL_Time;
-    private JLabel JL_Name;
+    public JLabel JL_Time;
+    public JLabel JL_Name;
     private JLabel JL_Code;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

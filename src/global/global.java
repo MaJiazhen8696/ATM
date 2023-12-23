@@ -3,10 +3,12 @@ package global;
 import User.User;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.Statement;
-import java.util.Locale;
-import java.util.ResourceBundle;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 public class global {
     public static Locale LOCALE;//默认语言
@@ -35,11 +37,26 @@ public class global {
     public static Connection CNN;
     public static User USER;
     public static Statement ST;
+    public static Calendar calendar= Calendar.getInstance();
+    public static SimpleDateFormat dateFormat= new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+    public static JLabel T;
     public global(){
+
         LOCALE=Locale.getDefault();
         CONFIG = ResourceBundle.getBundle("config.cfg");
         URL=CONFIG.getString("url");
         //BUNDLE=ResourceBundle.getBundle("",LOCALE);
+
+        java.util.Timer counter = new java.util.Timer();
+
+        counter.schedule(new TimerTask() {
+            public void run() {
+
+                System.out.print(1);
+                if(T!=null) T.setText(dateFormat.format(new Date()));
+
+            }
+        },0,333);
     }
     public static void Disable(JPanel p){
         p.setVisible(false);

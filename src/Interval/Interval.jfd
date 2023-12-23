@@ -19,17 +19,24 @@ new FormModel {
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "JL_Time"
 				"text": new FormMessage( null, "Interval.JL_Time.text" )
+				auxiliary() {
+					"JavaCodeGenerator.variableModifiers": 1
+				}
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 280
+				"x": 170
 				"y": 15
-				"width": 75
+				"width": 185
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "JL_Name"
 				"text": new FormMessage( null, "Interval.JL_Name.text" )
+				auxiliary() {
+					"JavaCodeGenerator.variableModifiers": 1
+				}
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 280
+				"x": 260
 				"y": 45
+				"width": 125
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "JL_Code"

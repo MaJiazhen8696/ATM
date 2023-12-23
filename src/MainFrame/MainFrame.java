@@ -138,6 +138,7 @@ public class MainFrame extends JFrame {
     public void toInterval(JPanel p){
         global.Disable(p);
         global.Enable(interval);
+        global.T=interval.JL_Time;
         interval.ST();
 
     }
