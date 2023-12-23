@@ -1,68 +1,59 @@
 /*
- * Created by JFormDesigner on Fri Dec 15 15:30:27 CST 2023
+ * Created by JFormDesigner on Fri Dec 22 20:25:54 CST 2023
  */
 
-package MainFrame;
+package MainFrame.ChangePwd;
+
+import java.awt.event.*;
+import MainFrame.MainFrame;
 
 import java.awt.*;
-import java.awt.event.*;
-import java.util.*;
 import javax.swing.*;
 
 /**
- * @author MJZ
+ * @author m'm
  */
-public class Login extends JPanel {
-    MainFrame Father=null;
-    private int cnt=0;
-    public Login(MainFrame fa) {
+public class ReConfirm_pwd extends JPanel {
+    MainFrame FATHER;
+    public static String secondPwd;
+    public ReConfirm_pwd(MainFrame fa) {
+        FATHER=fa;
         initComponents();
-        Father=fa;
+        textField1.setText(null);
     }
 
-    private void Confirm_Password(ActionEvent e) {
-        String Password=JT_Password.getText();
-        // 登录
-
-        if(cnt==3){
-            Father.RetainCard();
+    private void Confirm(ActionEvent e) {
+        ReConfirm_pwd.secondPwd=textField1.getText();
+        if(Confirm_pwd.firstPwd.equals(ReConfirm_pwd.secondPwd)){
+            FATHER.toChange_success(this);
         }
-
+        else{
+            FATHER.toChange_failed(this);
+        }
     }
 
-    private void Modify_Password(ActionEvent e) {
-        JT_Password.setText("");
-    }
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
-        ResourceBundle bundle = ResourceBundle.getBundle("lang.Login");
         label1 = new JLabel();
-        JT_Password = new JTextField();
+        textField1 = new JTextField();
         button1 = new JButton();
-        BT_Modify = new JButton();
 
         //======== this ========
         setLayout(null);
 
         //---- label1 ----
-        label1.setText(bundle.getString("Login.label1.text"));
+        label1.setText("\u8bf7\u518d\u6b21\u8f93\u5165\u60a8\u7684\u65b0\u4e2a\u4eba\u5bc6\u7801");
         add(label1);
-        label1.setBounds(185, 215, 219, label1.getPreferredSize().height);
-        add(JT_Password);
-        JT_Password.setBounds(160, 290, 134, JT_Password.getPreferredSize().height);
+        label1.setBounds(135, 80, 255, label1.getPreferredSize().height);
+        add(textField1);
+        textField1.setBounds(135, 135, 185, textField1.getPreferredSize().height);
 
         //---- button1 ----
-        button1.setText(bundle.getString("Login.button1.text"));
-        button1.addActionListener(e -> Confirm_Password(e));
+        button1.setText("\u786e\u8ba4");
+        button1.addActionListener(e -> Confirm(e));
         add(button1);
-        button1.setBounds(new Rectangle(new Point(550, 410), button1.getPreferredSize()));
-
-        //---- BT_Modify ----
-        BT_Modify.setText(bundle.getString("Login.BT_Modify.text"));
-        BT_Modify.addActionListener(e -> Modify_Password(e));
-        add(BT_Modify);
-        BT_Modify.setBounds(new Rectangle(new Point(550, 450), BT_Modify.getPreferredSize()));
+        button1.setBounds(new Rectangle(new Point(390, 245), button1.getPreferredSize()));
 
         {
             // compute preferred size
@@ -83,8 +74,7 @@ public class Login extends JPanel {
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
     private JLabel label1;
-    private JTextField JT_Password;
+    private JTextField textField1;
     private JButton button1;
-    private JButton BT_Modify;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }
