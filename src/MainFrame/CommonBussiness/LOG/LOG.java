@@ -62,6 +62,10 @@ public class LOG extends JPanel {
     private void JB_Back(ActionEvent e) {
         Father.toBussinessSelect(this);
     }
+
+    private void JB_Card(ActionEvent e) {
+
+    }
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         ResourceBundle bundle = ResourceBundle.getBundle("lang.Saving");
@@ -82,6 +86,7 @@ public class LOG extends JPanel {
 
         //---- JB_Card ----
         JB_Card.setText(bundle.getString("LOG.JB_Card.text"));
+        JB_Card.addActionListener(e -> JB_Card(e));
         add(JB_Card);
         JB_Card.setBounds(new Rectangle(new Point(5, 320), JB_Card.getPreferredSize()));
 

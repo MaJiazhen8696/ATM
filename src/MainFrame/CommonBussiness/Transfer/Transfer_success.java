@@ -4,6 +4,7 @@
 
 package MainFrame.CommonBussiness.Transfer;
 
+import java.awt.event.*;
 import MainFrame.MainFrame;
 
 import java.awt.*;
@@ -19,9 +20,19 @@ public class Transfer_success extends JPanel {
         initComponents();
     }
 
+    private void JB_Back(ActionEvent e) {
+        FATHER.toBussinessSelect(this);
+    }
+
+    private void JB_Print(ActionEvent e) {
+        FATHER.toPrintReceipt(this);
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         label1 = new JLabel();
+        JB_Print = new JButton();
+        JB_Back = new JButton();
 
         //======== this ========
         setLayout(null);
@@ -30,6 +41,18 @@ public class Transfer_success extends JPanel {
         label1.setText("\u8f6c\u8d26\u6210\u529f!!!!!");
         add(label1);
         label1.setBounds(150, 100, 205, label1.getPreferredSize().height);
+
+        //---- JB_Print ----
+        JB_Print.setText("\u6253\u5370\u51ed\u6761");
+        JB_Print.addActionListener(e -> JB_Print(e));
+        add(JB_Print);
+        JB_Print.setBounds(new Rectangle(new Point(385, 230), JB_Print.getPreferredSize()));
+
+        //---- JB_Back ----
+        JB_Back.setText("\u8fd4\u56de");
+        JB_Back.addActionListener(e -> JB_Back(e));
+        add(JB_Back);
+        JB_Back.setBounds(new Rectangle(new Point(385, 310), JB_Back.getPreferredSize()));
 
         {
             // compute preferred size
@@ -50,5 +73,7 @@ public class Transfer_success extends JPanel {
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
     private JLabel label1;
+    private JButton JB_Print;
+    private JButton JB_Back;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

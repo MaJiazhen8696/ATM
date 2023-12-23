@@ -13,6 +13,7 @@ import MainFrame.ChangePwd.Confirm_pwd;
 import MainFrame.ChangePwd.ReConfirm_pwd;
 import MainFrame.CommonBussiness.LOG.LOG;
 import MainFrame.CommonBussiness.MoneyQuery.MoneyQuery;
+import MainFrame.CommonBussiness.PrintReceipt.PrintReceipt;
 import MainFrame.CommonBussiness.Saving.Confirm_Money;
 import MainFrame.CommonBussiness.Saving.Saving;
 import MainFrame.CommonBussiness.Withdraw.Withdraw;
@@ -67,6 +68,7 @@ public class MainFrame extends JFrame {
     Saving saving = new Saving(this);
     Withdraw withdraw = new Withdraw(this);
     Confirm_Money confirmMoney=new Confirm_Money(this);
+    PrintReceipt printReceipt = new PrintReceipt(this);
     AccountSelect accountSelect=new AccountSelect(this);
     LOG log=new LOG(this);
     Interval interval=new Interval(this);
@@ -93,6 +95,7 @@ public class MainFrame extends JFrame {
         add(reConfirm_pwd);
         add(change_success);
         add(change_failed);
+        add(printReceipt);
         add(takeCard);
         add(saving);add(accountSelect);
         add(log);add(interval);
@@ -125,6 +128,7 @@ public class MainFrame extends JFrame {
         global.Disable(takeCard);
         global.Disable(log);
         global.Disable(interval);
+        global.Disable(printReceipt);
 
 
         global.Enable(wel);
@@ -264,6 +268,10 @@ public class MainFrame extends JFrame {
     public void toBussinessSelect(JPanel p){
         global.Disable(p);
         global.Enable(bussinessSelect);
+    }
+    public void toPrintReceipt(JPanel p){
+        global.Disable(p);
+        global.Enable(printReceipt);
     }
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
