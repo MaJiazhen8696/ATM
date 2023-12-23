@@ -10,9 +10,9 @@ public class Account {
     private String Name,ID;
     private List<Record> record;
     public Account(){
-        this.Money=50;
-        this.Name="cfs";
-        this.ID="01210013";
+
+
+
 
     }
     public boolean ChangeMoney(int op,double num,String id,int Source,String... S){

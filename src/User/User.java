@@ -26,7 +26,7 @@ public class User {
 //            ;
 //        }
         CurrentAccount=new Account();
-        CurrentAccount.Money=100;
+        CurrentAccount.Money=200;
         Savings_Account=CurrentAccount;
         Check_Account=CurrentAccount;
         Credits_Account=CurrentAccount;

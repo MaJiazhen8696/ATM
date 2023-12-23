@@ -37,6 +37,14 @@ public class Login extends JPanel {
     }
     private boolean Sign_In(String User,String Password){
         LOAD(User,null);
+        System.out.println(User);
+        System.out.println(Password);
+        try {
+            java.sql.Connection cnn = DriverManager.getConnection(global.URL, User, Password);
+            LOAD(User,cnn);
+        }catch (SQLException e){
+            return false;
+        }
         return true;
 //        try {
 //            java.sql.Connection cnn = DriverManager.getConnection(global.URL, User, Password);
@@ -110,6 +118,8 @@ public class Login extends JPanel {
         BT_Modify = new JButton();
         JT_Password = new JPasswordField();
         JL_Failed = new JLabel();
+        textField1 = new JTextField();
+        label1 = new JLabel();
 
         //======== this ========
         setLayout(null);
@@ -118,12 +128,12 @@ public class Login extends JPanel {
         JL_Success.setHorizontalAlignment(SwingConstants.CENTER);
         JL_Success.setText(bundle.getString("Login.JL_Success.text"));
         add(JL_Success);
-        JL_Success.setBounds(155, 170, 235, 155);
+        JL_Success.setBounds(120, 395, 235, 155);
 
         //---- JL_Hint ----
         JL_Hint.setText(bundle.getString("Login.JL_Hint.text"));
         add(JL_Hint);
-        JL_Hint.setBounds(185, 215, 219, JL_Hint.getPreferredSize().height);
+        JL_Hint.setBounds(60, 265, 219, JL_Hint.getPreferredSize().height);
 
         //---- BT_Confirm ----
         BT_Confirm.setText(bundle.getString("Login.BT_Confirm.text"));
@@ -137,12 +147,19 @@ public class Login extends JPanel {
         add(BT_Modify);
         BT_Modify.setBounds(new Rectangle(new Point(550, 450), BT_Modify.getPreferredSize()));
         add(JT_Password);
-        JT_Password.setBounds(170, 270, 130, 30);
+        JT_Password.setBounds(175, 255, 130, 30);
 
         //---- JL_Failed ----
         JL_Failed.setText(bundle.getString("Login.JL_Failed.text"));
         add(JL_Failed);
-        JL_Failed.setBounds(180, 305, 175, JL_Failed.getPreferredSize().height);
+        JL_Failed.setBounds(180, 335, 175, JL_Failed.getPreferredSize().height);
+        add(textField1);
+        textField1.setBounds(180, 205, 120, 33);
+
+        //---- label1 ----
+        label1.setText(bundle.getString("Login.label1.text"));
+        add(label1);
+        label1.setBounds(60, 210, 110, label1.getPreferredSize().height);
 
         {
             // compute preferred size
@@ -168,5 +185,7 @@ public class Login extends JPanel {
     private JButton BT_Modify;
     private JPasswordField JT_Password;
     private JLabel JL_Failed;
+    private JTextField textField1;
+    private JLabel label1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }
