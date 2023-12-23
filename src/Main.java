@@ -42,6 +42,6 @@ public class Main {
 
         MainFrame cur=new MainFrame();
         cur.setVisible(true);
-        //通过在MainFrame 中切换Planel实现页面切换
+
     }
 }

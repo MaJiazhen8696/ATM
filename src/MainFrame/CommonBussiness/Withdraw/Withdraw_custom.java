@@ -25,12 +25,16 @@ public class Withdraw_custom extends JPanel {
         int sum;
         sum=Integer.parseInt(textField1.getText());
         if(global.USER.CurrentAccount.Money>=sum){
-            global.USER.CurrentAccount.Money-=sum;
+            global.USER.CurrentAccount.ChangeMoney(global.Taken,global.USER.getID(),null,sum);
             FATHER.toWithdraw_success(this);
         }
         else{
             FATHER.toWithdraw_failed(this);
         }
+    }
+
+    private void Withdraw_custom(ActionEvent e) {
+        // TODO add your code here
     }
 
     private void initComponents() {
@@ -50,7 +54,7 @@ public class Withdraw_custom extends JPanel {
         label1.setBounds(new Rectangle(new Point(65, 170), label1.getPreferredSize()));
 
         //---- button1 ----
-        button1.setText("Confirm");
+        button1.setText("\u786e\u8ba4");
         button1.addActionListener(e -> confirm(e));
         add(button1);
         button1.setBounds(new Rectangle(new Point(405, 300), button1.getPreferredSize()));

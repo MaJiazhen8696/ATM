@@ -6,6 +6,7 @@ package MainFrame.CommonBussiness.Transfer;
 
 import java.awt.event.*;
 import MainFrame.MainFrame;
+import User.User;
 import global.global;
 
 import java.awt.*;
@@ -16,16 +17,21 @@ import javax.swing.*;
  */
 public class Transfer_amount extends JPanel {
     MainFrame FATHER;
+    public static double amount;
     public Transfer_amount(MainFrame fa) {
         FATHER=fa;
         initComponents();
     }
 
     private void BT_Confirm(ActionEvent e) {
-        double amount=0;
+        amount=Double.parseDouble(textField1.getText());
         amount=Double.parseDouble(textField1.getText());
         if(global.USER.CurrentAccount.Money>=amount){
-            global.USER.CurrentAccount.Money -= amount;
+            User other= new User(Transfer_admin.admin);
+            other.SwitchAccount(global.Savings);
+            System.out.println(other.CurrentAccount.ID);
+            other.CurrentAccount.ChangeMoney(global.Income,other.getID(),global.USER.CurrentAccount.getAccountID(),amount);
+            global.USER.CurrentAccount.ChangeMoney(global.Outcome,global.USER.getID(),Transfer_admin.admin,amount);
             FATHER.toTransfer_success(this);
         }
         else{

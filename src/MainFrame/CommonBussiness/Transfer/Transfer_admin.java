@@ -15,12 +15,14 @@ import javax.swing.*;
  */
 public class Transfer_admin extends JPanel {
     MainFrame FATHER;
+    public static String admin;
     public Transfer_admin(MainFrame fa) {
         FATHER=fa;
         initComponents();
     }
 
     private void BT_Confirm(ActionEvent e) {
+        admin=textField1.getText();
         FATHER.toTransfer_amount(this);
     }
 

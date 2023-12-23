@@ -4,6 +4,7 @@
 
 package MainFrame.CommonBussiness.Withdraw;
 
+import java.awt.event.*;
 import MainFrame.MainFrame;
 
 import java.awt.*;
@@ -17,6 +18,10 @@ public class Withdraw_failed extends JPanel {
     public Withdraw_failed(MainFrame fa) {
         initComponents();
         FATHER=fa;
+    }
+
+    private void JB_Back(ActionEvent e) {
+        FATHER.toBussinessSelect(this);
     }
 
     private void initComponents() {
@@ -34,6 +39,7 @@ public class Withdraw_failed extends JPanel {
 
         //---- button1 ----
         button1.setText("\u8fd4\u56de");
+        button1.addActionListener(e -> JB_Back(e));
         add(button1);
         button1.setBounds(new Rectangle(new Point(375, 260), button1.getPreferredSize()));
 
