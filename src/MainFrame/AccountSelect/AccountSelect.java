@@ -56,6 +56,8 @@ public class AccountSelect extends JPanel {
         JB_CreditsAccount = new JButton();
         JB_Quit = new JButton();
         JL_Timer = new JLabel();
+        JL_Name = new JLabel();
+        JL_Code = new JLabel();
 
         //======== this ========
         setLayout(null);
@@ -92,7 +94,17 @@ public class AccountSelect extends JPanel {
         //---- JL_Timer ----
         JL_Timer.setText(bundle.getString("JL_Timer.text"));
         add(JL_Timer);
-        JL_Timer.setBounds(390, 30, 125, JL_Timer.getPreferredSize().height);
+        JL_Timer.setBounds(550, 25, 95, JL_Timer.getPreferredSize().height);
+
+        //---- JL_Name ----
+        JL_Name.setText(bundle.getString("JL_Name.text"));
+        add(JL_Name);
+        JL_Name.setBounds(550, 55, 125, JL_Name.getPreferredSize().height);
+
+        //---- JL_Code ----
+        JL_Code.setText(bundle.getString("JL_Code.text"));
+        add(JL_Code);
+        JL_Code.setBounds(540, 85, 125, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size
@@ -118,5 +130,7 @@ public class AccountSelect extends JPanel {
     private JButton JB_CreditsAccount;
     private JButton JB_Quit;
     public JLabel JL_Timer;
+    public JLabel JL_Name;
+    private JLabel JL_Code;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

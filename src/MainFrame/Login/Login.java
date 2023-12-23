@@ -103,6 +103,8 @@ public class Login extends JPanel {
         JL_Failed = new JLabel();
         JT_User = new JTextField();
         label1 = new JLabel();
+        JL_Timer = new JLabel();
+        JL_Code = new JLabel();
 
         //======== this ========
         setLayout(null);
@@ -138,6 +140,16 @@ public class Login extends JPanel {
         add(label1);
         label1.setBounds(60, 210, 110, label1.getPreferredSize().height);
 
+        //---- JL_Timer ----
+        JL_Timer.setText(bundle.getString("Login.JL_Timer.text"));
+        add(JL_Timer);
+        JL_Timer.setBounds(510, 40, 95, 17);
+
+        //---- JL_Code ----
+        JL_Code.setText(bundle.getString("Login.JL_Code.text"));
+        add(JL_Code);
+        JL_Code.setBounds(500, 100, 125, 17);
+
         {
             // compute preferred size
             Dimension preferredSize = new Dimension();
@@ -163,5 +175,7 @@ public class Login extends JPanel {
     private JLabel JL_Failed;
     private JTextField JT_User;
     private JLabel label1;
+    public JLabel JL_Timer;
+    private JLabel JL_Code;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

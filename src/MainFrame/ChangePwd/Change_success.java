@@ -33,6 +33,9 @@ public class Change_success extends JPanel {
         label1 = new JLabel();
         button1 = new JButton();
         button2 = new JButton();
+        JL_Timer = new JLabel();
+        JL_Name = new JLabel();
+        JL_Code = new JLabel();
 
         //======== this ========
         setLayout(null);
@@ -53,6 +56,21 @@ public class Change_success extends JPanel {
         button2.addActionListener(e -> TakeCard(e));
         add(button2);
         button2.setBounds(new Rectangle(new Point(385, 320), button2.getPreferredSize()));
+
+        //---- JL_Timer ----
+        JL_Timer.setText("text");
+        add(JL_Timer);
+        JL_Timer.setBounds(460, 45, 95, JL_Timer.getPreferredSize().height);
+
+        //---- JL_Name ----
+        JL_Name.setText("text");
+        add(JL_Name);
+        JL_Name.setBounds(460, 75, 125, JL_Name.getPreferredSize().height);
+
+        //---- JL_Code ----
+        JL_Code.setText("\u673a\u5668\u53f7\uff1aCUMT2023");
+        add(JL_Code);
+        JL_Code.setBounds(450, 105, 125, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size
@@ -75,5 +93,8 @@ public class Change_success extends JPanel {
     private JLabel label1;
     private JButton button1;
     private JButton button2;
+    public JLabel JL_Timer;
+    public JLabel JL_Name;
+    private JLabel JL_Code;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

@@ -42,6 +42,9 @@ public class Withdraw_custom extends JPanel {
         textField1 = new JTextField();
         label1 = new JLabel();
         button1 = new JButton();
+        JL_Timer = new JLabel();
+        JL_Name = new JLabel();
+        JL_Code = new JLabel();
 
         //======== this ========
         setLayout(null);
@@ -54,10 +57,25 @@ public class Withdraw_custom extends JPanel {
         label1.setBounds(new Rectangle(new Point(65, 170), label1.getPreferredSize()));
 
         //---- button1 ----
-        button1.setText("Confirm");
+        button1.setText("\u786e\u8ba4");
         button1.addActionListener(e -> Withdraw_custom(e));
         add(button1);
         button1.setBounds(new Rectangle(new Point(405, 300), button1.getPreferredSize()));
+
+        //---- JL_Timer ----
+        JL_Timer.setText("text");
+        add(JL_Timer);
+        JL_Timer.setBounds(500, 25, 95, JL_Timer.getPreferredSize().height);
+
+        //---- JL_Name ----
+        JL_Name.setText("text");
+        add(JL_Name);
+        JL_Name.setBounds(500, 55, 125, JL_Name.getPreferredSize().height);
+
+        //---- JL_Code ----
+        JL_Code.setText("\u673a\u5668\u53f7\uff1aCUMT2023");
+        add(JL_Code);
+        JL_Code.setBounds(490, 85, 125, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size
@@ -80,5 +98,8 @@ public class Withdraw_custom extends JPanel {
     private JTextField textField1;
     private JLabel label1;
     private JButton button1;
+    public JLabel JL_Timer;
+    public JLabel JL_Name;
+    private JLabel JL_Code;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

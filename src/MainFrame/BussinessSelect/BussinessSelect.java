@@ -73,6 +73,9 @@ public class BussinessSelect extends JPanel {
         JB_Transfer = new JButton();
         JB_Other = new JButton();
         JB_Back = new JButton();
+        JL_Timer = new JLabel();
+        JL_Name = new JLabel();
+        JL_Code = new JLabel();
 
         //======== this ========
         setLayout(null);
@@ -130,6 +133,21 @@ public class BussinessSelect extends JPanel {
         add(JB_Back);
         JB_Back.setBounds(new Rectangle(new Point(525, 310), JB_Back.getPreferredSize()));
 
+        //---- JL_Timer ----
+        JL_Timer.setText(bundle.getString("JL_Timer.text"));
+        add(JL_Timer);
+        JL_Timer.setBounds(525, 25, 95, JL_Timer.getPreferredSize().height);
+
+        //---- JL_Name ----
+        JL_Name.setText(bundle.getString("JL_Name.text"));
+        add(JL_Name);
+        JL_Name.setBounds(525, 55, 125, JL_Name.getPreferredSize().height);
+
+        //---- JL_Code ----
+        JL_Code.setText(bundle.getString("JL_Code.text"));
+        add(JL_Code);
+        JL_Code.setBounds(515, 85, 125, JL_Code.getPreferredSize().height);
+
         {
             // compute preferred size
             Dimension preferredSize = new Dimension();
@@ -157,5 +175,8 @@ public class BussinessSelect extends JPanel {
     private JButton JB_Transfer;
     private JButton JB_Other;
     private JButton JB_Back;
+    public JLabel JL_Timer;
+    public JLabel JL_Name;
+    private JLabel JL_Code;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

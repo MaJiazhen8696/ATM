@@ -34,6 +34,9 @@ public class Other_page3 extends JPanel {
         button2 = new JButton();
         button3 = new JButton();
         button4 = new JButton();
+        JL_Timer = new JLabel();
+        JL_Name = new JLabel();
+        JL_Code = new JLabel();
 
         //======== this ========
         setLayout(null);
@@ -60,6 +63,21 @@ public class Other_page3 extends JPanel {
         add(button4);
         button4.setBounds(new Rectangle(new Point(380, 295), button4.getPreferredSize()));
 
+        //---- JL_Timer ----
+        JL_Timer.setText("text");
+        add(JL_Timer);
+        JL_Timer.setBounds(365, 45, 95, JL_Timer.getPreferredSize().height);
+
+        //---- JL_Name ----
+        JL_Name.setText("text");
+        add(JL_Name);
+        JL_Name.setBounds(365, 75, 125, JL_Name.getPreferredSize().height);
+
+        //---- JL_Code ----
+        JL_Code.setText("\u673a\u5668\u53f7\uff1aCUMT2023");
+        add(JL_Code);
+        JL_Code.setBounds(355, 105, 125, JL_Code.getPreferredSize().height);
+
         {
             // compute preferred size
             Dimension preferredSize = new Dimension();
@@ -82,5 +100,8 @@ public class Other_page3 extends JPanel {
     private JButton button2;
     private JButton button3;
     private JButton button4;
+    public JLabel JL_Timer;
+    public JLabel JL_Name;
+    private JLabel JL_Code;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

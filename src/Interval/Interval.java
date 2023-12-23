@@ -48,7 +48,7 @@ public class Interval extends JPanel {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         ResourceBundle bundle = ResourceBundle.getBundle("lang.Saving");
         JL_waiting = new JLabel();
-        JL_Time = new JLabel();
+        JL_Timer = new JLabel();
         JL_Name = new JLabel();
         JL_Code = new JLabel();
 
@@ -60,10 +60,10 @@ public class Interval extends JPanel {
         add(JL_waiting);
         JL_waiting.setBounds(new Rectangle(new Point(140, 145), JL_waiting.getPreferredSize()));
 
-        //---- JL_Time ----
-        JL_Time.setText(bundle.getString("Interval.JL_Time.text"));
-        add(JL_Time);
-        JL_Time.setBounds(170, 15, 185, JL_Time.getPreferredSize().height);
+        //---- JL_Timer ----
+        JL_Timer.setText(bundle.getString("Interval.JL_Timer.text"));
+        add(JL_Timer);
+        JL_Timer.setBounds(260, 15, 95, JL_Timer.getPreferredSize().height);
 
         //---- JL_Name ----
         JL_Name.setText(bundle.getString("Interval.JL_Name.text"));
@@ -94,7 +94,7 @@ public class Interval extends JPanel {
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
     private JLabel JL_waiting;
-    public JLabel JL_Time;
+    public JLabel JL_Timer;
     public JLabel JL_Name;
     private JLabel JL_Code;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
