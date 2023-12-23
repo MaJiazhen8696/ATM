@@ -16,21 +16,22 @@ public class Main {
 
     static {
         new global();
-
         try{
 
             Class.forName("com.mysql.cj.jdbc.Driver");
             ResourceBundle cfg=global.CONFIG;
             java.sql.Connection cnn = DriverManager.getConnection(cfg.getString("url"),cfg.getString("user"),cfg.getString("password"));
-            Statement st =  cnn.createStatement();
-            String sql="SELECT * FROM users";
-            ResultSet result = st.executeQuery(sql);
-            while(result.next()){
-                System.out.println(result.getObject("ID"));
-            }
+//            Statement st =  cnn.createStatement();
+//            String sql="SELECT * FROM users";
+//            ResultSet result = st.executeQuery(sql);
+//            while(result.next()){
+//                System.out.println(result.getObject("ID"));
+//            }
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
+
+
 
     }
     public static void main(String[] args) throws Exception {
