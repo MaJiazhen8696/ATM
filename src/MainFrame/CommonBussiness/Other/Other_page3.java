@@ -36,31 +36,29 @@ public class Other_page3 extends JPanel {
         button4 = new JButton();
 
         //======== this ========
-        setPreferredSize(new Dimension(638, 422));
-        setOpaque(false);
         setLayout(null);
 
         //---- button1 ----
         button1.setText("\u4ee3\u7406\u4e1a\u52a113");
         add(button1);
-        button1.setBounds(new Rectangle(new Point(25, 95), button1.getPreferredSize()));
+        button1.setBounds(new Rectangle(new Point(56, 65), button1.getPreferredSize()));
 
         //---- button2 ----
         button2.setText("\u4ee3\u7406\u4e1a\u52a114");
         add(button2);
-        button2.setBounds(new Rectangle(new Point(25, 150), button2.getPreferredSize()));
+        button2.setBounds(new Rectangle(new Point(60, 165), button2.getPreferredSize()));
 
         //---- button3 ----
         button3.setText("\u4e0a\u4e00\u9875");
         button3.addActionListener(e -> getPriorPage(e));
         add(button3);
-        button3.setBounds(new Rectangle(new Point(10, 340), button3.getPreferredSize()));
+        button3.setBounds(new Rectangle(new Point(65, 285), button3.getPreferredSize()));
 
         //---- button4 ----
         button4.setText("\u8fd4\u56de");
         button4.addActionListener(e -> BT_Back(e));
         add(button4);
-        button4.setBounds(new Rectangle(new Point(530, 340), button4.getPreferredSize()));
+        button4.setBounds(new Rectangle(new Point(380, 295), button4.getPreferredSize()));
 
         {
             // compute preferred size

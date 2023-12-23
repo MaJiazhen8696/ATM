@@ -55,7 +55,7 @@ public class Saving extends JPanel {
     }
 
     private void JB_Back(ActionEvent e) {
-        // TODO add your code here
+        Father.toBussinessSelect(this);
     }
 
     private void MouseClicked(MouseEvent e) {
@@ -72,8 +72,6 @@ public class Saving extends JPanel {
         JB_Back = new JButton();
 
         //======== this ========
-        setPreferredSize(new Dimension(638, 422));
-        setOpaque(false);
         addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -84,29 +82,25 @@ public class Saving extends JPanel {
 
         //---- JL_Hint ----
         JL_Hint.setText(bundle.getString("Saving.JL_Hint.text"));
-        JL_Hint.setForeground(Color.white);
-        JL_Hint.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 30));
         add(JL_Hint);
-        JL_Hint.setBounds(105, 130, 420, JL_Hint.getPreferredSize().height);
+        JL_Hint.setBounds(170, 125, 265, JL_Hint.getPreferredSize().height);
 
         //---- JL_Timer ----
         JL_Timer.setText(bundle.getString("Saving.JL_Timer.text"));
-        JL_Timer.setForeground(Color.white);
-        JL_Timer.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 22));
         add(JL_Timer);
-        JL_Timer.setBounds(55, 260, 210, JL_Timer.getPreferredSize().height);
+        JL_Timer.setBounds(130, 260, 120, JL_Timer.getPreferredSize().height);
 
         //---- JB_Confirm ----
         JB_Confirm.setText(bundle.getString("Saving.JB_Confirm.text"));
         JB_Confirm.addActionListener(e -> JB_Confirm(e));
         add(JB_Confirm);
-        JB_Confirm.setBounds(new Rectangle(new Point(540, 305), JB_Confirm.getPreferredSize()));
+        JB_Confirm.setBounds(460, 320, 118, JB_Confirm.getPreferredSize().height);
 
         //---- JB_Back ----
         JB_Back.setText(bundle.getString("Saving.JB_Back.text"));
         JB_Back.addActionListener(e -> JB_Back(e));
         add(JB_Back);
-        JB_Back.setBounds(new Rectangle(new Point(540, 345), JB_Back.getPreferredSize()));
+        JB_Back.setBounds(465, 380, 110, JB_Back.getPreferredSize().height);
 
         {
             // compute preferred size

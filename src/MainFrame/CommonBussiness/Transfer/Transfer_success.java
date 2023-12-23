@@ -4,6 +4,7 @@
 
 package MainFrame.CommonBussiness.Transfer;
 
+import java.awt.event.*;
 import MainFrame.MainFrame;
 
 import java.awt.*;
@@ -19,21 +20,39 @@ public class Transfer_success extends JPanel {
         initComponents();
     }
 
+    private void JB_Back(ActionEvent e) {
+        FATHER.toBussinessSelect(this);
+    }
+
+    private void JB_Print(ActionEvent e) {
+        FATHER.toPrintReceipt(this);
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         label1 = new JLabel();
+        JB_Back = new JButton();
+        JB_Print = new JButton();
 
         //======== this ========
-        setPreferredSize(new Dimension(638, 422));
-        setOpaque(false);
         setLayout(null);
 
         //---- label1 ----
         label1.setText("\u8f6c\u8d26\u6210\u529f!!!!!");
-        label1.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 36));
-        label1.setForeground(Color.white);
         add(label1);
-        label1.setBounds(190, 185, 300, label1.getPreferredSize().height);
+        label1.setBounds(150, 100, 205, label1.getPreferredSize().height);
+
+        //---- JB_Back ----
+        JB_Back.setText("\u8fd4\u56de");
+        JB_Back.addActionListener(e -> JB_Back(e));
+        add(JB_Back);
+        JB_Back.setBounds(new Rectangle(new Point(375, 290), JB_Back.getPreferredSize()));
+
+        //---- JB_Print ----
+        JB_Print.setText("\u6253\u5370\u51ed\u6761");
+        JB_Print.addActionListener(e -> JB_Print(e));
+        add(JB_Print);
+        JB_Print.setBounds(new Rectangle(new Point(370, 220), JB_Print.getPreferredSize()));
 
         {
             // compute preferred size
@@ -54,5 +73,7 @@ public class Transfer_success extends JPanel {
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
     private JLabel label1;
+    private JButton JB_Back;
+    private JButton JB_Print;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

@@ -35,26 +35,23 @@ public class MoneyQuery extends JPanel {
         button1 = new JButton();
 
         //======== this ========
-        setPreferredSize(new Dimension(638, 422));
         setLayout(null);
 
         //---- label1 ----
         label1.setText("\u8d26\u6237\u4f59\u989d\uff1a");
-        label1.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 36));
         add(label1);
-        label1.setBounds(new Rectangle(new Point(90, 180), label1.getPreferredSize()));
+        label1.setBounds(new Rectangle(new Point(85, 130), label1.getPreferredSize()));
 
         //---- label2 ----
         label2.setText("text");
-        label2.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 36));
         add(label2);
-        label2.setBounds(285, 180, 90, label2.getPreferredSize().height);
+        label2.setBounds(190, 130, 90, label2.getPreferredSize().height);
 
         //---- button1 ----
         button1.setText("\u8fd4\u56de");
         button1.addActionListener(e -> BT_Back(e));
         add(button1);
-        button1.setBounds(new Rectangle(new Point(265, 375), button1.getPreferredSize()));
+        button1.setBounds(new Rectangle(new Point(105, 265), button1.getPreferredSize()));
 
         {
             // compute preferred size

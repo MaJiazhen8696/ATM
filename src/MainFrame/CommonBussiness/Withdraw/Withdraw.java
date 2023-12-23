@@ -25,7 +25,7 @@ public class Withdraw extends JPanel {
 
     private void Withdraw_100(ActionEvent e) {
         if(global.USER.CurrentAccount.Money>=100){
-            global.USER.CurrentAccount.Money -=100;
+            global.USER.CurrentAccount.ChangeMoney(global.Taken,global.USER.getID(),null,100);
             System.out.println(global.USER.CurrentAccount.Money);
             Father.toWithdraw_success(this);
         }
@@ -36,7 +36,7 @@ public class Withdraw extends JPanel {
 
     private void Withdraw_200(ActionEvent e) {
         if(global.USER.CurrentAccount.Money>=200){
-            global.USER.CurrentAccount.Money -=200;
+            global.USER.CurrentAccount.ChangeMoney(global.Taken,global.USER.getID(),null,200);
             Father.toWithdraw_success(this);
         }
         else{
@@ -46,7 +46,7 @@ public class Withdraw extends JPanel {
 
     private void button3(ActionEvent e) {
         if(global.USER.CurrentAccount.Money>=500){
-            global.USER.CurrentAccount.Money -=500;
+            global.USER.CurrentAccount.ChangeMoney(global.Taken,global.USER.getID(),null,500);
             Father.toWithdraw_success(this);
         }
         else{
@@ -56,7 +56,7 @@ public class Withdraw extends JPanel {
 
     private void Withdraw_800(ActionEvent e) {
         if(global.USER.CurrentAccount.Money>=800){
-            global.USER.CurrentAccount.Money -=800;
+            global.USER.CurrentAccount.ChangeMoney(global.Taken,global.USER.getID(),null,800);
             Father.toWithdraw_success(this);
         }
         else{
@@ -66,7 +66,7 @@ public class Withdraw extends JPanel {
 
     private void Withdraw_1000(ActionEvent e) {
         if(global.USER.CurrentAccount.Money>=1000){
-            global.USER.CurrentAccount.Money -=1000;
+            global.USER.CurrentAccount.ChangeMoney(global.Taken,global.USER.getID(),null,1000);
             Father.toWithdraw_success(this);
         }
         else{
@@ -76,7 +76,7 @@ public class Withdraw extends JPanel {
 
     private void Withdraw_1500(ActionEvent e) {
         if(global.USER.CurrentAccount.Money>=1500){
-            global.USER.CurrentAccount.Money -=1500;
+            global.USER.CurrentAccount.ChangeMoney(global.Taken,global.USER.getID(),null,1500);
             Father.toWithdraw_success(this);
         }
         else{
@@ -86,6 +86,10 @@ public class Withdraw extends JPanel {
 
     private void Withdraw_custom(ActionEvent e) {
         Father.toWithdraw_custom(this);
+    }
+
+    private void JB_Back(ActionEvent e) {
+        Father.toBussinessSelect(this);
     }
 
 
@@ -102,63 +106,60 @@ public class Withdraw extends JPanel {
         button8 = new JButton();
 
         //======== this ========
-        setPreferredSize(new Dimension(638, 422));
-        setOpaque(false);
         setLayout(null);
 
         //---- label1 ----
         label1.setText("\u8bf7\u8f93\u5165\u53d6\u6b3e\u91d1\u989d");
-        label1.setForeground(Color.white);
-        label1.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 30));
         add(label1);
-        label1.setBounds(205, 60, 230, label1.getPreferredSize().height);
+        label1.setBounds(240, 60, 135, label1.getPreferredSize().height);
 
         //---- button1 ----
         button1.setText("100");
         button1.addActionListener(e -> Withdraw_100(e));
         add(button1);
-        button1.setBounds(new Rectangle(new Point(25, 95), button1.getPreferredSize()));
+        button1.setBounds(new Rectangle(new Point(40, 120), button1.getPreferredSize()));
 
         //---- button2 ----
         button2.setText("200");
         button2.addActionListener(e -> Withdraw_200(e));
         add(button2);
-        button2.setBounds(new Rectangle(new Point(25, 150), button2.getPreferredSize()));
+        button2.setBounds(new Rectangle(new Point(45, 185), button2.getPreferredSize()));
 
         //---- button3 ----
         button3.setText("500");
         button3.addActionListener(e -> button3(e));
         add(button3);
-        button3.setBounds(new Rectangle(new Point(25, 205), button3.getPreferredSize()));
+        button3.setBounds(new Rectangle(new Point(45, 255), button3.getPreferredSize()));
 
         //---- button4 ----
         button4.setText("800");
         button4.addActionListener(e -> Withdraw_800(e));
         add(button4);
-        button4.setBounds(new Rectangle(new Point(25, 260), button4.getPreferredSize()));
+        button4.setBounds(new Rectangle(new Point(45, 340), button4.getPreferredSize()));
 
         //---- button5 ----
         button5.setText("1000");
         button5.addActionListener(e -> Withdraw_1000(e));
         add(button5);
-        button5.setBounds(new Rectangle(new Point(505, 95), button5.getPreferredSize()));
+        button5.setBounds(new Rectangle(new Point(490, 135), button5.getPreferredSize()));
 
         //---- button6 ----
         button6.setText("1500");
         button6.addActionListener(e -> Withdraw_1500(e));
         add(button6);
-        button6.setBounds(new Rectangle(new Point(505, 150), button6.getPreferredSize()));
+        button6.setBounds(new Rectangle(new Point(495, 215), button6.getPreferredSize()));
 
         //---- button7 ----
         button7.setText("\u8f93\u5165\u91d1\u989d");
         button7.addActionListener(e -> Withdraw_custom(e));
         add(button7);
-        button7.setBounds(new Rectangle(new Point(505, 205), button7.getPreferredSize()));
+        button7.setBounds(new Rectangle(new Point(490, 310), button7.getPreferredSize()));
 
         //---- button8 ----
         button8.setText("\u53d6\u5361");
+        button8.addActionListener(e -> JB_Back(e));
         add(button8);
-        button8.setBounds(new Rectangle(new Point(545, 320), button8.getPreferredSize()));
+        button8.setBounds(new Rectangle(new Point(495, 440), button8.getPreferredSize()));
 
         {
             // compute preferred size

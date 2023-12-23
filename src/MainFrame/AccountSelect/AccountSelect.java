@@ -57,28 +57,24 @@ public class AccountSelect extends JPanel {
         JB_Quit = new JButton();
 
         //======== this ========
-        setOpaque(false);
         setLayout(null);
 
         //---- JL_Hint ----
         JL_Hint.setText(bundle.getString("JL_Hint.text"));
-        JL_Hint.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 28));
         add(JL_Hint);
-        JL_Hint.setBounds(280, 80, 165, JL_Hint.getPreferredSize().height);
+        JL_Hint.setBounds(280, 80, 90, JL_Hint.getPreferredSize().height);
 
         //---- JB_SavingsAccount ----
         JB_SavingsAccount.setText(bundle.getString("JB_SavingsAccount.text"));
-        JB_SavingsAccount.setPreferredSize(new Dimension(120, 30));
         JB_SavingsAccount.addActionListener(e -> JB_SavingsAccount(e));
         add(JB_SavingsAccount);
-        JB_SavingsAccount.setBounds(new Rectangle(new Point(40, 180), JB_SavingsAccount.getPreferredSize()));
+        JB_SavingsAccount.setBounds(40, 180, 120, JB_SavingsAccount.getPreferredSize().height);
 
         //---- JB_CheckAccount ----
         JB_CheckAccount.setText(bundle.getString("JB_CheckAccount.text"));
-        JB_CheckAccount.setPreferredSize(new Dimension(120, 30));
         JB_CheckAccount.addActionListener(e -> JB_CheckAccount(e));
         add(JB_CheckAccount);
-        JB_CheckAccount.setBounds(new Rectangle(new Point(40, 245), JB_CheckAccount.getPreferredSize()));
+        JB_CheckAccount.setBounds(35, 245, 120, 30);
 
         //---- JB_CreditsAccount ----
         JB_CreditsAccount.setText(bundle.getString("JB_CreditsAccount.text"));

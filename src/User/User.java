@@ -4,6 +4,7 @@ import global.global;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
 
@@ -12,24 +13,29 @@ public class User {
     private List<String> record;
     public Account CurrentAccount;
     private Account Savings_Account, Credits_Account, Check_Account;
-    public User(String id, Connection cnn){
-        global.ID=id;
-        global.CNN=cnn;
-//        try {
-//            Statement st = cnn.createStatement();
-//            String sql = "SELECT * FROM users where ID =" +id;
-//            ResultSet result = st.executeQuery(sql);
-//            if (result.next()) {
-//                //
-//            }
-//        }catch(Exception e){
-//            ;
-//        }
-        CurrentAccount=new Account();
-        CurrentAccount.Money=200;
-        Savings_Account=CurrentAccount;
-        Check_Account=CurrentAccount;
-        Credits_Account=CurrentAccount;
+    private String ID;
+    public User(String id){
+        ID=id;
+        try {
+
+            String sql = "SELECT * FROM useraccounts where ID =" + id;
+            ResultSet result = global.ST.executeQuery(sql);
+            if(result.next()){
+                Savings_Account= new Account(
+                        result.getString("Savings_Account"),
+                        result.getDouble("Savings_Account_money"));
+                Credits_Account= new Account(
+                        result.getString("Credits_Account"),
+                        result.getDouble("Credits_Account_money"));
+                Check_Account= new Account(
+                        result.getString("Check_Account"),
+                        result.getDouble("Check_Account_money"));
+                }
+            }catch (Exception e){
+
+        }
+
+
     }
     public void SwitchAccount(int op){
         switch (op){
@@ -48,10 +54,17 @@ public class User {
             default: break;
         }
     }
-    public boolean Refresh(){
-
-        return true;
+    public String getID(){
+        return ID;
     }
-
+    public void changePWD(String s){
+        char qt='\'';
+        String sql="update useraccounts set password ="+qt+s+qt+"where ID="+ID;
+        try{
+            global.ST.execute(sql);
+        }catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
+    }
 
 }

@@ -4,6 +4,7 @@
 
 package MainFrame.CommonBussiness.Withdraw;
 
+import java.awt.event.*;
 import MainFrame.MainFrame;
 
 import java.awt.*;
@@ -19,27 +20,28 @@ public class Withdraw_failed extends JPanel {
         FATHER=fa;
     }
 
+    private void JB_Back(ActionEvent e) {
+        FATHER.toBussinessSelect(this);
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         label1 = new JLabel();
         button1 = new JButton();
 
         //======== this ========
-        setPreferredSize(new Dimension(638, 422));
-        setOpaque(false);
         setLayout(null);
 
         //---- label1 ----
         label1.setText("\u4f59\u989d\u4e0d\u8db3!!!!!");
-        label1.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 30));
-        label1.setForeground(Color.white);
         add(label1);
-        label1.setBounds(180, 170, 240, label1.getPreferredSize().height);
+        label1.setBounds(185, 110, 240, label1.getPreferredSize().height);
 
         //---- button1 ----
         button1.setText("\u8fd4\u56de");
+        button1.addActionListener(e -> JB_Back(e));
         add(button1);
-        button1.setBounds(new Rectangle(new Point(545, 320), button1.getPreferredSize()));
+        button1.setBounds(new Rectangle(new Point(375, 260), button1.getPreferredSize()));
 
         {
             // compute preferred size

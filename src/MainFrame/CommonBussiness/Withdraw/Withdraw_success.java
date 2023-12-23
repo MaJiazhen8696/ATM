@@ -4,6 +4,9 @@
 
 package MainFrame.CommonBussiness.Withdraw;
 
+import java.awt.event.*;
+
+import MainFrame.CommonBussiness.PrintReceipt.PrintReceipt;
 import MainFrame.MainFrame;
 
 import java.awt.*;
@@ -19,21 +22,39 @@ public class Withdraw_success extends JPanel {
         FATHER=fa;
     }
 
+    private void JB_Back(ActionEvent e) {
+        FATHER.toBussinessSelect(this);
+    }
+
+    private void JB_Print(ActionEvent e) {
+        FATHER.toPrintReceipt(this);
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         label1 = new JLabel();
+        button1 = new JButton();
+        button2 = new JButton();
 
         //======== this ========
-        setOpaque(false);
-        setPreferredSize(new Dimension(638, 422));
         setLayout(null);
 
         //---- label1 ----
         label1.setText("\u53d6\u6b3e\u6210\u529f!!!!!");
-        label1.setForeground(Color.white);
-        label1.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 30));
         add(label1);
-        label1.setBounds(180, 170, 220, label1.getPreferredSize().height);
+        label1.setBounds(165, 75, 170, label1.getPreferredSize().height);
+
+        //---- button1 ----
+        button1.setText("\u8fd4\u56de");
+        button1.addActionListener(e -> JB_Back(e));
+        add(button1);
+        button1.setBounds(new Rectangle(new Point(390, 275), button1.getPreferredSize()));
+
+        //---- button2 ----
+        button2.setText("\u6253\u5370\u51ed\u6761");
+        button2.addActionListener(e -> JB_Print(e));
+        add(button2);
+        button2.setBounds(390, 225, 103, button2.getPreferredSize().height);
 
         {
             // compute preferred size
@@ -54,5 +75,7 @@ public class Withdraw_success extends JPanel {
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
     private JLabel label1;
+    private JButton button1;
+    private JButton button2;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

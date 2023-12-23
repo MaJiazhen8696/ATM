@@ -40,19 +40,17 @@ public class Other_page1 extends JPanel {
         button8 = new JButton();
 
         //======== this ========
-        setPreferredSize(new Dimension(638, 422));
-        setOpaque(false);
         setLayout(null);
 
         //---- button1 ----
         button1.setText("\u4ee3\u7406\u4e1a\u52a11");
         add(button1);
-        button1.setBounds(new Rectangle(new Point(25, 95), button1.getPreferredSize()));
+        button1.setBounds(new Rectangle(new Point(30, 40), button1.getPreferredSize()));
 
         //---- button2 ----
         button2.setText("\u4ee3\u7406\u4e1a\u52a12");
         add(button2);
-        button2.setBounds(new Rectangle(new Point(25, 150), button2.getPreferredSize()));
+        button2.setBounds(new Rectangle(new Point(25, 120), button2.getPreferredSize()));
 
         //---- button3 ----
         button3.setText("\u4ee3\u7406\u4e1a\u52a13");
@@ -62,29 +60,29 @@ public class Other_page1 extends JPanel {
         //---- button4 ----
         button4.setText("\u4ee3\u7406\u4e1a\u52a14");
         add(button4);
-        button4.setBounds(new Rectangle(new Point(505, 95), button4.getPreferredSize()));
+        button4.setBounds(new Rectangle(new Point(365, 40), button4.getPreferredSize()));
 
         //---- button5 ----
         button5.setText("\u4ee3\u7406\u4e1a\u52a15");
         add(button5);
-        button5.setBounds(new Rectangle(new Point(505, 150), button5.getPreferredSize()));
+        button5.setBounds(new Rectangle(new Point(370, 125), button5.getPreferredSize()));
 
         //---- button6 ----
         button6.setText("\u4ee3\u7406\u4e1a\u52a16");
         add(button6);
-        button6.setBounds(new Rectangle(new Point(505, 205), button6.getPreferredSize()));
+        button6.setBounds(new Rectangle(new Point(370, 210), button6.getPreferredSize()));
 
         //---- button7 ----
         button7.setText("\u8fd4\u56de");
         button7.addActionListener(e -> BT_Back(e));
         add(button7);
-        button7.setBounds(new Rectangle(new Point(10, 340), button7.getPreferredSize()));
+        button7.setBounds(new Rectangle(new Point(30, 305), button7.getPreferredSize()));
 
         //---- button8 ----
         button8.setText("\u4e0b\u4e00\u9875");
         button8.addActionListener(e -> getNextPage(e));
         add(button8);
-        button8.setBounds(new Rectangle(new Point(530, 340), button8.getPreferredSize()));
+        button8.setBounds(new Rectangle(new Point(380, 305), button8.getPreferredSize()));
 
         {
             // compute preferred size

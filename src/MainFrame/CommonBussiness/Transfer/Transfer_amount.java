@@ -6,6 +6,7 @@ package MainFrame.CommonBussiness.Transfer;
 
 import java.awt.event.*;
 import MainFrame.MainFrame;
+import User.User;
 import global.global;
 
 import java.awt.*;
@@ -16,16 +17,21 @@ import javax.swing.*;
  */
 public class Transfer_amount extends JPanel {
     MainFrame FATHER;
+    public static double amount;
     public Transfer_amount(MainFrame fa) {
         FATHER=fa;
         initComponents();
     }
 
     private void BT_Confirm(ActionEvent e) {
-        double amount=0;
+        amount=Double.parseDouble(textField1.getText());
         amount=Double.parseDouble(textField1.getText());
         if(global.USER.CurrentAccount.Money>=amount){
-            global.USER.CurrentAccount.Money -= amount;
+            User other= new User(Transfer_admin.admin);
+            other.SwitchAccount(global.Savings);
+            System.out.println(other.CurrentAccount.ID);
+            other.CurrentAccount.ChangeMoney(global.Income,other.getID(),global.USER.CurrentAccount.getAccountID(),amount);
+            global.USER.CurrentAccount.ChangeMoney(global.Outcome,global.USER.getID(),Transfer_admin.admin,amount);
             FATHER.toTransfer_success(this);
         }
         else{
@@ -40,25 +46,20 @@ public class Transfer_amount extends JPanel {
         button1 = new JButton();
 
         //======== this ========
-        setPreferredSize(new Dimension(638, 422));
-        setOpaque(false);
         setLayout(null);
 
         //---- label1 ----
         label1.setText("\u8bf7\u8f93\u5165\u8f6c\u8d26\u91d1\u989d");
-        label1.setForeground(Color.white);
-        label1.setHorizontalAlignment(SwingConstants.CENTER);
-        label1.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 30));
         add(label1);
-        label1.setBounds(175, 130, 270, label1.getPreferredSize().height);
+        label1.setBounds(new Rectangle(new Point(150, 70), label1.getPreferredSize()));
         add(textField1);
-        textField1.setBounds(190, 210, 220, textField1.getPreferredSize().height);
+        textField1.setBounds(155, 120, 165, textField1.getPreferredSize().height);
 
         //---- button1 ----
         button1.setText("\u786e\u8ba4");
         button1.addActionListener(e -> BT_Confirm(e));
         add(button1);
-        button1.setBounds(new Rectangle(new Point(540, 305), button1.getPreferredSize()));
+        button1.setBounds(new Rectangle(new Point(395, 255), button1.getPreferredSize()));
 
         {
             // compute preferred size

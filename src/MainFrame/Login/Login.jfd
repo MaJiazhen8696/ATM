@@ -1,4 +1,4 @@
-JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.8" encoding: "UTF-8"
+JFDML JFormDesigner: "8.2.0.0.331" Java: "17.0.9" encoding: "UTF-8"
 
 new FormModel {
 	"i18n.autoExternalize": true
@@ -9,80 +9,70 @@ new FormModel {
 	root: new FormRoot {
 		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
 			name: "this"
-			"opaque": false
-			"preferredSize": new java.awt.Dimension( 638, 422 )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "JL_Success"
 				"horizontalAlignment": 0
 				"text": new FormMessage( null, "Login.JL_Success.text" )
-				"font": new java.awt.Font( "宋体", 1, 28 )
-				"foreground": new java.awt.Color( 255, 255, 255, 255 )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 105
-				"y": 265
+				"x": 120
+				"y": 395
 				"width": 235
 				"height": 155
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "JL_Hint"
 				"text": new FormMessage( null, "Login.JL_Hint.text" )
-				"foreground": new java.awt.Color( 255, 255, 255, 255 )
-				"font": new java.awt.Font( "宋体", 1, 18 )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 50
-				"y": 235
-				"width": 95
+				"x": 60
+				"y": 265
+				"width": 219
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "BT_Confirm"
 				"text": new FormMessage( null, "Login.BT_Confirm.text" )
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "BT_Confirm", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 540
-				"y": 290
+				"x": 550
+				"y": 410
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "BT_Modify"
 				"text": new FormMessage( null, "Login.BT_Modify.text" )
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "Modify_Password", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 540
-				"y": 330
+				"x": 550
+				"y": 450
 			} )
 			add( new FormComponent( "javax.swing.JPasswordField" ) {
 				name: "JT_Password"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 160
-				"y": 225
+				"x": 175
+				"y": 255
 				"width": 130
 				"height": 30
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "JL_Failed"
 				"text": new FormMessage( null, "Login.JL_Failed.text" )
-				"font": new java.awt.Font( "宋体", 1, 13 )
-				"foreground": new java.awt.Color( 255, 255, 255, 255 )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 170
-				"y": 305
-				"width": 105
+				"x": 180
+				"y": 335
+				"width": 175
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
-				name: "textField1"
+				name: "JT_User"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 160
-				"y": 175
-				"width": 130
-				"height": 30
+				"x": 180
+				"y": 205
+				"width": 120
+				"height": 33
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label1"
 				"text": new FormMessage( null, "Login.label1.text" )
-				"foreground": new java.awt.Color( 255, 255, 255, 255 )
-				"font": new java.awt.Font( "宋体", 1, 18 )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 50
-				"y": 180
+				"x": 60
+				"y": 210
 				"width": 110
 			} )
 		}, new FormLayoutConstraints( null ) {

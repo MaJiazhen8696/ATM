@@ -25,7 +25,7 @@ public class Withdraw_custom extends JPanel {
         int sum;
         sum=Integer.parseInt(textField1.getText());
         if(global.USER.CurrentAccount.Money>=sum){
-            global.USER.CurrentAccount.Money-=sum;
+            global.USER.CurrentAccount.ChangeMoney(global.Taken,global.USER.CurrentAccount.getAccountID(),null,sum);
             FATHER.toWithdraw_success(this);
         }
         else{
@@ -44,24 +44,20 @@ public class Withdraw_custom extends JPanel {
         button1 = new JButton();
 
         //======== this ========
-        setOpaque(false);
-        setPreferredSize(new Dimension(638, 422));
         setLayout(null);
         add(textField1);
-        textField1.setBounds(315, 185, 125, textField1.getPreferredSize().height);
+        textField1.setBounds(155, 160, 125, textField1.getPreferredSize().height);
 
         //---- label1 ----
         label1.setText("\u53d6\u6b3e\u91d1\u989d");
-        label1.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 30));
-        label1.setForeground(Color.white);
         add(label1);
-        label1.setBounds(150, 185, 135, label1.getPreferredSize().height);
+        label1.setBounds(new Rectangle(new Point(65, 170), label1.getPreferredSize()));
 
         //---- button1 ----
-        button1.setText("\u786e\u8ba4");
+        button1.setText("Confirm");
         button1.addActionListener(e -> Withdraw_custom(e));
         add(button1);
-        button1.setBounds(new Rectangle(new Point(545, 320), button1.getPreferredSize()));
+        button1.setBounds(new Rectangle(new Point(405, 300), button1.getPreferredSize()));
 
         {
             // compute preferred size

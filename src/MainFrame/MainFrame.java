@@ -10,7 +10,9 @@ import MainFrame.ChangePwd.Change_failed;
 import MainFrame.ChangePwd.Change_success;
 import MainFrame.ChangePwd.Confirm_pwd;
 import MainFrame.ChangePwd.ReConfirm_pwd;
+import MainFrame.CommonBussiness.LOG.LOG;
 import MainFrame.CommonBussiness.MoneyQuery.MoneyQuery;
+import MainFrame.CommonBussiness.PrintReceipt.PrintReceipt;
 import MainFrame.CommonBussiness.Saving.Confirm_Money;
 import MainFrame.CommonBussiness.Saving.Saving;
 import MainFrame.CommonBussiness.Withdraw.Withdraw;
@@ -31,6 +33,8 @@ import MainFrame.takeCard.TakeCard;
 import global.global;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ResourceBundle;
 import javax.swing.*;
 
@@ -62,35 +66,16 @@ public class MainFrame extends JFrame {
     BussinessSelect bussinessSelect= new BussinessSelect(this);
     Saving saving = new Saving(this);
     Withdraw withdraw = new Withdraw(this);
+    PrintReceipt printReceipt = new PrintReceipt(this);
     Confirm_Money confirmMoney=new Confirm_Money(this);
     AccountSelect accountSelect=new AccountSelect(this);
+    LOG log=new LOG(this);
     public MainFrame() {
-        //设置大小
-        setSize(638, 422);
-        //设置位置
-        //setLocation(0, 0);
-        //背景图片的路径。（相对路径或者绝对路径。本例图片放于"java项目名"的文件下）
-        String path = "background.png";
-        // 背景图片
-        ImageIcon background = new ImageIcon(path);
-        // 把背景图片显示在一个标签里面
-        JLabel label = new JLabel(background);
-        // 把标签的大小位置设置为图片刚好填充整个面板
-        label.setBounds(0, 0, this.getWidth(), this.getHeight());
-        // 把内容窗格转化为JPanel，否则不能用方法setOpaque()来使内容窗格透明
-        JPanel imagePanel = (JPanel) this.getContentPane();
-        imagePanel.setOpaque(false);
-        // 把背景图片添加到分层窗格的最底层作为背景
-        this.getLayeredPane().add(label, Integer.MIN_VALUE);
-        //设置可见
-        setVisible(true);
-        //点关闭按钮时退
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
         bundle = global.BUNDLE;
         initComponents();
         add(wel);add(login);
         add(retainCard);add(bussinessSelect);
+        add(saving);add(accountSelect);add(confirmMoney);
         add(saving);
         add(withdraw);
         add(withdraw_failed);
@@ -109,7 +94,9 @@ public class MainFrame extends JFrame {
         add(change_success);
         add(change_failed);
         add(takeCard);
+        add(printReceipt);
         add(saving);add(accountSelect);
+        add(log);
 
         add(saving);add(accountSelect);add(confirmMoney);
         global.Disable(bussinessSelect);
@@ -130,17 +117,19 @@ public class MainFrame extends JFrame {
         global.Disable(other_page3);
         global.Disable(accountSelect);
         global.Disable(confirmMoney);
+        global.Disable(withdraw);
+        global.Disable(withdraw_failed);
         global.Disable(confirm_pwd);
         global.Disable(reConfirm_pwd);
         global.Disable(change_failed);
         global.Disable(change_success);
         global.Disable(takeCard);
-
+        global.Disable(printReceipt);
+        global.Disable(log);
         global.Enable(wel);
 
 
     }
-
     public void toLogin(JPanel p){
         global.Disable(p);
         global.Enable(login);
@@ -153,6 +142,23 @@ public class MainFrame extends JFrame {
     public void toWithdraw_custom(JPanel p){
         global.Disable(p);
         global.Enable(withdraw_custom);
+
+
+//        Timer counter = new Timer(1000, new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//
+//                global.Enable(xxxx);
+//                ((Timer)e.getSource()).stop();
+//
+//            }
+//        });
+//        counter.start();
+
+
+
+
+
     }
     public void toWithdraw(JPanel p){
         global.Disable(p);
@@ -161,6 +167,11 @@ public class MainFrame extends JFrame {
     public void toWithdraw_failed(JPanel p){
         global.Disable(p);
         global.Enable(withdraw_failed);
+    }
+    public void tolog(JPanel p){
+        global.Disable(p);
+        global.Enable(log);
+        log.Show();
     }
     public void toWithdraw_success(JPanel p){
         global.Disable(p);
@@ -225,6 +236,10 @@ public class MainFrame extends JFrame {
         global.Disable(p);
         global.Enable(takeCard);
     }
+    public void toPrintReceipt(JPanel p){
+        global.Disable(p);
+        global.Enable(printReceipt);
+    }
     public void RetainCard(JPanel p,int ERROR_CODE){
         if(ERROR_CODE!=global.SAFE){
             global.Disable(p);
@@ -249,9 +264,9 @@ public class MainFrame extends JFrame {
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         //======== this ========
-        setPreferredSize(new Dimension(652, 459));
+        setPreferredSize(new Dimension(800, 600));
         var contentPane = getContentPane();
-        contentPane.setLayout(new CardLayout());
+        contentPane.setLayout(new FlowLayout());
         pack();
         setLocationRelativeTo(getOwner());
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on

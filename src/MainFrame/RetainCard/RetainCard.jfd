@@ -1,4 +1,4 @@
-JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.8" encoding: "UTF-8"
+JFDML JFormDesigner: "8.2.0.0.331" Java: "17.0.9" encoding: "UTF-8"
 
 new FormModel {
 	"i18n.autoExternalize": true
@@ -9,9 +9,14 @@ new FormModel {
 	root: new FormRoot {
 		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
 			name: "this"
-			"preferredSize": new java.awt.Dimension( 638, 422 )
-			"minimumSize": new java.awt.Dimension( 0, 0 )
-			"opaque": false
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "JL_Retain"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 85
+				"y": 80
+				"width": 160
+				"height": 50
+			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "JL_Hint"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
@@ -19,21 +24,9 @@ new FormModel {
 				"y": 190
 				"width": 125
 			} )
-			add( new FormComponent( "javax.swing.JLabel" ) {
-				name: "JL_Retain"
-				"text": new FormMessage( null, "RetainCard.JL_Retain.text" )
-				"font": new java.awt.Font( "宋体", 1, 36 )
-				"horizontalAlignment": 0
-				"foreground": new java.awt.Color( 255, 255, 255, 255 )
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 40
-				"y": 160
-				"width": 585
-				"height": 110
-			} )
 		}, new FormLayoutConstraints( null ) {
-			"location": new java.awt.Point( 15, 15 )
-			"size": new java.awt.Dimension( 660, 450 )
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 400, 300 )
 		} )
 	}
 }

@@ -24,16 +24,12 @@ public class TakeCard extends JPanel {
         label1 = new JLabel();
 
         //======== this ========
-        setOpaque(false);
-        setPreferredSize(new Dimension(638, 422));
         setLayout(null);
 
         //---- label1 ----
         label1.setText("\u5361\u5df2\u53d6\u51fa!!!!!");
-        label1.setForeground(Color.white);
-        label1.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 36));
         add(label1);
-        label1.setBounds(190, 185, 285, label1.getPreferredSize().height);
+        label1.setBounds(200, 80, 190, label1.getPreferredSize().height);
 
         {
             // compute preferred size

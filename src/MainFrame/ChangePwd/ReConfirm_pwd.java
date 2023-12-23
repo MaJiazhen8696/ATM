@@ -6,6 +6,7 @@ package MainFrame.ChangePwd;
 
 import java.awt.event.*;
 import MainFrame.MainFrame;
+import global.global;
 
 import java.awt.*;
 import javax.swing.*;
@@ -23,8 +24,9 @@ public class ReConfirm_pwd extends JPanel {
     }
 
     private void Confirm(ActionEvent e) {
-        ReConfirm_pwd.secondPwd=textField1.getText();
+        secondPwd=textField1.getText();
         if(Confirm_pwd.firstPwd.equals(ReConfirm_pwd.secondPwd)){
+            global.USER.changePWD(secondPwd);
             FATHER.toChange_success(this);
         }
         else{
@@ -40,24 +42,20 @@ public class ReConfirm_pwd extends JPanel {
         button1 = new JButton();
 
         //======== this ========
-        setOpaque(false);
-        setPreferredSize(new Dimension(638, 422));
         setLayout(null);
 
         //---- label1 ----
         label1.setText("\u8bf7\u518d\u6b21\u8f93\u5165\u60a8\u7684\u65b0\u4e2a\u4eba\u5bc6\u7801");
-        label1.setForeground(Color.white);
-        label1.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 30));
         add(label1);
-        label1.setBounds(150, 130, 475, label1.getPreferredSize().height);
+        label1.setBounds(135, 80, 255, label1.getPreferredSize().height);
         add(textField1);
-        textField1.setBounds(190, 210, 220, textField1.getPreferredSize().height);
+        textField1.setBounds(135, 135, 185, textField1.getPreferredSize().height);
 
         //---- button1 ----
         button1.setText("\u786e\u8ba4");
         button1.addActionListener(e -> Confirm(e));
         add(button1);
-        button1.setBounds(new Rectangle(new Point(540, 290), button1.getPreferredSize()));
+        button1.setBounds(new Rectangle(new Point(390, 245), button1.getPreferredSize()));
 
         {
             // compute preferred size
