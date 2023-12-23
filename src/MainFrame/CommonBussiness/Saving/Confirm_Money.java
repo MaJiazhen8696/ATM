@@ -11,10 +11,7 @@ import global.global;
 import java.awt.*;
 import java.util.*;
 import javax.swing.*;
-<<<<<<< HEAD
 import javax.swing.Timer;
-=======
->>>>>>> tmp
 
 /**
  * @author MJZ

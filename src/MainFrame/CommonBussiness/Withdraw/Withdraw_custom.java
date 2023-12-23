@@ -54,8 +54,8 @@ public class Withdraw_custom extends JPanel {
         label1.setBounds(new Rectangle(new Point(65, 170), label1.getPreferredSize()));
 
         //---- button1 ----
-        button1.setText("\u786e\u8ba4");
-        button1.addActionListener(e -> confirm(e));
+        button1.setText("Confirm");
+        button1.addActionListener(e -> Withdraw_custom(e));
         add(button1);
         button1.setBounds(new Rectangle(new Point(405, 300), button1.getPreferredSize()));
 
