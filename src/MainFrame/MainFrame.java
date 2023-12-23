@@ -89,6 +89,7 @@ public class MainFrame extends JFrame {
         add(takeCard);
         add(saving);add(accountSelect);
 
+        add(saving);add(accountSelect);add(confirmMoney);
         global.Disable(bussinessSelect);
         global.Disable(login);
         global.Disable(retainCard);
@@ -106,6 +107,7 @@ public class MainFrame extends JFrame {
         global.Disable(other_page2);
         global.Disable(other_page3);
         global.Disable(accountSelect);
+        global.Disable(confirmMoney);
         global.Disable(confirm_pwd);
         global.Disable(reConfirm_pwd);
         global.Disable(change_failed);

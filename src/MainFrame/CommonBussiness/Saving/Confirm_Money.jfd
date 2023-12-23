@@ -51,6 +51,21 @@ new FormModel {
 				"y": 120
 				"width": 265
 			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "JB_Confirm"
+				"text": new FormMessage( null, "Saving.Confirm_Money.JB_Confirm.text" )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "JB_Confirm", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 415
+				"y": 215
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "JB_Cancel"
+				"text": new FormMessage( null, "Saving.Confirm_Money.JB_Cancel.text" )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 415
+				"y": 255
+			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
 			"size": new java.awt.Dimension( 500, 300 )

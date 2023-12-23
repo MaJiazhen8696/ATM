@@ -24,6 +24,10 @@ public class global {
     public final static int Check  = 2;
     public final static int Credits = 3;
 
+    public final static int Income = 1;
+    public final static int Outcome = 2;
+    public final static int FromTransfer = 1;
+    public final static int FromCash = 2;
     public static String ID;
     public static Connection CNN;
     public static User USER;

@@ -20,7 +20,7 @@ public class Saving extends JPanel {
     Timer timer;
     MainFrame Father;
     int cnt=31;
-    int MoneyCNT=0;
+    int MoneyCNT=0,MoneyTotal=0;
     ResourceBundle bundle;
     Saving THIS;
     public Saving(MainFrame fa) {
@@ -59,7 +59,7 @@ public class Saving extends JPanel {
     }
 
     private void MouseClicked(MouseEvent e) {
-        // TODO add your code here
+
         MoneyCNT++;
     }
 

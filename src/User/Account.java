@@ -1,31 +1,58 @@
 package User;
 
+import global.global;
+
+import java.util.Date;
+import java.util.List;
+
 public class Account {
     public double Money;
-    public String Name,ID;
+    private String Name,ID;
+    private List<Record> record;
     public Account(){
-        this.Money=200;
-        this.Name="cfs";
-        this.ID="01210013";
 
-    }
-    public double getMoney(){
-        return Money;
-    }
-    public void get_PayRecord(){
+
 
 
     }
-    public boolean Payable(double cost){
-        return Money>cost;
-    }
+    public boolean ChangeMoney(int op,double num,String id,int Source,String... S){
+        if(op== global.Income){
+            this.Money+=num;
+            if(Source==global.FromCash){
+                record.add(new Record(op,num,id,Source));
+            }
+            if(Source==global.FromTransfer){
 
-    public boolean Cost(double cost){
-        if(Payable(cost)){
-            Money-=cost;
+            }
+
+            return true;
+
+        }
+        if(op==global.Outcome){
+            this.Money-=num;
+            SetRecord();
             return true;
         }
         return false;
     }
+    public double getMoney(){
+        return Money;
+    }
+    private void SetRecord(){
+
+    }
+    public void getRecord(Date st){
+
+
+    }
+    public void getRecord(Date st,Date ed){
+
+
+    }
+
+    public boolean Payable(double cost){
+        return Money>cost;
+    }
+
 
 }
