@@ -36,19 +36,16 @@ public class Login extends JPanel {
         Father=fa;
     }
     private boolean Sign_In(String User,String Password){
-        LOAD(User,null);
+        try {
+            java.sql.Connection cnn = DriverManager.getConnection(global.URL, User, Password);
+            LOAD(User,cnn);
+        }catch (SQLException e){
+            return false;
+        }
         return true;
-//        try {
-//            java.sql.Connection cnn = DriverManager.getConnection(global.URL, User, Password);
-//            LOAD(User,cnn);
-//        }catch (SQLException e){
-//            return false;
-//        }
-//        return true;
     }
 
     private void LOAD(String id, Connection cnn){
-
         global.USER=new User(id,cnn);
     }
     private void Modify_Password(ActionEvent e) {

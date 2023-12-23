@@ -4,7 +4,7 @@ public class Account {
     public double Money;
     public String Name,ID;
     public Account(){
-        this.Money=50;
+        this.Money=200;
         this.Name="cfs";
         this.ID="01210013";
 

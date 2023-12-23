@@ -34,7 +34,8 @@ public class BussinessSelect extends JPanel {
     }
 
     private void JB_MoneyQuery(ActionEvent e) {
-        // TODO add your code here
+        FATHER.toQuery(this);
+
     }
 
     private void JB_RecordQuery(ActionEvent e) {
@@ -42,19 +43,19 @@ public class BussinessSelect extends JPanel {
     }
 
     private void JB_Transfer(ActionEvent e) {
-        // TODO add your code here
+        FATHER.toTransfer_admin(this);
     }
 
     private void JB_Other(ActionEvent e) {
-        // TODO add your code here
+        FATHER.toOther_page1(this);
     }
 
     private void JB_Password(ActionEvent e) {
-        // TODO add your code here
+        FATHER.toConfirm_pwd(this);
     }
 
     private void JB_Back(ActionEvent e) {
-        // TODO add your code here
+        FATHER.toAccountSelect(this);
     }
 
 

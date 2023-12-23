@@ -26,6 +26,8 @@ public class Withdraw extends JPanel {
     private void Withdraw_100(ActionEvent e) {
         if(global.USER.CurrentAccount.Money>=100){
             global.USER.CurrentAccount.Money -=100;
+            System.out.println(global.USER.CurrentAccount.Money);
+            Father.toWithdraw_success(this);
         }
         else{
             Father.toWithdraw_failed(this);
@@ -35,6 +37,7 @@ public class Withdraw extends JPanel {
     private void Withdraw_200(ActionEvent e) {
         if(global.USER.CurrentAccount.Money>=200){
             global.USER.CurrentAccount.Money -=200;
+            Father.toWithdraw_success(this);
         }
         else{
             Father.toWithdraw_failed(this);
@@ -44,6 +47,7 @@ public class Withdraw extends JPanel {
     private void button3(ActionEvent e) {
         if(global.USER.CurrentAccount.Money>=500){
             global.USER.CurrentAccount.Money -=500;
+            Father.toWithdraw_success(this);
         }
         else{
             Father.toWithdraw_failed(this);
@@ -53,6 +57,7 @@ public class Withdraw extends JPanel {
     private void Withdraw_800(ActionEvent e) {
         if(global.USER.CurrentAccount.Money>=800){
             global.USER.CurrentAccount.Money -=800;
+            Father.toWithdraw_success(this);
         }
         else{
             Father.toWithdraw_failed(this);
@@ -62,6 +67,7 @@ public class Withdraw extends JPanel {
     private void Withdraw_1000(ActionEvent e) {
         if(global.USER.CurrentAccount.Money>=1000){
             global.USER.CurrentAccount.Money -=1000;
+            Father.toWithdraw_success(this);
         }
         else{
             Father.toWithdraw_failed(this);
@@ -71,10 +77,15 @@ public class Withdraw extends JPanel {
     private void Withdraw_1500(ActionEvent e) {
         if(global.USER.CurrentAccount.Money>=1500){
             global.USER.CurrentAccount.Money -=1500;
+            Father.toWithdraw_success(this);
         }
         else{
             Father.toWithdraw_failed(this);
         }
+    }
+
+    private void Withdraw_custom(ActionEvent e) {
+        Father.toWithdraw_custom(this);
     }
 
 
@@ -136,6 +147,7 @@ public class Withdraw extends JPanel {
 
         //---- button7 ----
         button7.setText("\u8f93\u5165\u91d1\u989d");
+        button7.addActionListener(e -> Withdraw_custom(e));
         add(button7);
         button7.setBounds(new Rectangle(new Point(490, 310), button7.getPreferredSize()));
 

@@ -1,9 +1,10 @@
 /*
- * Created by JFormDesigner on Fri Dec 22 15:02:50 CST 2023
+ * Created by JFormDesigner on Fri Dec 22 20:26:17 CST 2023
  */
 
-package MainFrame.CommonBussiness.Withdraw;
+package MainFrame.ChangePwd;
 
+import java.awt.event.*;
 import MainFrame.MainFrame;
 
 import java.awt.*;
@@ -12,30 +13,46 @@ import javax.swing.*;
 /**
  * @author m'm
  */
-public class Withdraw_failed extends JPanel {
+public class Change_success extends JPanel {
     MainFrame FATHER;
-    public Withdraw_failed(MainFrame fa) {
-        initComponents();
+    public Change_success(MainFrame fa) {
         FATHER=fa;
+        initComponents();
+    }
+
+    private void Continue(ActionEvent e) {
+        FATHER.toBussinessSelect(this);
+    }
+
+    private void TakeCard(ActionEvent e) {
+        FATHER.toTakeCard(this);
     }
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         label1 = new JLabel();
         button1 = new JButton();
+        button2 = new JButton();
 
         //======== this ========
         setLayout(null);
 
         //---- label1 ----
-        label1.setText("\u4f59\u989d\u4e0d\u8db3!!!!!");
+        label1.setText("\u4fee\u6539\u5bc6\u7801\u6210\u529f!!!!!");
         add(label1);
-        label1.setBounds(185, 110, 240, label1.getPreferredSize().height);
+        label1.setBounds(135, 105, 205, label1.getPreferredSize().height);
 
         //---- button1 ----
-        button1.setText("\u8fd4\u56de");
+        button1.setText("\u7ee7\u7eed");
+        button1.addActionListener(e -> Continue(e));
         add(button1);
-        button1.setBounds(new Rectangle(new Point(375, 260), button1.getPreferredSize()));
+        button1.setBounds(new Rectangle(new Point(385, 260), button1.getPreferredSize()));
+
+        //---- button2 ----
+        button2.setText("\u53d6\u5361");
+        button2.addActionListener(e -> TakeCard(e));
+        add(button2);
+        button2.setBounds(new Rectangle(new Point(385, 320), button2.getPreferredSize()));
 
         {
             // compute preferred size
@@ -57,5 +74,6 @@ public class Withdraw_failed extends JPanel {
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
     private JLabel label1;
     private JButton button1;
+    private JButton button2;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

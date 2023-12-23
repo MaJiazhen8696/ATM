@@ -1,5 +1,5 @@
 /*
- * Created by JFormDesigner on Fri Dec 22 15:02:50 CST 2023
+ * Created by JFormDesigner on Fri Dec 22 16:42:44 CST 2023
  */
 
 package MainFrame.CommonBussiness.Withdraw;
@@ -12,9 +12,9 @@ import javax.swing.*;
 /**
  * @author m'm
  */
-public class Withdraw_failed extends JPanel {
+public class Withdraw_success extends JPanel {
     MainFrame FATHER;
-    public Withdraw_failed(MainFrame fa) {
+    public Withdraw_success(MainFrame fa) {
         initComponents();
         FATHER=fa;
     }
@@ -22,20 +22,14 @@ public class Withdraw_failed extends JPanel {
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         label1 = new JLabel();
-        button1 = new JButton();
 
         //======== this ========
         setLayout(null);
 
         //---- label1 ----
-        label1.setText("\u4f59\u989d\u4e0d\u8db3!!!!!");
+        label1.setText("\u53d6\u6b3e\u6210\u529f!!!!!");
         add(label1);
-        label1.setBounds(185, 110, 240, label1.getPreferredSize().height);
-
-        //---- button1 ----
-        button1.setText("\u8fd4\u56de");
-        add(button1);
-        button1.setBounds(new Rectangle(new Point(375, 260), button1.getPreferredSize()));
+        label1.setBounds(165, 75, 170, label1.getPreferredSize().height);
 
         {
             // compute preferred size
@@ -56,6 +50,5 @@ public class Withdraw_failed extends JPanel {
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
     private JLabel label1;
-    private JButton button1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

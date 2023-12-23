@@ -1,10 +1,12 @@
 /*
- * Created by JFormDesigner on Fri Dec 22 15:02:50 CST 2023
+ * Created by JFormDesigner on Fri Dec 22 19:27:34 CST 2023
  */
 
-package MainFrame.CommonBussiness.Withdraw;
+package MainFrame.CommonBussiness.Transfer;
 
+import java.awt.event.*;
 import MainFrame.MainFrame;
+import global.global;
 
 import java.awt.*;
 import javax.swing.*;
@@ -12,30 +14,46 @@ import javax.swing.*;
 /**
  * @author m'm
  */
-public class Withdraw_failed extends JPanel {
+public class Transfer_amount extends JPanel {
     MainFrame FATHER;
-    public Withdraw_failed(MainFrame fa) {
-        initComponents();
+    public Transfer_amount(MainFrame fa) {
         FATHER=fa;
+        initComponents();
+    }
+
+    private void BT_Confirm(ActionEvent e) {
+        double amount=0;
+        amount=Double.parseDouble(textField1.getText());
+        if(global.USER.CurrentAccount.Money>=amount){
+            global.USER.CurrentAccount.Money -= amount;
+            FATHER.toTransfer_success(this);
+        }
+        else{
+            FATHER.toTransfer_failed(this);
+        }
     }
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         label1 = new JLabel();
+        textField1 = new JTextField();
         button1 = new JButton();
 
         //======== this ========
         setLayout(null);
 
         //---- label1 ----
-        label1.setText("\u4f59\u989d\u4e0d\u8db3!!!!!");
+        label1.setText("\u8bf7\u8f93\u5165\u8f6c\u8d26\u91d1\u989d");
         add(label1);
-        label1.setBounds(185, 110, 240, label1.getPreferredSize().height);
+        label1.setBounds(new Rectangle(new Point(150, 70), label1.getPreferredSize()));
+        add(textField1);
+        textField1.setBounds(155, 120, 165, textField1.getPreferredSize().height);
 
         //---- button1 ----
-        button1.setText("\u8fd4\u56de");
+        button1.setText("\u786e\u8ba4");
+        button1.addActionListener(e -> BT_Confirm(e));
         add(button1);
-        button1.setBounds(new Rectangle(new Point(375, 260), button1.getPreferredSize()));
+        button1.setBounds(new Rectangle(new Point(395, 255), button1.getPreferredSize()));
 
         {
             // compute preferred size
@@ -56,6 +74,7 @@ public class Withdraw_failed extends JPanel {
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
     private JLabel label1;
+    private JTextField textField1;
     private JButton button1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }
