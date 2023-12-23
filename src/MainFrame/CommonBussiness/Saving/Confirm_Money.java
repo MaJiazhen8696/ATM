@@ -30,7 +30,7 @@ public class Confirm_Money extends JPanel {
     }
 
     private void JB_Confirm(ActionEvent e) {
-        global.USER.CurrentAccount.ChangeMoney(global.Income,global.USER.getID(),null,MoneyTotal);
+        global.USER.CurrentAccount.ChangeMoney(global.Income,global.USER.CurrentAccount.getAccountID(),null,MoneyTotal);
         MoneyCount=0;MoneyTotal=0;
         Timer counter = new Timer(1000, new ActionListener() {
             @Override

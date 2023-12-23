@@ -39,7 +39,7 @@ public class BussinessSelect extends JPanel {
     }
 
     private void JB_RecordQuery(ActionEvent e) {
-        // TODO add your code here
+        FATHER.tolog(this);
     }
 
     private void JB_Transfer(ActionEvent e) {

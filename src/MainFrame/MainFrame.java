@@ -10,6 +10,7 @@ import MainFrame.ChangePwd.Change_failed;
 import MainFrame.ChangePwd.Change_success;
 import MainFrame.ChangePwd.Confirm_pwd;
 import MainFrame.ChangePwd.ReConfirm_pwd;
+import MainFrame.CommonBussiness.LOG.LOG;
 import MainFrame.CommonBussiness.MoneyQuery.MoneyQuery;
 import MainFrame.CommonBussiness.Saving.Confirm_Money;
 import MainFrame.CommonBussiness.Saving.Saving;
@@ -31,6 +32,8 @@ import MainFrame.takeCard.TakeCard;
 import global.global;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ResourceBundle;
 import javax.swing.*;
 
@@ -64,6 +67,7 @@ public class MainFrame extends JFrame {
     Withdraw withdraw = new Withdraw(this);
     Confirm_Money confirmMoney=new Confirm_Money(this);
     AccountSelect accountSelect=new AccountSelect(this);
+    LOG log=new LOG(this);
     public MainFrame() {
         bundle = global.BUNDLE;
         initComponents();
@@ -89,6 +93,7 @@ public class MainFrame extends JFrame {
         add(change_failed);
         add(takeCard);
         add(saving);add(accountSelect);
+        add(log);
 
         add(saving);add(accountSelect);add(confirmMoney);
         global.Disable(bussinessSelect);
@@ -116,7 +121,7 @@ public class MainFrame extends JFrame {
         global.Disable(change_failed);
         global.Disable(change_success);
         global.Disable(takeCard);
-
+        global.Disable(log);
         global.Enable(wel);
 
 
@@ -133,6 +138,23 @@ public class MainFrame extends JFrame {
     public void toWithdraw_custom(JPanel p){
         global.Disable(p);
         global.Enable(withdraw_custom);
+
+
+//        Timer counter = new Timer(1000, new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//
+//                global.Enable(xxxx);
+//                ((Timer)e.getSource()).stop();
+//
+//            }
+//        });
+//        counter.start();
+
+
+
+
+
     }
     public void toWithdraw(JPanel p){
         global.Disable(p);
@@ -141,6 +163,11 @@ public class MainFrame extends JFrame {
     public void toWithdraw_failed(JPanel p){
         global.Disable(p);
         global.Enable(withdraw_failed);
+    }
+    public void tolog(JPanel p){
+        global.Disable(p);
+        global.Enable(log);
+        log.Show();
     }
     public void toWithdraw_success(JPanel p){
         global.Disable(p);
