@@ -1,24 +1,35 @@
 /*
- * Created by JFormDesigner on Wed Dec 20 17:31:16 CST 2023
+ * Created by JFormDesigner on Fri Dec 22 15:02:50 CST 2023
  */
 
-package MainFrame.CommonBussiness;
+package MainFrame.CommonBussiness.Withdraw;
+
+import MainFrame.MainFrame;
 
 import java.awt.*;
 import javax.swing.*;
 
 /**
- * @author MJZ
+ * @author m'm
  */
-public class Withdraw extends JPanel {
-    public Withdraw() {
+public class Withdraw_failed extends JPanel {
+    MainFrame FATHER;
+    public Withdraw_failed(MainFrame fa) {
         initComponents();
+        FATHER=fa;
     }
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
+        label1 = new JLabel();
+
         //======== this ========
         setLayout(null);
+
+        //---- label1 ----
+        label1.setText("\u4f59\u989d\u4e0d\u8db3!!!!!");
+        add(label1);
+        label1.setBounds(new Rectangle(new Point(185, 110), label1.getPreferredSize()));
 
         {
             // compute preferred size
@@ -38,5 +49,6 @@ public class Withdraw extends JPanel {
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
+    private JLabel label1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

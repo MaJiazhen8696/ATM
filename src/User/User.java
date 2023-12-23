@@ -30,6 +30,17 @@ public class User {
         Savings_Account=CurrentAccount;
         Check_Account=CurrentAccount;
         Credits_Account=CurrentAccount;
+        CurrentAccount= new Account();
+        try {
+            Statement st = cnn.createStatement();
+            String sql = "SELECT * FROM users where ID =" +id;
+            ResultSet result = st.executeQuery(sql);
+            if (result.next()) {
+                //
+            }
+        }catch(Exception e){
+            ;
+        }
     }
     public void SwitchAccount(int op){
         switch (op){
