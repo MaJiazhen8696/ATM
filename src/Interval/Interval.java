@@ -4,18 +4,41 @@
 
 package Interval;
 
+import MainFrame.MainFrame;
+
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.*;
 import javax.swing.*;
+import javax.swing.Timer;
 
 /**
  * @author MJZ
  */
 public class Interval extends JPanel {
-    public Interval() {
+    MainFrame Father;
+    JPanel THIS;
+    public Interval( MainFrame fa) {
+        Father=fa;
+        THIS=this;
         initComponents();
-    }
 
+    }
+    public void ST(){
+        //播片
+        Timer counter = new Timer(1000, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+
+                Father.toAccountSelect(THIS);
+                ((Timer)e.getSource()).stop();
+
+            }
+        });
+        counter.start();
+    }
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         ResourceBundle bundle = ResourceBundle.getBundle("lang.Saving");

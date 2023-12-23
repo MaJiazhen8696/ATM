@@ -45,7 +45,7 @@ public class Account {
             }
             String sql="update useraccounts " +
                     "set "+ flag+"_money ="+Money+" " +
-                    "where ID="+qt+op1+qt+";";
+                    "where ID="+qt+ID.substring(2)+qt+";";
 
             System.out.println(sql);
             try{
@@ -67,7 +67,7 @@ public class Account {
             }
             String sql="update useraccounts " +
                     "set "+ flag+"_money ="+Money+" " +
-                    "where ID="+qt+op1+qt+";";
+                    "where ID="+qt+ ID.substring(2)+qt+";";
 
             System.out.println(sql);
             try{

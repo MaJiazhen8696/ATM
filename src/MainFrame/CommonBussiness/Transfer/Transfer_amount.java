@@ -30,8 +30,8 @@ public class Transfer_amount extends JPanel {
             User other= new User(Transfer_admin.admin);
             other.SwitchAccount(global.Savings);
             System.out.println(other.CurrentAccount.ID);
-            other.CurrentAccount.ChangeMoney(global.Income,other.getID(),global.USER.CurrentAccount.getAccountID(),amount);
-            global.USER.CurrentAccount.ChangeMoney(global.Outcome,global.USER.getID(),Transfer_admin.admin,amount);
+            other.CurrentAccount.ChangeMoney(global.Income,other.CurrentAccount.getAccountID(),global.USER.CurrentAccount.getAccountID(),amount);
+            global.USER.CurrentAccount.ChangeMoney(global.Outcome,global.USER.CurrentAccount.getAccountID(),other.CurrentAccount.getAccountID(),amount);
             FATHER.toTransfer_success(this);
         }
         else{

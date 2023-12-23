@@ -4,6 +4,7 @@
 
 package MainFrame;
 
+import Interval.Interval;
 import MainFrame.AccountSelect.AccountSelect;
 import MainFrame.BussinessSelect.BussinessSelect;
 import MainFrame.ChangePwd.Change_failed;
@@ -68,6 +69,7 @@ public class MainFrame extends JFrame {
     Confirm_Money confirmMoney=new Confirm_Money(this);
     AccountSelect accountSelect=new AccountSelect(this);
     LOG log=new LOG(this);
+    Interval interval=new Interval(this);
     public MainFrame() {
         bundle = global.BUNDLE;
         initComponents();
@@ -93,7 +95,7 @@ public class MainFrame extends JFrame {
         add(change_failed);
         add(takeCard);
         add(saving);add(accountSelect);
-        add(log);
+        add(log);add(interval);
 
         add(saving);add(accountSelect);add(confirmMoney);
         global.Disable(bussinessSelect);
@@ -122,6 +124,9 @@ public class MainFrame extends JFrame {
         global.Disable(change_success);
         global.Disable(takeCard);
         global.Disable(log);
+        global.Disable(interval);
+
+
         global.Enable(wel);
 
 
@@ -129,6 +134,12 @@ public class MainFrame extends JFrame {
     public void toLogin(JPanel p){
         global.Disable(p);
         global.Enable(login);
+    }
+    public void toInterval(JPanel p){
+        global.Disable(p);
+        global.Enable(interval);
+        interval.ST();
+
     }
     public void toSaving(JPanel p){
         global.Disable(p);

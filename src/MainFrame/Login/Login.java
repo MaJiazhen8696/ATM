@@ -30,7 +30,6 @@ public class Login extends JPanel {
         initComponents();
 
         JL_Failed.setVisible(false);
-        JL_Success.setVisible(false);
         Father=fa;
     }
     private boolean Sign_In(String User,String Password){
@@ -67,22 +66,12 @@ public class Login extends JPanel {
             Error_Counter=0;
             JL_Failed.setVisible(false);
             JL_Hint.setVisible(false);
+            Father.toInterval(this);
 
-            JL_Success.setVisible(true);
 
             //愚蠢，不会提示就不要提示
 
-            Timer counter = new Timer(1000, new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
 
-                    JL_Success.setVisible(false);
-                    Father.toAccountSelect(THIS);
-                    ((Timer)e.getSource()).stop();
-
-                }
-            });
-            counter.start();
 
 
         }
@@ -107,7 +96,6 @@ public class Login extends JPanel {
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         ResourceBundle bundle = ResourceBundle.getBundle("lang.Login");
-        JL_Success = new JLabel();
         JL_Hint = new JLabel();
         BT_Confirm = new JButton();
         BT_Modify = new JButton();
@@ -118,12 +106,6 @@ public class Login extends JPanel {
 
         //======== this ========
         setLayout(null);
-
-        //---- JL_Success ----
-        JL_Success.setHorizontalAlignment(SwingConstants.CENTER);
-        JL_Success.setText(bundle.getString("Login.JL_Success.text"));
-        add(JL_Success);
-        JL_Success.setBounds(120, 395, 235, 155);
 
         //---- JL_Hint ----
         JL_Hint.setText(bundle.getString("Login.JL_Hint.text"));
@@ -174,7 +156,6 @@ public class Login extends JPanel {
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
-    private JLabel JL_Success;
     private JLabel JL_Hint;
     private JButton BT_Confirm;
     private JButton BT_Modify;
