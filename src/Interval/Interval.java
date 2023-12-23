@@ -32,7 +32,7 @@ public class Interval extends JPanel {
     }
     public void ST(){
         //播片
-        Timer counter = new Timer(10000, new ActionListener() {
+        Timer counter = new Timer(1000, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
