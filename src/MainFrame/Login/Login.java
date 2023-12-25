@@ -95,7 +95,7 @@ public class Login extends JPanel {
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
-        ResourceBundle bundle = ResourceBundle.getBundle("lang.Login");
+        ResourceBundle bundle = ResourceBundle.getBundle("lang");
         JL_Hint = new JLabel();
         BT_Confirm = new JButton();
         BT_Modify = new JButton();

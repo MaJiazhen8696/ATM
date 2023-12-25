@@ -1,9 +1,8 @@
-JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.8" encoding: "UTF-8"
+JFDML JFormDesigner: "8.2.0.0.331" Java: "17.0.9" encoding: "UTF-8"
 
 new FormModel {
 	"i18n.autoExternalize": true
-	"i18n.bundlePackage": "lang"
-	"i18n.bundleName": "Welcome"
+	"i18n.bundleName": "lang"
 	"i18n.keyPrefix": "Welcome"
 	contentType: "form/swing"
 	root: new FormRoot {

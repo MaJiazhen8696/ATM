@@ -5,12 +5,14 @@
 package MainFrame.CommonBussiness.PrintReceipt;
 
 import java.awt.event.*;
+import java.util.*;
 import MainFrame.MainFrame;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
+import javax.swing.Timer;
 
 /**
  * @author m'm
@@ -49,6 +51,7 @@ public class PrintReceipt extends JPanel {
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
+        ResourceBundle bundle = ResourceBundle.getBundle("lang");
         L_wait = new JLabel();
         L_success = new JLabel();
         JB_Back = new JButton();
@@ -68,41 +71,41 @@ public class PrintReceipt extends JPanel {
         setLayout(null);
 
         //---- L_wait ----
-        L_wait.setText("\u6b63\u5728\u6253\u5370\u51ed\u6761\uff0c\u8bf7\u7a0d\u7b49...");
+        L_wait.setText(bundle.getString("PrintReceipt.L_wait.text"));
         L_wait.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 30));
         L_wait.setForeground(Color.white);
         add(L_wait);
         L_wait.setBounds(130, 190, 400, L_wait.getPreferredSize().height);
 
         //---- L_success ----
-        L_success.setText("\u6253\u5370\u6210\u529f!!!!!");
+        L_success.setText(bundle.getString("PrintReceipt.L_success.text"));
         L_success.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 30));
         L_success.setForeground(Color.white);
         add(L_success);
         L_success.setBounds(200, 185, 220, L_success.getPreferredSize().height);
 
         //---- JB_Back ----
-        JB_Back.setText("\u8fd4\u56de");
+        JB_Back.setText(bundle.getString("PrintReceipt.JB_Back.text"));
         JB_Back.addActionListener(e -> JB_Back(e));
         add(JB_Back);
         JB_Back.setBounds(new Rectangle(new Point(540, 330), JB_Back.getPreferredSize()));
 
         //---- JL_Timer ----
-        JL_Timer.setText("text");
+        JL_Timer.setText(bundle.getString("PrintReceipt.JL_Timer.text"));
         JL_Timer.setForeground(Color.white);
         JL_Timer.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
         add(JL_Timer);
         JL_Timer.setBounds(470, 0, 170, 25);
 
         //---- JL_Name ----
-        JL_Name.setText("text");
+        JL_Name.setText(bundle.getString("PrintReceipt.JL_Name.text"));
         JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
         JL_Name.setForeground(Color.white);
         add(JL_Name);
         JL_Name.setBounds(470, 40, 170, 25);
 
         //---- JL_Code ----
-        JL_Code.setText("\u673a\u5668\u53f7\uff1aCUMT2023");
+        JL_Code.setText(bundle.getString("PrintReceipt.JL_Code.text"));
         JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
         JL_Code.setForeground(Color.white);
         add(JL_Code);

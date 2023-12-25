@@ -5,6 +5,7 @@
 package MainFrame.CommonBussiness.Transfer;
 
 import java.awt.event.*;
+import java.util.*;
 import MainFrame.MainFrame;
 
 import java.awt.*;
@@ -28,6 +29,7 @@ public class Transfer_admin extends JPanel {
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
+        ResourceBundle bundle = ResourceBundle.getBundle("lang");
         label1 = new JLabel();
         label2 = new JLabel();
         textField1 = new JTextField();
@@ -44,7 +46,7 @@ public class Transfer_admin extends JPanel {
         label1.setBounds(new Rectangle(new Point(150, 65), label1.getPreferredSize()));
 
         //---- label2 ----
-        label2.setText("\u8bf7\u8f93\u5165\u8f6c\u8d26\u8d26\u53f7");
+        label2.setText(bundle.getString("Transfer_admin.label2.text"));
         label2.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 30));
         label2.setForeground(Color.white);
         add(label2);
@@ -53,27 +55,27 @@ public class Transfer_admin extends JPanel {
         textField1.setBounds(190, 210, 220, textField1.getPreferredSize().height);
 
         //---- button1 ----
-        button1.setText("\u786e\u8ba4");
+        button1.setText(bundle.getString("Transfer_admin.button1.text"));
         button1.addActionListener(e -> BT_Confirm(e));
         add(button1);
         button1.setBounds(new Rectangle(new Point(540, 330), button1.getPreferredSize()));
 
         //---- JL_Timer ----
-        JL_Timer.setText("text");
+        JL_Timer.setText(bundle.getString("Transfer_admin.JL_Timer.text"));
         JL_Timer.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
         JL_Timer.setForeground(Color.white);
         add(JL_Timer);
         JL_Timer.setBounds(470, 0, 170, 25);
 
         //---- JL_Name ----
-        JL_Name.setText("text");
+        JL_Name.setText(bundle.getString("Transfer_admin.JL_Name.text"));
         JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
         JL_Name.setForeground(Color.white);
         add(JL_Name);
         JL_Name.setBounds(470, 40, 170, 25);
 
         //---- JL_Code ----
-        JL_Code.setText("\u673a\u5668\u53f7\uff1aCUMT2023");
+        JL_Code.setText(bundle.getString("Transfer_admin.JL_Code.text"));
         JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
         JL_Code.setForeground(Color.white);
         add(JL_Code);

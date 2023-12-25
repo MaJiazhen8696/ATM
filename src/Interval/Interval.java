@@ -46,7 +46,7 @@ public class Interval extends JPanel {
     }
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
-        ResourceBundle bundle = ResourceBundle.getBundle("lang.Saving");
+        ResourceBundle bundle = ResourceBundle.getBundle("lang");
         JL_waiting = new JLabel();
         JL_Timer = new JLabel();
         JL_Name = new JLabel();

@@ -44,7 +44,7 @@ public class RetainCard extends JPanel {
     }
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
-        ResourceBundle bundle = ResourceBundle.getBundle("lang.RetainCard");
+        ResourceBundle bundle = ResourceBundle.getBundle("lang");
         JL_Retain = new JLabel();
         JL_Hint = new JLabel();
         JL_Timer = new JLabel();

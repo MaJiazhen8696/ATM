@@ -54,7 +54,7 @@ public class Confirm_Money extends JPanel {
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
-        ResourceBundle bundle = ResourceBundle.getBundle("lang.Saving");
+        ResourceBundle bundle = ResourceBundle.getBundle("lang");
         label1 = new JLabel();
         JP_Table = new JPanel();
         JL_MoneyValue = new JLabel();

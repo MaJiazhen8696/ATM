@@ -15,6 +15,7 @@ import global.global;
 import java.awt.*;
 import java.util.List;
 import javax.swing.*;
+import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -32,13 +33,28 @@ public class LOG extends JPanel {
     };
     public LOG(MainFrame fa) {
         Father=fa;
-
+        initComponents();
     }
     public void Show(){
         char qt='\'';
         String sql="Select * from record where op1 = '"+global.USER.CurrentAccount.getAccountID()+"'  "+
                 "order by currentDate DESC";
         System.out.println(sql);
+        DefaultTableModel dft=(DefaultTableModel) JT.getModel();
+        DefaultTableCellRenderer dftc=new DefaultTableCellRenderer();
+        dftc.setBorder(BorderFactory.createLineBorder(new Color(0x232a85)));
+        dftc.setOpaque(false);
+        dftc.setForeground(Color.white);
+        JT.setOpaque(false);
+        JT.setBorder(BorderFactory.createLineBorder(new Color(0x3e45a8)));
+        SP.setOpaque(false);
+        SP.getViewport().setOpaque(false);
+        JT.setDefaultRenderer(Object.class,dftc);
+        JT.getTableHeader().setBackground(new Color(0x3e45a8));
+
+        JT.getTableHeader().setForeground(Color.white);
+
+
         try{
             ResultSet res= global.ST.executeQuery(sql);
 
@@ -46,7 +62,9 @@ public class LOG extends JPanel {
                 if(res.next()){
                     //日期 金额 余
                     val[i][0]=String.valueOf(res.getDate("currentDate"));
-                    val[i][1]= String.valueOf(res.getDouble("amount"));
+                    String opt="";
+                    if(res.getInt("op")==global.Outcome) opt="-";
+                    val[i][1]=opt+ String.valueOf(res.getDouble("amount"));
                     val[i][2]= String.valueOf(res.getDouble("balance"));
                 }
                 else break;
@@ -54,7 +72,8 @@ public class LOG extends JPanel {
         }catch (SQLException e){
             System.out.println(e.getMessage());
         }
-        initComponents();
+        dft.setDataVector(val,Names);
+
 
 
     }
@@ -66,9 +85,13 @@ public class LOG extends JPanel {
     private void JB_Card(ActionEvent e) {
 
     }
+
+    private void createUIComponents() {
+        // TODO: add custom component creation code here
+    }
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
-        ResourceBundle bundle = ResourceBundle.getBundle("lang.Saving");
+        ResourceBundle bundle = ResourceBundle.getBundle("lang");
         SP = new JScrollPane();
         JT = new JTable();
         JB_Card = new JButton();
@@ -80,6 +103,7 @@ public class LOG extends JPanel {
         //======== this ========
         setOpaque(false);
         setPreferredSize(new Dimension(638, 422));
+        setMaximumSize(new Dimension(638, 422));
         setLayout(null);
 
         //======== SP ========
@@ -89,11 +113,12 @@ public class LOG extends JPanel {
             //---- JT ----
             JT.setForeground(Color.black);
             JT.setBackground(Color.white);
+            JT.setAutoscrolls(false);
             JT.setOpaque(false);
             SP.setViewportView(JT);
         }
         add(SP);
-        SP.setBounds(170, 125, 295, 145);
+        SP.setBounds(185, 140, 295, 132);
 
         //---- JB_Card ----
         JB_Card.setText(bundle.getString("LOG.JB_Card.text"));

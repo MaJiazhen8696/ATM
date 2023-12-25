@@ -39,7 +39,7 @@ public class Welcome extends JPanel {
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
-        ResourceBundle bundle = ResourceBundle.getBundle("lang.Welcome");
+        ResourceBundle bundle = ResourceBundle.getBundle("lang");
         button1 = new JButton();
         button2 = new JButton();
         label1 = new JLabel();

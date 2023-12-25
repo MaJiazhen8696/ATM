@@ -95,6 +95,7 @@ public class Withdraw extends JPanel {
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
+        ResourceBundle bundle = ResourceBundle.getBundle("lang");
         label1 = new JLabel();
         button1 = new JButton();
         button2 = new JButton();
@@ -114,76 +115,76 @@ public class Withdraw extends JPanel {
         setLayout(null);
 
         //---- label1 ----
-        label1.setText("\u8bf7\u8f93\u5165\u53d6\u6b3e\u91d1\u989d");
+        label1.setText(bundle.getString("Withdraw.label1.text"));
         label1.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 30));
         label1.setForeground(Color.white);
         add(label1);
         label1.setBounds(210, 15, 230, label1.getPreferredSize().height);
 
         //---- button1 ----
-        button1.setText("100");
+        button1.setText(bundle.getString("Withdraw.button1.text"));
         button1.addActionListener(e -> Withdraw_100(e));
         add(button1);
         button1.setBounds(new Rectangle(new Point(25, 95), button1.getPreferredSize()));
 
         //---- button2 ----
-        button2.setText("200");
+        button2.setText(bundle.getString("Withdraw.button2.text"));
         button2.addActionListener(e -> Withdraw_200(e));
         add(button2);
         button2.setBounds(new Rectangle(new Point(25, 150), button2.getPreferredSize()));
 
         //---- button3 ----
-        button3.setText("500");
+        button3.setText(bundle.getString("Withdraw.button3.text"));
         button3.addActionListener(e -> button3(e));
         add(button3);
         button3.setBounds(new Rectangle(new Point(25, 205), button3.getPreferredSize()));
 
         //---- button4 ----
-        button4.setText("800");
+        button4.setText(bundle.getString("Withdraw.button4.text"));
         button4.addActionListener(e -> Withdraw_800(e));
         add(button4);
         button4.setBounds(new Rectangle(new Point(25, 260), button4.getPreferredSize()));
 
         //---- button5 ----
-        button5.setText("1000");
+        button5.setText(bundle.getString("Withdraw.button5.text"));
         button5.addActionListener(e -> Withdraw_1000(e));
         add(button5);
         button5.setBounds(new Rectangle(new Point(505, 150), button5.getPreferredSize()));
 
         //---- button6 ----
-        button6.setText("1500");
+        button6.setText(bundle.getString("Withdraw.button6.text"));
         button6.addActionListener(e -> Withdraw_1500(e));
         add(button6);
         button6.setBounds(new Rectangle(new Point(505, 205), button6.getPreferredSize()));
 
         //---- button7 ----
-        button7.setText("\u8f93\u5165\u91d1\u989d");
+        button7.setText(bundle.getString("Withdraw.button7.text"));
         button7.addActionListener(e -> Withdraw_custom(e));
         add(button7);
         button7.setBounds(new Rectangle(new Point(505, 260), button7.getPreferredSize()));
 
         //---- button8 ----
-        button8.setText("\u53d6\u5361");
+        button8.setText(bundle.getString("Withdraw.button8.text"));
         button8.addActionListener(e -> JB_Back(e));
         add(button8);
         button8.setBounds(new Rectangle(new Point(495, 440), button8.getPreferredSize()));
 
         //---- JL_Timer ----
-        JL_Timer.setText("text");
+        JL_Timer.setText(bundle.getString("Withdraw.JL_Timer.text"));
         JL_Timer.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
         JL_Timer.setForeground(Color.white);
         add(JL_Timer);
         JL_Timer.setBounds(470, 0, 170, 25);
 
         //---- JL_Name ----
-        JL_Name.setText("text");
+        JL_Name.setText(bundle.getString("Withdraw.JL_Name.text"));
         JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
         JL_Name.setForeground(Color.white);
         add(JL_Name);
         JL_Name.setBounds(470, 40, 170, 25);
 
         //---- JL_Code ----
-        JL_Code.setText("\u673a\u5668\u53f7\uff1aCUMT2023");
+        JL_Code.setText(bundle.getString("Withdraw.JL_Code.text"));
         JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
         JL_Code.setForeground(Color.white);
         add(JL_Code);

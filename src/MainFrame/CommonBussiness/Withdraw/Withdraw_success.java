@@ -5,6 +5,7 @@
 package MainFrame.CommonBussiness.Withdraw;
 
 import java.awt.event.*;
+import java.util.*;
 import MainFrame.MainFrame;
 
 import java.awt.*;
@@ -30,6 +31,7 @@ public class Withdraw_success extends JPanel {
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
+        ResourceBundle bundle = ResourceBundle.getBundle("lang");
         label1 = new JLabel();
         JB_Back = new JButton();
         JB_Print = new JButton();
@@ -43,40 +45,40 @@ public class Withdraw_success extends JPanel {
         setLayout(null);
 
         //---- label1 ----
-        label1.setText("\u53d6\u6b3e\u6210\u529f!!!!!");
+        label1.setText(bundle.getString("Withdraw_success.label1.text"));
         label1.setForeground(Color.white);
         label1.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 36));
         add(label1);
         label1.setBounds(180, 185, 265, label1.getPreferredSize().height);
 
         //---- JB_Back ----
-        JB_Back.setText("\u8fd4\u56de");
+        JB_Back.setText(bundle.getString("Withdraw_success.JB_Back.text"));
         JB_Back.addActionListener(e -> JB_Back(e));
         add(JB_Back);
         JB_Back.setBounds(540, 330, 85, JB_Back.getPreferredSize().height);
 
         //---- JB_Print ----
-        JB_Print.setText("\u6253\u5370\u51ed\u6761");
+        JB_Print.setText(bundle.getString("Withdraw_success.JB_Print.text"));
         JB_Print.addActionListener(e -> JB_Print(e));
         add(JB_Print);
         JB_Print.setBounds(540, 290, 85, JB_Print.getPreferredSize().height);
 
         //---- JL_Timer ----
-        JL_Timer.setText("text");
+        JL_Timer.setText(bundle.getString("Withdraw_success.JL_Timer.text"));
         JL_Timer.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
         JL_Timer.setForeground(Color.white);
         add(JL_Timer);
         JL_Timer.setBounds(470, 0, 170, 25);
 
         //---- JL_Name ----
-        JL_Name.setText("text");
+        JL_Name.setText(bundle.getString("Withdraw_success.JL_Name.text"));
         JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
         JL_Name.setForeground(Color.white);
         add(JL_Name);
         JL_Name.setBounds(470, 40, 170, 25);
 
         //---- JL_Code ----
-        JL_Code.setText("\u673a\u5668\u53f7\uff1aCUMT2023");
+        JL_Code.setText(bundle.getString("Withdraw_success.JL_Code.text"));
         JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
         JL_Code.setForeground(Color.white);
         add(JL_Code);

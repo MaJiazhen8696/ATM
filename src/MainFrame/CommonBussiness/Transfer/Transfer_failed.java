@@ -4,6 +4,7 @@
 
 package MainFrame.CommonBussiness.Transfer;
 
+import java.util.*;
 import MainFrame.MainFrame;
 
 import java.awt.*;
@@ -21,6 +22,7 @@ public class Transfer_failed extends JPanel {
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
+        ResourceBundle bundle = ResourceBundle.getBundle("lang");
         label1 = new JLabel();
         JL_Timer = new JLabel();
         JL_Name = new JLabel();
@@ -32,28 +34,28 @@ public class Transfer_failed extends JPanel {
         setLayout(null);
 
         //---- label1 ----
-        label1.setText("\u8f6c\u8d26\u5931\u8d25!!!!!");
+        label1.setText(bundle.getString("Transfer_failed.label1.text"));
         label1.setForeground(Color.white);
         label1.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 36));
         add(label1);
         label1.setBounds(190, 185, 265, label1.getPreferredSize().height);
 
         //---- JL_Timer ----
-        JL_Timer.setText("text");
+        JL_Timer.setText(bundle.getString("Transfer_failed.JL_Timer.text"));
         JL_Timer.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
         JL_Timer.setForeground(Color.white);
         add(JL_Timer);
         JL_Timer.setBounds(470, 0, 170, 25);
 
         //---- JL_Name ----
-        JL_Name.setText("text");
+        JL_Name.setText(bundle.getString("Transfer_failed.JL_Name.text"));
         JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
         JL_Name.setForeground(Color.white);
         add(JL_Name);
         JL_Name.setBounds(470, 40, 170, 25);
 
         //---- JL_Code ----
-        JL_Code.setText("\u673a\u5668\u53f7\uff1aCUMT2023");
+        JL_Code.setText(bundle.getString("Transfer_failed.JL_Code.text"));
         JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
         JL_Code.setForeground(Color.white);
         add(JL_Code);

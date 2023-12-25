@@ -1,6 +1,9 @@
-JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.8" encoding: "UTF-8"
+JFDML JFormDesigner: "8.2.0.0.331" Java: "17.0.9" encoding: "UTF-8"
 
 new FormModel {
+	"i18n.bundleName": "lang"
+	"i18n.autoExternalize": true
+	"i18n.keyPrefix": "Other_page3"
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
@@ -9,21 +12,21 @@ new FormModel {
 			"preferredSize": new java.awt.Dimension( 638, 422 )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button1"
-				"text": "代理业务13"
+				"text": new FormMessage( null, "Other_page3.button1.text" )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 25
 				"y": 150
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button2"
-				"text": "代理业务14"
+				"text": new FormMessage( null, "Other_page3.button2.text" )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 25
 				"y": 205
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button3"
-				"text": "上一页"
+				"text": new FormMessage( null, "Other_page3.button3.text" )
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "getPriorPage", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 15
@@ -31,7 +34,7 @@ new FormModel {
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button4"
-				"text": "返回"
+				"text": new FormMessage( null, "Other_page3.button4.text" )
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "BT_Back", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 540
@@ -39,7 +42,7 @@ new FormModel {
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "JL_Timer"
-				"text": "text"
+				"text": new FormMessage( null, "Other_page3.JL_Timer.text" )
 				"font": new java.awt.Font( "宋体", 1, 16 )
 				"foreground": new java.awt.Color( 255, 255, 255, 255 )
 				auxiliary() {
@@ -52,7 +55,7 @@ new FormModel {
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "JL_Name"
-				"text": "text"
+				"text": new FormMessage( null, "Other_page3.JL_Name.text" )
 				"font": new java.awt.Font( "宋体", 1, 16 )
 				"foreground": new java.awt.Color( 255, 255, 255, 255 )
 				auxiliary() {
@@ -66,7 +69,7 @@ new FormModel {
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "JL_Code"
-				"text": "机器号：CUMT2023"
+				"text": new FormMessage( null, "Other_page3.JL_Code.text" )
 				"font": new java.awt.Font( "宋体", 1, 21 )
 				"foreground": new java.awt.Color( 255, 255, 255, 255 )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {

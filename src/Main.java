@@ -16,6 +16,7 @@ public class Main {
 
     static {
         new global();
+        Locale.setDefault(new Locale("en"));
         try{
 
             Class.forName("com.mysql.cj.jdbc.Driver");

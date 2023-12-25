@@ -4,6 +4,7 @@
 
 package MainFrame.takeCard;
 
+import java.util.*;
 import MainFrame.MainFrame;
 
 import java.awt.*;
@@ -21,6 +22,7 @@ public class TakeCard extends JPanel {
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
+        ResourceBundle bundle = ResourceBundle.getBundle("lang");
         label1 = new JLabel();
         JL_Timer = new JLabel();
         JL_Code = new JLabel();
@@ -31,21 +33,21 @@ public class TakeCard extends JPanel {
         setLayout(null);
 
         //---- label1 ----
-        label1.setText("\u5361\u5df2\u53d6\u51fa!!!!!");
+        label1.setText(bundle.getString("TakeCard.label1.text"));
         label1.setForeground(Color.white);
         label1.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 36));
         add(label1);
         label1.setBounds(190, 185, 285, label1.getPreferredSize().height);
 
         //---- JL_Timer ----
-        JL_Timer.setText("text");
+        JL_Timer.setText(bundle.getString("TakeCard.JL_Timer.text"));
         JL_Timer.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
         JL_Timer.setForeground(Color.white);
         add(JL_Timer);
         JL_Timer.setBounds(470, 0, 170, 25);
 
         //---- JL_Code ----
-        JL_Code.setText("\u673a\u5668\u53f7\uff1aCUMT2023");
+        JL_Code.setText(bundle.getString("TakeCard.JL_Code.text"));
         JL_Code.setForeground(Color.white);
         JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
         add(JL_Code);

@@ -5,6 +5,7 @@
 package MainFrame.CommonBussiness.Transfer;
 
 import java.awt.event.*;
+import java.util.*;
 import MainFrame.MainFrame;
 import User.User;
 import global.global;
@@ -41,6 +42,7 @@ public class Transfer_amount extends JPanel {
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
+        ResourceBundle bundle = ResourceBundle.getBundle("lang");
         label1 = new JLabel();
         textField1 = new JTextField();
         button1 = new JButton();
@@ -54,7 +56,7 @@ public class Transfer_amount extends JPanel {
         setLayout(null);
 
         //---- label1 ----
-        label1.setText("\u8bf7\u8f93\u5165\u8f6c\u8d26\u91d1\u989d");
+        label1.setText(bundle.getString("Transfer_amount.label1.text"));
         label1.setForeground(Color.white);
         label1.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 30));
         add(label1);
@@ -63,27 +65,27 @@ public class Transfer_amount extends JPanel {
         textField1.setBounds(190, 210, 220, textField1.getPreferredSize().height);
 
         //---- button1 ----
-        button1.setText("\u786e\u8ba4");
+        button1.setText(bundle.getString("Transfer_amount.button1.text"));
         button1.addActionListener(e -> BT_Confirm(e));
         add(button1);
         button1.setBounds(new Rectangle(new Point(540, 330), button1.getPreferredSize()));
 
         //---- JL_Timer ----
-        JL_Timer.setText("text");
+        JL_Timer.setText(bundle.getString("Transfer_amount.JL_Timer.text"));
         JL_Timer.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
         JL_Timer.setForeground(Color.white);
         add(JL_Timer);
         JL_Timer.setBounds(470, 0, 170, 25);
 
         //---- JL_Name ----
-        JL_Name.setText("text");
+        JL_Name.setText(bundle.getString("Transfer_amount.JL_Name.text"));
         JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
         JL_Name.setForeground(Color.white);
         add(JL_Name);
         JL_Name.setBounds(470, 40, 170, 25);
 
         //---- JL_Code ----
-        JL_Code.setText("\u673a\u5668\u53f7\uff1aCUMT2023");
+        JL_Code.setText(bundle.getString("Transfer_amount.JL_Code.text"));
         JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
         JL_Code.setForeground(Color.white);
         add(JL_Code);

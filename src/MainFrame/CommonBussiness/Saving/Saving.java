@@ -65,7 +65,7 @@ public class Saving extends JPanel {
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
-        ResourceBundle bundle = ResourceBundle.getBundle("lang.Saving");
+        ResourceBundle bundle = ResourceBundle.getBundle("lang");
         JL_Hint = new JLabel();
         JL_Time = new JLabel();
         JB_Confirm = new JButton();
@@ -112,21 +112,21 @@ public class Saving extends JPanel {
         JB_Back.setBounds(new Rectangle(new Point(540, 330), JB_Back.getPreferredSize()));
 
         //---- JL_Timer ----
-        JL_Timer.setText(bundle.getString("JL_Timer.text"));
+        JL_Timer.setText(bundle.getString("Saving.JL_Timer.text"));
         JL_Timer.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
         JL_Timer.setForeground(Color.white);
         add(JL_Timer);
         JL_Timer.setBounds(470, 0, 170, 25);
 
         //---- JL_Name ----
-        JL_Name.setText(bundle.getString("JL_Name.text"));
+        JL_Name.setText(bundle.getString("Saving.JL_Name.text"));
         JL_Name.setForeground(Color.white);
         JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
         add(JL_Name);
         JL_Name.setBounds(470, 40, 170, 25);
 
         //---- JL_Code ----
-        JL_Code.setText(bundle.getString("JL_Code.text"));
+        JL_Code.setText(bundle.getString("Saving.JL_Code.text"));
         JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
         JL_Code.setForeground(Color.white);
         add(JL_Code);
