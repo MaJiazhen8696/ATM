@@ -36,7 +36,7 @@ new FormModel {
 				"foreground": new java.awt.Color( 255, 255, 255, 255 )
 				"font": new java.awt.Font( "宋体", 1, 36 )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 250
+				"x": 245
 				"y": 185
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
