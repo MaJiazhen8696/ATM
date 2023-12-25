@@ -106,6 +106,7 @@ public class Login extends JPanel {
         //======== this ========
         setOpaque(false);
         setPreferredSize(new Dimension(638, 422));
+        setMinimumSize(new Dimension(638, 422));
         setLayout(null);
 
         //---- JL_Hint ----

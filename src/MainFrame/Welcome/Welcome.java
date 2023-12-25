@@ -49,6 +49,8 @@ public class Welcome extends JPanel {
         //======== this ========
         setOpaque(false);
         setPreferredSize(new Dimension(638, 422));
+        setMinimumSize(new Dimension(634, 422));
+        setMaximumSize(new Dimension(638, 422));
         addKeyListener(new KeyAdapter() {
             @Override
             public void keyTyped(KeyEvent e) {
@@ -65,14 +67,16 @@ public class Welcome extends JPanel {
 
         //---- button1 ----
         button1.setText(bundle.getString("Welcome.button1.text"));
+        button1.setAlignmentY(0.0F);
         button1.addActionListener(e -> button1(e));
         add(button1);
-        button1.setBounds(540, 290, 80, button1.getPreferredSize().height);
+        button1.setBounds(570, 285, 80, button1.getPreferredSize().height);
 
         //---- button2 ----
         button2.setText(bundle.getString("Welcome.button2.text"));
+        button2.setAlignmentY(0.0F);
         add(button2);
-        button2.setBounds(540, 330, 80, button2.getPreferredSize().height);
+        button2.setBounds(570, 325, 80, button2.getPreferredSize().height);
 
         //---- label1 ----
         label1.setText(bundle.getString("Welcome.label1.text"));
@@ -86,14 +90,14 @@ public class Welcome extends JPanel {
         JL_Timer.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
         JL_Timer.setForeground(Color.white);
         add(JL_Timer);
-        JL_Timer.setBounds(470, 40, 170, 25);
+        JL_Timer.setBounds(480, 15, 170, 25);
 
         //---- JL_Code ----
         JL_Code.setText(bundle.getString("Welcome.JL_Code.text"));
         JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
         JL_Code.setForeground(Color.white);
         add(JL_Code);
-        JL_Code.setBounds(460, 80, 195, JL_Code.getPreferredSize().height);
+        JL_Code.setBounds(455, 45, 195, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size
