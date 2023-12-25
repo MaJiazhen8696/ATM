@@ -97,7 +97,7 @@ public class Saving extends JPanel {
         JL_Time.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 22));
         JL_Time.setForeground(Color.white);
         add(JL_Time);
-        JL_Time.setBounds(120, 280, 210, JL_Time.getPreferredSize().height);
+        JL_Time.setBounds(56, 260, 210, JL_Time.getPreferredSize().height);
 
         //---- JB_Confirm ----
         JB_Confirm.setText(bundle.getString("Saving.JB_Confirm.text"));
