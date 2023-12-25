@@ -27,12 +27,13 @@ new FormModel {
 			} ) {
 				name: "JP_Table"
 				"preferredSize": new java.awt.Dimension( 200, 100 )
+				"opaque": false
 				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "JL_MoneyValue"
 					"text": new FormMessage( null, "Saving.Confirm_Money.JL_MoneyValue.text" )
 					"font": &Font0 new java.awt.Font( "宋体", 1, 22 )
 					"horizontalAlignment": 0
-					"foreground": &Color0 new java.awt.Color( 0, 0, 0, 255 )
+					"foreground": &Color0 new java.awt.Color( 255, 255, 255, 255 )
 					"background": &Color1 new java.awt.Color( 255, 255, 255, 255 )
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
@@ -75,9 +76,9 @@ new FormModel {
 				} )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 135
-				"y": 120
+				"y": 125
 				"width": 335
-				"height": 190
+				"height": 170
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "JB_Confirm"

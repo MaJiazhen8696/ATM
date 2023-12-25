@@ -13,11 +13,12 @@ new FormModel {
 			"preferredSize": new java.awt.Dimension( 638, 422 )
 			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
 				name: "SP"
+				"opaque": false
 				add( new FormComponent( "javax.swing.JTable" ) {
 					name: "JT"
 					"foreground": sfield java.awt.Color black
-					"opaque": false
 					"background": new java.awt.Color( 255, 255, 255, 255 )
+					"opaque": false
 				} )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 170

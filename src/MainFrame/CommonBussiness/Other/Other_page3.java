@@ -82,6 +82,7 @@ public class Other_page3 extends JPanel {
         //---- JL_Code ----
         JL_Code.setText("\u673a\u5668\u53f7\uff1aCUMT2023");
         JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
+        JL_Code.setForeground(Color.white);
         add(JL_Code);
         JL_Code.setBounds(460, 80, 195, JL_Code.getPreferredSize().height);
 

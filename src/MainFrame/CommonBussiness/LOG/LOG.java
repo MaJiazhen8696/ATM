@@ -84,11 +84,12 @@ public class LOG extends JPanel {
 
         //======== SP ========
         {
+            SP.setOpaque(false);
 
             //---- JT ----
             JT.setForeground(Color.black);
-            JT.setOpaque(false);
             JT.setBackground(Color.white);
+            JT.setOpaque(false);
             SP.setViewportView(JT);
         }
         add(SP);

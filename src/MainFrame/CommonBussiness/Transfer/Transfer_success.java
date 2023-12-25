@@ -53,13 +53,13 @@ public class Transfer_success extends JPanel {
         JB_Print.setText("\u6253\u5370\u51ed\u6761");
         JB_Print.addActionListener(e -> JB_Print(e));
         add(JB_Print);
-        JB_Print.setBounds(540, 290, 80, JB_Print.getPreferredSize().height);
+        JB_Print.setBounds(540, 290, 85, JB_Print.getPreferredSize().height);
 
         //---- JB_Back ----
         JB_Back.setText("\u8fd4\u56de");
         JB_Back.addActionListener(e -> JB_Back(e));
         add(JB_Back);
-        JB_Back.setBounds(540, 330, 80, JB_Back.getPreferredSize().height);
+        JB_Back.setBounds(540, 330, 85, JB_Back.getPreferredSize().height);
 
         //---- JL_Timer ----
         JL_Timer.setText("text");
