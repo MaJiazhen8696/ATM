@@ -62,7 +62,7 @@ public class Withdraw_custom extends JPanel {
 
         //---- button1 ----
         button1.setText("\u786e\u8ba4");
-        button1.addActionListener(e -> Withdraw_custom(e));
+        button1.addActionListener(e -> confirm(e));
         add(button1);
         button1.setBounds(new Rectangle(new Point(540, 330), button1.getPreferredSize()));
 
@@ -71,21 +71,21 @@ public class Withdraw_custom extends JPanel {
         JL_Timer.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
         JL_Timer.setForeground(Color.white);
         add(JL_Timer);
-        JL_Timer.setBounds(470, 40, 170, 25);
+        JL_Timer.setBounds(470, 0, 170, 25);
 
         //---- JL_Name ----
         JL_Name.setText("text");
         JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
         JL_Name.setForeground(Color.white);
         add(JL_Name);
-        JL_Name.setBounds(470, 80, 170, 25);
+        JL_Name.setBounds(470, 40, 170, 25);
 
         //---- JL_Code ----
         JL_Code.setText("\u673a\u5668\u53f7\uff1aCUMT2023");
         JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
         JL_Code.setForeground(Color.white);
         add(JL_Code);
-        JL_Code.setBounds(460, 120, 195, JL_Code.getPreferredSize().height);
+        JL_Code.setBounds(460, 80, 195, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size

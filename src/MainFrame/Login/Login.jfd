@@ -17,13 +17,14 @@ new FormModel {
 				"foreground": &Color0 new java.awt.Color( 255, 255, 255, 255 )
 				"font": &Font0 new java.awt.Font( "宋体", 1, 18 )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 50
+				"x": 180
 				"y": 235
 				"width": 95
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "BT_Confirm"
 				"text": new FormMessage( null, "Login.BT_Confirm.text" )
+				"font": &Font1 new java.awt.Font( "宋体", 1, 13 )
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "BT_Confirm", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 540
@@ -32,6 +33,7 @@ new FormModel {
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "BT_Modify"
 				"text": new FormMessage( null, "Login.BT_Modify.text" )
+				"font": #Font1
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "Modify_Password", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 540
@@ -40,7 +42,7 @@ new FormModel {
 			add( new FormComponent( "javax.swing.JPasswordField" ) {
 				name: "JT_Password"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 165
+				"x": 295
 				"y": 230
 				"width": 130
 				"height": 30
@@ -51,14 +53,14 @@ new FormModel {
 				"foreground": new java.awt.Color( 255, 255, 255, 255 )
 				"font": new java.awt.Font( "宋体", 1, 18 )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 90
-				"y": 305
-				"width": 145
+				"x": 180
+				"y": 375
+				"width": 215
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "JT_User"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 165
+				"x": 295
 				"y": 180
 				"width": 130
 				"height": 30
@@ -69,7 +71,7 @@ new FormModel {
 				"foreground": #Color0
 				"font": #Font0
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 50
+				"x": 180
 				"y": 180
 				"width": 95
 			} )
@@ -83,7 +85,7 @@ new FormModel {
 				}
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 470
-				"y": 40
+				"y": 0
 				"width": 170
 				"height": 25
 			} )
@@ -95,7 +97,7 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 195
 				"x": 460
-				"y": 80
+				"y": 40
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )

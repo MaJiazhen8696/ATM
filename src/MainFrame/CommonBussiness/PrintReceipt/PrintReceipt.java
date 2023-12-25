@@ -72,14 +72,14 @@ public class PrintReceipt extends JPanel {
         L_wait.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 30));
         L_wait.setForeground(Color.white);
         add(L_wait);
-        L_wait.setBounds(85, 140, 400, L_wait.getPreferredSize().height);
+        L_wait.setBounds(130, 190, 400, L_wait.getPreferredSize().height);
 
         //---- L_success ----
         L_success.setText("\u6253\u5370\u6210\u529f!!!!!");
         L_success.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 30));
         L_success.setForeground(Color.white);
         add(L_success);
-        L_success.setBounds(150, 210, 220, L_success.getPreferredSize().height);
+        L_success.setBounds(200, 185, 220, L_success.getPreferredSize().height);
 
         //---- JB_Back ----
         JB_Back.setText("\u8fd4\u56de");
@@ -92,21 +92,21 @@ public class PrintReceipt extends JPanel {
         JL_Timer.setForeground(Color.white);
         JL_Timer.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
         add(JL_Timer);
-        JL_Timer.setBounds(470, 40, 170, 25);
+        JL_Timer.setBounds(470, 0, 170, 25);
 
         //---- JL_Name ----
         JL_Name.setText("text");
         JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
         JL_Name.setForeground(Color.white);
         add(JL_Name);
-        JL_Name.setBounds(470, 80, 170, 25);
+        JL_Name.setBounds(470, 40, 170, 25);
 
         //---- JL_Code ----
         JL_Code.setText("\u673a\u5668\u53f7\uff1aCUMT2023");
         JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
         JL_Code.setForeground(Color.white);
         add(JL_Code);
-        JL_Code.setBounds(460, 120, 195, JL_Code.getPreferredSize().height);
+        JL_Code.setBounds(460, 80, 195, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size

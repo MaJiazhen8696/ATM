@@ -70,14 +70,14 @@ public class RetainCard extends JPanel {
         JL_Timer.setForeground(Color.white);
         JL_Timer.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
         add(JL_Timer);
-        JL_Timer.setBounds(470, 40, 170, 25);
+        JL_Timer.setBounds(470, 0, 170, 25);
 
         //---- JL_Code ----
         JL_Code.setText(bundle.getString("RetainCard.JL_Code.text"));
         JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
         JL_Code.setForeground(Color.white);
         add(JL_Code);
-        JL_Code.setBounds(460, 80, 195, JL_Code.getPreferredSize().height);
+        JL_Code.setBounds(460, 40, 195, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size

@@ -53,27 +53,37 @@ public class Interval extends JPanel {
         JL_Code = new JLabel();
 
         //======== this ========
+        setOpaque(false);
+        setPreferredSize(new Dimension(638, 422));
         setLayout(null);
 
         //---- JL_waiting ----
         JL_waiting.setText(bundle.getString("Interval.JL_waiting.text"));
+        JL_waiting.setForeground(Color.white);
+        JL_waiting.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 36));
         add(JL_waiting);
-        JL_waiting.setBounds(new Rectangle(new Point(140, 145), JL_waiting.getPreferredSize()));
+        JL_waiting.setBounds(135, 180, 370, JL_waiting.getPreferredSize().height);
 
         //---- JL_Timer ----
         JL_Timer.setText(bundle.getString("Interval.JL_Timer.text"));
+        JL_Timer.setForeground(Color.white);
+        JL_Timer.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
         add(JL_Timer);
-        JL_Timer.setBounds(260, 15, 95, JL_Timer.getPreferredSize().height);
+        JL_Timer.setBounds(470, 0, 170, 25);
 
         //---- JL_Name ----
         JL_Name.setText(bundle.getString("Interval.JL_Name.text"));
+        JL_Name.setForeground(Color.white);
+        JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
         add(JL_Name);
-        JL_Name.setBounds(260, 45, 125, JL_Name.getPreferredSize().height);
+        JL_Name.setBounds(470, 40, 170, 25);
 
         //---- JL_Code ----
         JL_Code.setText(bundle.getString("Interval.JL_Code.text"));
+        JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
+        JL_Code.setForeground(Color.white);
         add(JL_Code);
-        JL_Code.setBounds(250, 75, 125, JL_Code.getPreferredSize().height);
+        JL_Code.setBounds(460, 80, 195, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size

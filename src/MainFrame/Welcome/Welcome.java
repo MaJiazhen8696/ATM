@@ -79,21 +79,21 @@ public class Welcome extends JPanel {
         label1.setForeground(Color.white);
         label1.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 36));
         add(label1);
-        label1.setBounds(new Rectangle(new Point(250, 185), label1.getPreferredSize()));
+        label1.setBounds(new Rectangle(new Point(245, 185), label1.getPreferredSize()));
 
         //---- JL_Timer ----
         JL_Timer.setText(bundle.getString("Welcome.JL_Timer.text"));
         JL_Timer.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
         JL_Timer.setForeground(Color.white);
         add(JL_Timer);
-        JL_Timer.setBounds(470, 40, 170, 25);
+        JL_Timer.setBounds(470, 0, 170, 25);
 
         //---- JL_Code ----
         JL_Code.setText(bundle.getString("Welcome.JL_Code.text"));
         JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
         JL_Code.setForeground(Color.white);
         add(JL_Code);
-        JL_Code.setBounds(460, 80, 195, JL_Code.getPreferredSize().height);
+        JL_Code.setBounds(460, 40, 195, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size

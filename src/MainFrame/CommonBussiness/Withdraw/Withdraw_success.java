@@ -47,40 +47,40 @@ public class Withdraw_success extends JPanel {
         label1.setForeground(Color.white);
         label1.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 36));
         add(label1);
-        label1.setBounds(180, 170, 265, label1.getPreferredSize().height);
+        label1.setBounds(180, 185, 265, label1.getPreferredSize().height);
 
         //---- JB_Back ----
         JB_Back.setText("\u8fd4\u56de");
         JB_Back.addActionListener(e -> JB_Back(e));
         add(JB_Back);
-        JB_Back.setBounds(540, 330, 80, JB_Back.getPreferredSize().height);
+        JB_Back.setBounds(540, 330, 85, JB_Back.getPreferredSize().height);
 
         //---- JB_Print ----
         JB_Print.setText("\u6253\u5370\u51ed\u6761");
         JB_Print.addActionListener(e -> JB_Print(e));
         add(JB_Print);
-        JB_Print.setBounds(540, 290, 80, JB_Print.getPreferredSize().height);
+        JB_Print.setBounds(540, 290, 85, JB_Print.getPreferredSize().height);
 
         //---- JL_Timer ----
         JL_Timer.setText("text");
         JL_Timer.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
         JL_Timer.setForeground(Color.white);
         add(JL_Timer);
-        JL_Timer.setBounds(470, 40, 170, 25);
+        JL_Timer.setBounds(470, 0, 170, 25);
 
         //---- JL_Name ----
         JL_Name.setText("text");
         JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
         JL_Name.setForeground(Color.white);
         add(JL_Name);
-        JL_Name.setBounds(470, 80, 170, 25);
+        JL_Name.setBounds(470, 40, 170, 25);
 
         //---- JL_Code ----
         JL_Code.setText("\u673a\u5668\u53f7\uff1aCUMT2023");
         JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
         JL_Code.setForeground(Color.white);
         add(JL_Code);
-        JL_Code.setBounds(460, 120, 195, JL_Code.getPreferredSize().height);
+        JL_Code.setBounds(460, 80, 195, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size

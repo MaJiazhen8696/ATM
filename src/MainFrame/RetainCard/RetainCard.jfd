@@ -41,7 +41,7 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 170
 				"x": 470
-				"y": 40
+				"y": 0
 				"height": 25
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
@@ -52,7 +52,7 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 195
 				"x": 460
-				"y": 80
+				"y": 40
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )

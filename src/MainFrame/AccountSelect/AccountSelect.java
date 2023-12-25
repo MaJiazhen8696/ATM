@@ -69,7 +69,7 @@ public class AccountSelect extends JPanel {
         JL_Hint.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 30));
         JL_Hint.setForeground(Color.white);
         add(JL_Hint);
-        JL_Hint.setBounds(235, 85, 170, JL_Hint.getPreferredSize().height);
+        JL_Hint.setBounds(235, 30, 170, JL_Hint.getPreferredSize().height);
 
         //---- JB_SavingsAccount ----
         JB_SavingsAccount.setText(bundle.getString("JB_SavingsAccount.text"));
@@ -100,21 +100,21 @@ public class AccountSelect extends JPanel {
         JL_Timer.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
         JL_Timer.setForeground(Color.white);
         add(JL_Timer);
-        JL_Timer.setBounds(470, 40, 170, 25);
+        JL_Timer.setBounds(470, 0, 170, 25);
 
         //---- JL_Name ----
         JL_Name.setText(bundle.getString("JL_Name.text"));
         JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
         JL_Name.setForeground(Color.white);
         add(JL_Name);
-        JL_Name.setBounds(470, 80, 170, 25);
+        JL_Name.setBounds(470, 40, 170, 25);
 
         //---- JL_Code ----
         JL_Code.setText(bundle.getString("JL_Code.text"));
         JL_Code.setForeground(Color.white);
         JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
         add(JL_Code);
-        JL_Code.setBounds(460, 120, 195, JL_Code.getPreferredSize().height);
+        JL_Code.setBounds(460, 80, 195, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size

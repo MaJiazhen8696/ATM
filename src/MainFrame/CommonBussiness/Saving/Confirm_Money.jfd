@@ -10,14 +10,15 @@ new FormModel {
 		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
 			name: "this"
 			"preferredSize": new java.awt.Dimension( 638, 422 )
+			"opaque": false
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label1"
 				"text": new FormMessage( null, "Saving.Confirm_Money.label1.text" )
 				"foreground": new java.awt.Color( 255, 255, 255, 255 )
 				"font": new java.awt.Font( "宋体", 1, 28 )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 180
-				"y": 55
+				"x": 200
+				"y": 30
 				"width": 230
 			} )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
@@ -32,6 +33,7 @@ new FormModel {
 					"font": &Font0 new java.awt.Font( "宋体", 1, 22 )
 					"horizontalAlignment": 0
 					"foreground": &Color0 new java.awt.Color( 0, 0, 0, 255 )
+					"background": &Color1 new java.awt.Color( 255, 255, 255, 255 )
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "JL_MoneyCount"
@@ -39,6 +41,7 @@ new FormModel {
 					"font": #Font0
 					"horizontalAlignment": 0
 					"foreground": #Color0
+					"background": #Color1
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "JL_MoneyTotal"
@@ -46,6 +49,7 @@ new FormModel {
 					"font": #Font0
 					"horizontalAlignment": 0
 					"foreground": #Color0
+					"background": #Color1
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "JL_Value"
@@ -53,21 +57,24 @@ new FormModel {
 					"font": new java.awt.Font( "宋体", 1, 19 )
 					"horizontalAlignment": 0
 					"foreground": #Color0
+					"background": #Color1
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "JL_Count"
 					"font": #Font0
 					"horizontalAlignment": 0
 					"foreground": #Color0
+					"background": #Color1
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "JL_Total"
 					"font": #Font0
 					"horizontalAlignment": 0
 					"foreground": #Color0
+					"background": #Color1
 				} )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 110
+				"x": 135
 				"y": 120
 				"width": 335
 				"height": 190
@@ -94,8 +101,8 @@ new FormModel {
 				"foreground": new java.awt.Color( 255, 255, 255, 255 )
 				"horizontalAlignment": 0
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 195
-				"y": 320
+				"x": 240
+				"y": 360
 				"width": 145
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
@@ -109,7 +116,6 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 170
 				"x": 470
-				"y": 40
 				"height": 25
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
@@ -123,7 +129,7 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 170
 				"x": 470
-				"y": 80
+				"y": 40
 				"height": 25
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
@@ -134,7 +140,7 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 195
 				"x": 460
-				"y": 120
+				"y": 80
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )

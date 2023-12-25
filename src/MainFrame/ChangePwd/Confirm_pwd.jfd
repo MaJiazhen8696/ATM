@@ -13,15 +13,15 @@ new FormModel {
 				"font": new java.awt.Font( "宋体", 1, 30 )
 				"foreground": new java.awt.Color( 255, 255, 255, 255 )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 120
-				"y": 150
+				"x": 150
+				"y": 170
 				"width": 375
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField1"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 190
-				"y": 210
+				"x": 200
+				"y": 225
 				"width": 220
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
@@ -43,7 +43,6 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 170
 				"x": 470
-				"y": 40
 				"height": 25
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
@@ -57,7 +56,7 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 170
 				"x": 470
-				"y": 80
+				"y": 40
 				"height": 25
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
@@ -68,7 +67,7 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 195
 				"x": 460
-				"y": 120
+				"y": 80
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
