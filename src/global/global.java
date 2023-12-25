@@ -52,11 +52,11 @@ public class global {
         counter.schedule(new TimerTask() {
             public void run() {
 
-                System.out.print(1);
+                //System.out.print(1);
                 if(T!=null) T.setText(dateFormat.format(new Date()));
 
             }
-        },0,333);
+        },0,33);
     }
     public static void Disable(JPanel p){
         p.setVisible(false);

@@ -300,6 +300,7 @@ public class MainFrame extends JFrame {
     }
     public void toPrintReceipt(JPanel p){
         global.Disable(p);
+        global.T=printReceipt.JL_Timer;
         global.Enable(printReceipt);
     }
     private void initComponents() {
