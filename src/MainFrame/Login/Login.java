@@ -26,7 +26,7 @@ public class Login extends JPanel {
     ResourceBundle bundle ;
     public Login(MainFrame fa) {
         THIS=this;
-        bundle = ResourceBundle.getBundle("lang.Login",global.LOCALE);
+        bundle = ResourceBundle.getBundle("lang",global.LOCALE);
         initComponents();
 
         JL_Failed.setVisible(false);

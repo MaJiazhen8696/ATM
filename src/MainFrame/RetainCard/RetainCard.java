@@ -22,7 +22,7 @@ public class RetainCard extends JPanel {
 
         initComponents();
         Father = fa;
-        bundle = ResourceBundle.getBundle("lang.RetainCard",global.LOCALE);
+        bundle = ResourceBundle.getBundle("lang",global.LOCALE);
 
     }
     public void Show(int ERROR_CODE){

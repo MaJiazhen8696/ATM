@@ -26,7 +26,7 @@ public class LOG extends JPanel {
     List<Record>records=new ArrayList<>();
     String[][] val=new String[10][3];
 
-    ResourceBundle bundle=ResourceBundle.getBundle("lang.Saving");
+    ResourceBundle bundle=ResourceBundle.getBundle("lang");
     String[] Names={bundle.getString("LOG.JT_COL1.text"),
             bundle.getString("LOG.JT_COL2.text"),
             bundle.getString("LOG.JT_COL3.text")

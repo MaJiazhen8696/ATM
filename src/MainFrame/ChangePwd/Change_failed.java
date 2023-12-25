@@ -27,7 +27,7 @@ public class Change_failed extends JPanel {
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
-        ResourceBundle bundle = ResourceBundle.getBundle("lang.ChangePWD");
+        ResourceBundle bundle = ResourceBundle.getBundle("lang");
         label1 = new JLabel();
         button1 = new JButton();
         button2 = new JButton();

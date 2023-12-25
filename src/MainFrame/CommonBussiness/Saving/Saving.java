@@ -28,7 +28,7 @@ public class Saving extends JPanel {
         timer = new Timer();
         Father = fa;
         THIS=this;
-        bundle= ResourceBundle.getBundle("lang.Saving");
+        bundle= ResourceBundle.getBundle("lang");
 
         //JP_TEST.setOpaque(true);
 

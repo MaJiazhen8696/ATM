@@ -19,7 +19,7 @@ import javax.swing.Timer;
 public class Confirm_Money extends JPanel {
     MainFrame Father ;
     JPanel THIS;
-    ResourceBundle bundle=ResourceBundle.getBundle("lang.Saving");
+    ResourceBundle bundle=ResourceBundle.getBundle("lang");
     private int MoneyCount=0,MoneyTotal=0;
     public Confirm_Money(MainFrame fa) {
 
