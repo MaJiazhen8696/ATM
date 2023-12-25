@@ -300,16 +300,20 @@ public class MainFrame extends JFrame {
     }
     public void toPrintReceipt(JPanel p){
         global.Disable(p);
+        global.T=printReceipt.JL_Timer;
         global.Enable(printReceipt);
     }
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         //======== this ========
         setPreferredSize(new Dimension(652, 459));
+        setMaximumSize(new Dimension(652, 459));
+        setMinimumSize(new Dimension(652, 459));
+        setResizable(false);
         var contentPane = getContentPane();
         contentPane.setLayout(new FlowLayout());
         pack();
-        setLocationRelativeTo(getOwner());
+        setLocationRelativeTo(null);
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
 
     }

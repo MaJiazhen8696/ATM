@@ -38,7 +38,7 @@ public class Saving extends JPanel {
             @Override
             public void run() {
 
-                JL_Timer.setText(bundle.getString("Saving.JL_Timer.text")+(--cnt)+bundle.getString("Saving.JL_Timer.text_2"));
+                JL_Time.setText(bundle.getString("Saving.JL_Time.text")+(--cnt)+bundle.getString("Saving.JL_Time.text_2"));
                 if(cnt==0){
                     timer.cancel();
                     //Father.RetainCard(THIS,);
