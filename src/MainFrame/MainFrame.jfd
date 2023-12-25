@@ -1,4 +1,4 @@
-JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.8" encoding: "UTF-8"
+JFDML JFormDesigner: "8.2.0.0.331" Java: "17.0.9" encoding: "UTF-8"
 
 new FormModel {
 	"i18n.autoExternalize": true
@@ -10,6 +10,10 @@ new FormModel {
 		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.FlowLayout ) ) {
 			name: "this"
 			"preferredSize": new java.awt.Dimension( 652, 459 )
+			"$locationPolicy": 1
+			"maximumSize": new java.awt.Dimension( 652, 459 )
+			"minimumSize": new java.awt.Dimension( 652, 459 )
+			"resizable": false
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
 			"size": new java.awt.Dimension( 500, 360 )

@@ -47,7 +47,7 @@ public class Login extends JPanel {
                 return false;
             }
         }catch (Exception e){
-            ;
+            System.out.println(e.getMessage());
         }
         return false;
     }
@@ -67,9 +67,6 @@ public class Login extends JPanel {
             JL_Failed.setVisible(false);
             JL_Hint.setVisible(false);
             Father.toInterval(this);
-
-
-            //愚蠢，不会提示就不要提示
 
 
 
@@ -116,51 +113,51 @@ public class Login extends JPanel {
         JL_Hint.setForeground(Color.white);
         JL_Hint.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 18));
         add(JL_Hint);
-        JL_Hint.setBounds(50, 235, 95, JL_Hint.getPreferredSize().height);
+        JL_Hint.setBounds(145, 240, 95, JL_Hint.getPreferredSize().height);
 
         //---- BT_Confirm ----
         BT_Confirm.setText(bundle.getString("Login.BT_Confirm.text"));
         BT_Confirm.addActionListener(e -> BT_Confirm(e));
         add(BT_Confirm);
-        BT_Confirm.setBounds(new Rectangle(new Point(540, 290), BT_Confirm.getPreferredSize()));
+        BT_Confirm.setBounds(new Rectangle(new Point(565, 290), BT_Confirm.getPreferredSize()));
 
         //---- BT_Modify ----
         BT_Modify.setText(bundle.getString("Login.BT_Modify.text"));
         BT_Modify.addActionListener(e -> Modify_Password(e));
         add(BT_Modify);
-        BT_Modify.setBounds(new Rectangle(new Point(540, 330), BT_Modify.getPreferredSize()));
+        BT_Modify.setBounds(new Rectangle(new Point(565, 335), BT_Modify.getPreferredSize()));
         add(JT_Password);
-        JT_Password.setBounds(165, 230, 130, 30);
+        JT_Password.setBounds(285, 235, 130, 30);
 
         //---- JL_Failed ----
         JL_Failed.setText(bundle.getString("Login.JL_Failed.text"));
         JL_Failed.setForeground(Color.white);
         JL_Failed.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 18));
         add(JL_Failed);
-        JL_Failed.setBounds(90, 305, 145, JL_Failed.getPreferredSize().height);
+        JL_Failed.setBounds(230, 305, 145, JL_Failed.getPreferredSize().height);
         add(JT_User);
-        JT_User.setBounds(165, 180, 130, 30);
+        JT_User.setBounds(285, 190, 130, 30);
 
         //---- label1 ----
         label1.setText(bundle.getString("Login.label1.text"));
         label1.setForeground(Color.white);
         label1.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 18));
         add(label1);
-        label1.setBounds(50, 180, 95, label1.getPreferredSize().height);
+        label1.setBounds(145, 195, 95, label1.getPreferredSize().height);
 
         //---- JL_Timer ----
         JL_Timer.setText(bundle.getString("Login.JL_Timer.text"));
         JL_Timer.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
         JL_Timer.setForeground(Color.white);
         add(JL_Timer);
-        JL_Timer.setBounds(470, 40, 170, 25);
+        JL_Timer.setBounds(475, 15, 170, 25);
 
         //---- JL_Code ----
         JL_Code.setText(bundle.getString("Login.JL_Code.text"));
         JL_Code.setForeground(Color.white);
         JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
         add(JL_Code);
-        JL_Code.setBounds(460, 80, 195, JL_Code.getPreferredSize().height);
+        JL_Code.setBounds(450, 50, 195, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size
