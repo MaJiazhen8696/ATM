@@ -39,44 +39,51 @@ public class Other_page3 extends JPanel {
         JL_Code = new JLabel();
 
         //======== this ========
+        setOpaque(false);
+        setPreferredSize(new Dimension(638, 422));
         setLayout(null);
 
         //---- button1 ----
         button1.setText("\u4ee3\u7406\u4e1a\u52a113");
         add(button1);
-        button1.setBounds(new Rectangle(new Point(56, 65), button1.getPreferredSize()));
+        button1.setBounds(new Rectangle(new Point(25, 150), button1.getPreferredSize()));
 
         //---- button2 ----
         button2.setText("\u4ee3\u7406\u4e1a\u52a114");
         add(button2);
-        button2.setBounds(new Rectangle(new Point(60, 165), button2.getPreferredSize()));
+        button2.setBounds(new Rectangle(new Point(25, 205), button2.getPreferredSize()));
 
         //---- button3 ----
         button3.setText("\u4e0a\u4e00\u9875");
         button3.addActionListener(e -> getPriorPage(e));
         add(button3);
-        button3.setBounds(new Rectangle(new Point(65, 285), button3.getPreferredSize()));
+        button3.setBounds(new Rectangle(new Point(15, 330), button3.getPreferredSize()));
 
         //---- button4 ----
         button4.setText("\u8fd4\u56de");
         button4.addActionListener(e -> BT_Back(e));
         add(button4);
-        button4.setBounds(new Rectangle(new Point(380, 295), button4.getPreferredSize()));
+        button4.setBounds(new Rectangle(new Point(540, 330), button4.getPreferredSize()));
 
         //---- JL_Timer ----
         JL_Timer.setText("text");
+        JL_Timer.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
+        JL_Timer.setForeground(Color.white);
         add(JL_Timer);
-        JL_Timer.setBounds(365, 45, 95, JL_Timer.getPreferredSize().height);
+        JL_Timer.setBounds(470, 40, 170, 25);
 
         //---- JL_Name ----
         JL_Name.setText("text");
+        JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
+        JL_Name.setForeground(Color.white);
         add(JL_Name);
-        JL_Name.setBounds(365, 75, 125, JL_Name.getPreferredSize().height);
+        JL_Name.setBounds(470, 80, 170, 25);
 
         //---- JL_Code ----
         JL_Code.setText("\u673a\u5668\u53f7\uff1aCUMT2023");
+        JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
         add(JL_Code);
-        JL_Code.setBounds(355, 105, 125, JL_Code.getPreferredSize().height);
+        JL_Code.setBounds(460, 120, 195, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size

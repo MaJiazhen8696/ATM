@@ -51,21 +51,33 @@ public class RetainCard extends JPanel {
         JL_Code = new JLabel();
 
         //======== this ========
+        setPreferredSize(new Dimension(638, 422));
+        setOpaque(false);
         setLayout(null);
+
+        //---- JL_Retain ----
+        JL_Retain.setText(bundle.getString("RetainCard.JL_Retain.text"));
+        JL_Retain.setForeground(Color.white);
+        JL_Retain.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 36));
+        JL_Retain.setHorizontalAlignment(SwingConstants.CENTER);
         add(JL_Retain);
-        JL_Retain.setBounds(85, 80, 160, 50);
+        JL_Retain.setBounds(40, 160, 585, 110);
         add(JL_Hint);
         JL_Hint.setBounds(125, 190, 125, JL_Hint.getPreferredSize().height);
 
         //---- JL_Timer ----
         JL_Timer.setText(bundle.getString("RetainCard.JL_Timer.text"));
+        JL_Timer.setForeground(Color.white);
+        JL_Timer.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
         add(JL_Timer);
-        JL_Timer.setBounds(265, 30, 95, JL_Timer.getPreferredSize().height);
+        JL_Timer.setBounds(470, 40, 170, 25);
 
         //---- JL_Code ----
         JL_Code.setText(bundle.getString("RetainCard.JL_Code.text"));
+        JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
+        JL_Code.setForeground(Color.white);
         add(JL_Code);
-        JL_Code.setBounds(255, 90, 125, JL_Code.getPreferredSize().height);
+        JL_Code.setBounds(460, 80, 195, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size

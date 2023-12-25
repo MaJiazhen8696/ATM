@@ -57,6 +57,8 @@ public class PrintReceipt extends JPanel {
         JL_Code = new JLabel();
 
         //======== this ========
+        setOpaque(false);
+        setPreferredSize(new Dimension(638, 422));
         addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -66,35 +68,45 @@ public class PrintReceipt extends JPanel {
         setLayout(null);
 
         //---- L_wait ----
-        L_wait.setText("\u6b63\u5728\u6253\u5370\u51ed\u6761\uff0c\u8bf7\u7a0d\u7b49!!!!!");
+        L_wait.setText("\u6b63\u5728\u6253\u5370\u51ed\u6761\uff0c\u8bf7\u7a0d\u7b49...");
+        L_wait.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 30));
+        L_wait.setForeground(Color.white);
         add(L_wait);
-        L_wait.setBounds(130, 80, 250, L_wait.getPreferredSize().height);
+        L_wait.setBounds(85, 140, 400, L_wait.getPreferredSize().height);
 
         //---- L_success ----
         L_success.setText("\u6253\u5370\u6210\u529f!!!!!");
+        L_success.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 30));
+        L_success.setForeground(Color.white);
         add(L_success);
-        L_success.setBounds(130, 100, 220, L_success.getPreferredSize().height);
+        L_success.setBounds(150, 210, 220, L_success.getPreferredSize().height);
 
         //---- JB_Back ----
         JB_Back.setText("\u8fd4\u56de");
         JB_Back.addActionListener(e -> JB_Back(e));
         add(JB_Back);
-        JB_Back.setBounds(new Rectangle(new Point(375, 265), JB_Back.getPreferredSize()));
+        JB_Back.setBounds(new Rectangle(new Point(540, 330), JB_Back.getPreferredSize()));
 
         //---- JL_Timer ----
         JL_Timer.setText("text");
+        JL_Timer.setForeground(Color.white);
+        JL_Timer.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
         add(JL_Timer);
-        JL_Timer.setBounds(440, 25, 95, JL_Timer.getPreferredSize().height);
+        JL_Timer.setBounds(470, 40, 170, 25);
 
         //---- JL_Name ----
         JL_Name.setText("text");
+        JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
+        JL_Name.setForeground(Color.white);
         add(JL_Name);
-        JL_Name.setBounds(440, 55, 125, JL_Name.getPreferredSize().height);
+        JL_Name.setBounds(470, 80, 170, 25);
 
         //---- JL_Code ----
         JL_Code.setText("\u673a\u5668\u53f7\uff1aCUMT2023");
+        JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
+        JL_Code.setForeground(Color.white);
         add(JL_Code);
-        JL_Code.setBounds(430, 85, 125, JL_Code.getPreferredSize().height);
+        JL_Code.setBounds(460, 120, 195, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size

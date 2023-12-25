@@ -43,64 +43,72 @@ public class Other_page2 extends JPanel {
         JL_Code = new JLabel();
 
         //======== this ========
+        setOpaque(false);
+        setPreferredSize(new Dimension(638, 422));
         setLayout(null);
 
         //---- button1 ----
         button1.setText("\u4ee3\u7406\u4e1a\u52a17");
         add(button1);
-        button1.setBounds(new Rectangle(new Point(60, 50), button1.getPreferredSize()));
+        button1.setBounds(new Rectangle(new Point(25, 150), button1.getPreferredSize()));
 
         //---- button2 ----
         button2.setText("\u4ee3\u7406\u4e1a\u52a18");
         add(button2);
-        button2.setBounds(new Rectangle(new Point(60, 125), button2.getPreferredSize()));
+        button2.setBounds(new Rectangle(new Point(25, 205), button2.getPreferredSize()));
 
         //---- button3 ----
         button3.setText("\u4ee3\u7406\u4e1a\u52a19");
         add(button3);
-        button3.setBounds(new Rectangle(new Point(60, 205), button3.getPreferredSize()));
+        button3.setBounds(new Rectangle(new Point(25, 260), button3.getPreferredSize()));
 
         //---- button4 ----
         button4.setText("\u4e0a\u4e00\u9875");
         button4.addActionListener(e -> getPriorPage(e));
         add(button4);
-        button4.setBounds(new Rectangle(new Point(65, 295), button4.getPreferredSize()));
+        button4.setBounds(new Rectangle(new Point(15, 330), button4.getPreferredSize()));
 
         //---- button5 ----
         button5.setText("\u4ee3\u7406\u4e1a\u52a110");
         add(button5);
-        button5.setBounds(new Rectangle(new Point(375, 55), button5.getPreferredSize()));
+        button5.setBounds(new Rectangle(new Point(505, 150), button5.getPreferredSize()));
 
         //---- button6 ----
         button6.setText("\u4ee3\u7406\u4e1a\u52a111");
         add(button6);
-        button6.setBounds(new Rectangle(new Point(380, 135), button6.getPreferredSize()));
+        button6.setBounds(new Rectangle(new Point(505, 205), button6.getPreferredSize()));
 
         //---- button7 ----
         button7.setText("\u4ee3\u7406\u4e1a\u52a112");
         add(button7);
-        button7.setBounds(new Rectangle(new Point(375, 210), button7.getPreferredSize()));
+        button7.setBounds(new Rectangle(new Point(505, 260), button7.getPreferredSize()));
 
         //---- button8 ----
         button8.setText("\u4e0b\u4e00\u9875");
         button8.addActionListener(e -> getNextPage(e));
         add(button8);
-        button8.setBounds(new Rectangle(new Point(375, 295), button8.getPreferredSize()));
+        button8.setBounds(new Rectangle(new Point(540, 330), button8.getPreferredSize()));
 
         //---- JL_Timer ----
         JL_Timer.setText("text");
+        JL_Timer.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
+        JL_Timer.setForeground(Color.white);
         add(JL_Timer);
-        JL_Timer.setBounds(485, 45, 95, JL_Timer.getPreferredSize().height);
+        JL_Timer.setBounds(470, 40, 170, 25);
 
         //---- JL_Name ----
         JL_Name.setText("text");
+        JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
+        JL_Name.setForeground(Color.white);
         add(JL_Name);
-        JL_Name.setBounds(485, 75, 125, JL_Name.getPreferredSize().height);
+        JL_Name.setBounds(470, 80, 170, 25);
 
         //---- JL_Code ----
         JL_Code.setText("\u673a\u5668\u53f7\uff1aCUMT2023");
+        JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
+        JL_Code.setForeground(Color.white);
         add(JL_Code);
-        JL_Code.setBounds(475, 105, 125, JL_Code.getPreferredSize().height);
+        JL_Code.setBounds(460, 120, 195, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size

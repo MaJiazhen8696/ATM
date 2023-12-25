@@ -38,39 +38,49 @@ public class Change_success extends JPanel {
         JL_Code = new JLabel();
 
         //======== this ========
+        setOpaque(false);
+        setPreferredSize(new Dimension(638, 422));
         setLayout(null);
 
         //---- label1 ----
         label1.setText("\u4fee\u6539\u5bc6\u7801\u6210\u529f!!!!!");
+        label1.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 36));
+        label1.setForeground(Color.white);
         add(label1);
-        label1.setBounds(135, 105, 205, label1.getPreferredSize().height);
+        label1.setBounds(160, 180, 390, label1.getPreferredSize().height);
 
         //---- button1 ----
         button1.setText("\u7ee7\u7eed");
         button1.addActionListener(e -> Continue(e));
         add(button1);
-        button1.setBounds(new Rectangle(new Point(385, 260), button1.getPreferredSize()));
+        button1.setBounds(new Rectangle(new Point(540, 290), button1.getPreferredSize()));
 
         //---- button2 ----
         button2.setText("\u53d6\u5361");
         button2.addActionListener(e -> TakeCard(e));
         add(button2);
-        button2.setBounds(new Rectangle(new Point(385, 320), button2.getPreferredSize()));
+        button2.setBounds(new Rectangle(new Point(540, 330), button2.getPreferredSize()));
 
         //---- JL_Timer ----
         JL_Timer.setText("text");
+        JL_Timer.setForeground(Color.white);
+        JL_Timer.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
         add(JL_Timer);
-        JL_Timer.setBounds(460, 45, 95, JL_Timer.getPreferredSize().height);
+        JL_Timer.setBounds(470, 40, 170, 25);
 
         //---- JL_Name ----
         JL_Name.setText("text");
+        JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
+        JL_Name.setForeground(Color.white);
         add(JL_Name);
-        JL_Name.setBounds(460, 75, 125, JL_Name.getPreferredSize().height);
+        JL_Name.setBounds(470, 80, 170, 25);
 
         //---- JL_Code ----
         JL_Code.setText("\u673a\u5668\u53f7\uff1aCUMT2023");
+        JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
+        JL_Code.setForeground(Color.white);
         add(JL_Code);
-        JL_Code.setBounds(450, 105, 125, JL_Code.getPreferredSize().height);
+        JL_Code.setBounds(460, 120, 195, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size

@@ -1,4 +1,4 @@
-JFDML JFormDesigner: "8.2.0.0.331" Java: "17.0.9" encoding: "UTF-8"
+JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.8" encoding: "UTF-8"
 
 new FormModel {
 	"i18n.autoExternalize": true
@@ -9,6 +9,8 @@ new FormModel {
 	root: new FormRoot {
 		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
 			name: "this"
+			"opaque": false
+			"preferredSize": new java.awt.Dimension( 638, 422 )
 			addEvent( new FormEvent( "java.awt.event.KeyListener", "keyTyped", "Active", true ) )
 			addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "thisMouseClicked", true ) )
 			add( new FormComponent( "javax.swing.JButton" ) {
@@ -16,47 +18,54 @@ new FormModel {
 				"text": new FormMessage( null, "Welcome.button1.text" )
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 470
-				"y": 355
-				"width": 158
+				"x": 540
+				"y": 290
+				"width": 80
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button2"
 				"text": new FormMessage( null, "Welcome.button2.text" )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 465
-				"y": 415
-				"width": 183
+				"x": 540
+				"y": 330
+				"width": 80
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label1"
 				"text": new FormMessage( null, "Welcome.label1.text" )
+				"foreground": new java.awt.Color( 255, 255, 255, 255 )
+				"font": new java.awt.Font( "宋体", 1, 36 )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 285
+				"x": 250
 				"y": 185
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "JL_Timer"
 				"text": new FormMessage( null, "Welcome.JL_Timer.text" )
+				"font": new java.awt.Font( "宋体", 1, 16 )
+				"foreground": new java.awt.Color( 255, 255, 255, 255 )
 				auxiliary() {
 					"JavaCodeGenerator.variableModifiers": 1
 				}
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"width": 95
-				"x": 520
-				"y": 20
+				"width": 170
+				"x": 470
+				"y": 40
+				"height": 25
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "JL_Code"
 				"text": new FormMessage( null, "Welcome.JL_Code.text" )
+				"font": new java.awt.Font( "宋体", 1, 21 )
+				"foreground": new java.awt.Color( 255, 255, 255, 255 )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"width": 125
-				"x": 510
+				"width": 195
+				"x": 460
 				"y": 80
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 655, 500 )
+			"size": new java.awt.Dimension( 650, 425 )
 		} )
 	}
 }

@@ -1,4 +1,4 @@
-JFDML JFormDesigner: "8.2.0.0.331" Java: "17.0.9" encoding: "UTF-8"
+JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.8" encoding: "UTF-8"
 
 new FormModel {
 	"i18n.autoExternalize": true
@@ -9,86 +9,97 @@ new FormModel {
 	root: new FormRoot {
 		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
 			name: "this"
+			"opaque": false
+			"preferredSize": new java.awt.Dimension( 638, 422 )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "JL_Hint"
 				"text": new FormMessage( null, "Login.JL_Hint.text" )
+				"foreground": &Color0 new java.awt.Color( 255, 255, 255, 255 )
+				"font": &Font0 new java.awt.Font( "宋体", 1, 18 )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 60
-				"y": 265
-				"width": 219
+				"x": 50
+				"y": 235
+				"width": 95
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "BT_Confirm"
 				"text": new FormMessage( null, "Login.BT_Confirm.text" )
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "BT_Confirm", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 550
-				"y": 410
+				"x": 540
+				"y": 290
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "BT_Modify"
 				"text": new FormMessage( null, "Login.BT_Modify.text" )
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "Modify_Password", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 550
-				"y": 450
+				"x": 540
+				"y": 330
 			} )
 			add( new FormComponent( "javax.swing.JPasswordField" ) {
 				name: "JT_Password"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 175
-				"y": 255
+				"x": 165
+				"y": 230
 				"width": 130
 				"height": 30
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "JL_Failed"
 				"text": new FormMessage( null, "Login.JL_Failed.text" )
+				"foreground": new java.awt.Color( 255, 255, 255, 255 )
+				"font": new java.awt.Font( "宋体", 1, 18 )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 180
-				"y": 335
-				"width": 175
+				"x": 90
+				"y": 305
+				"width": 145
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "JT_User"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 180
-				"y": 205
-				"width": 120
-				"height": 33
+				"x": 165
+				"y": 180
+				"width": 130
+				"height": 30
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label1"
 				"text": new FormMessage( null, "Login.label1.text" )
+				"foreground": #Color0
+				"font": #Font0
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 60
-				"y": 210
-				"width": 110
+				"x": 50
+				"y": 180
+				"width": 95
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "JL_Timer"
 				"text": new FormMessage( null, "Login.JL_Timer.text" )
+				"font": new java.awt.Font( "宋体", 1, 16 )
+				"foreground": new java.awt.Color( 255, 255, 255, 255 )
 				auxiliary() {
 					"JavaCodeGenerator.variableModifiers": 1
 				}
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"width": 95
-				"height": 17
-				"x": 510
+				"x": 470
 				"y": 40
+				"width": 170
+				"height": 25
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "JL_Code"
 				"text": new FormMessage( null, "Login.JL_Code.text" )
+				"foreground": new java.awt.Color( 255, 255, 255, 255 )
+				"font": new java.awt.Font( "宋体", 1, 21 )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"width": 125
-				"height": 17
-				"x": 500
-				"y": 100
+				"width": 195
+				"x": 460
+				"y": 80
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 645, 530 )
+			"size": new java.awt.Dimension( 645, 425 )
 		} )
 	}
 }

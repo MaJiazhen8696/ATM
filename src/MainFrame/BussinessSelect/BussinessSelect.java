@@ -78,75 +78,85 @@ public class BussinessSelect extends JPanel {
         JL_Code = new JLabel();
 
         //======== this ========
+        setPreferredSize(new Dimension(638, 422));
+        setOpaque(false);
         setLayout(null);
 
         //---- JL_Hint ----
         JL_Hint.setText(bundle.getString("JL_Hint.text"));
+        JL_Hint.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 30));
+        JL_Hint.setForeground(Color.white);
         add(JL_Hint);
-        JL_Hint.setBounds(225, 35, 170, JL_Hint.getPreferredSize().height);
+        JL_Hint.setBounds(225, 35, 215, JL_Hint.getPreferredSize().height);
 
         //---- JB_Save ----
         JB_Save.setText(bundle.getString("JB_Save.text"));
         JB_Save.addActionListener(e -> JB_Save(e));
         add(JB_Save);
-        JB_Save.setBounds(new Rectangle(new Point(45, 110), JB_Save.getPreferredSize()));
+        JB_Save.setBounds(new Rectangle(new Point(25, 95), JB_Save.getPreferredSize()));
 
         //---- JB_Withdraw ----
         JB_Withdraw.setText(bundle.getString("JB_Withdraw.text"));
         JB_Withdraw.addActionListener(e -> JB_Withdraw(e));
         add(JB_Withdraw);
-        JB_Withdraw.setBounds(new Rectangle(new Point(60, 180), JB_Withdraw.getPreferredSize()));
+        JB_Withdraw.setBounds(new Rectangle(new Point(25, 150), JB_Withdraw.getPreferredSize()));
 
         //---- JB_MoneyQuery ----
         JB_MoneyQuery.setText(bundle.getString("JB_MoneyQuery.text"));
         JB_MoneyQuery.addActionListener(e -> JB_MoneyQuery(e));
         add(JB_MoneyQuery);
-        JB_MoneyQuery.setBounds(new Rectangle(new Point(70, 240), JB_MoneyQuery.getPreferredSize()));
+        JB_MoneyQuery.setBounds(new Rectangle(new Point(25, 205), JB_MoneyQuery.getPreferredSize()));
 
         //---- JB_RecordQuery ----
         JB_RecordQuery.setText(bundle.getString("JB_RecordQuery.text"));
         JB_RecordQuery.addActionListener(e -> JB_RecordQuery(e));
         add(JB_RecordQuery);
-        JB_RecordQuery.setBounds(new Rectangle(new Point(85, 305), JB_RecordQuery.getPreferredSize()));
+        JB_RecordQuery.setBounds(new Rectangle(new Point(25, 260), JB_RecordQuery.getPreferredSize()));
 
         //---- JB_Password ----
         JB_Password.setText(bundle.getString("JB_Password.text"));
         JB_Password.addActionListener(e -> JB_Password(e));
         add(JB_Password);
-        JB_Password.setBounds(new Rectangle(new Point(500, 235), JB_Password.getPreferredSize()));
+        JB_Password.setBounds(new Rectangle(new Point(505, 260), JB_Password.getPreferredSize()));
 
         //---- JB_Transfer ----
         JB_Transfer.setText(bundle.getString("JB_Transfer.text"));
         JB_Transfer.addActionListener(e -> JB_Transfer(e));
         add(JB_Transfer);
-        JB_Transfer.setBounds(new Rectangle(new Point(515, 150), JB_Transfer.getPreferredSize()));
+        JB_Transfer.setBounds(new Rectangle(new Point(505, 150), JB_Transfer.getPreferredSize()));
 
         //---- JB_Other ----
         JB_Other.setText(bundle.getString("JB_Other.text"));
         JB_Other.addActionListener(e -> JB_Other(e));
         add(JB_Other);
-        JB_Other.setBounds(new Rectangle(new Point(520, 190), JB_Other.getPreferredSize()));
+        JB_Other.setBounds(new Rectangle(new Point(505, 205), JB_Other.getPreferredSize()));
 
         //---- JB_Back ----
         JB_Back.setText(bundle.getString("JB_Back.text"));
         JB_Back.addActionListener(e -> JB_Back(e));
         add(JB_Back);
-        JB_Back.setBounds(new Rectangle(new Point(525, 310), JB_Back.getPreferredSize()));
+        JB_Back.setBounds(new Rectangle(new Point(545, 320), JB_Back.getPreferredSize()));
 
         //---- JL_Timer ----
         JL_Timer.setText(bundle.getString("JL_Timer.text"));
+        JL_Timer.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
+        JL_Timer.setForeground(Color.white);
         add(JL_Timer);
-        JL_Timer.setBounds(525, 25, 95, JL_Timer.getPreferredSize().height);
+        JL_Timer.setBounds(470, 40, 170, 25);
 
         //---- JL_Name ----
         JL_Name.setText(bundle.getString("JL_Name.text"));
+        JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
+        JL_Name.setForeground(Color.white);
         add(JL_Name);
-        JL_Name.setBounds(525, 55, 125, JL_Name.getPreferredSize().height);
+        JL_Name.setBounds(470, 80, 170, 25);
 
         //---- JL_Code ----
         JL_Code.setText(bundle.getString("JL_Code.text"));
+        JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
+        JL_Code.setForeground(Color.white);
         add(JL_Code);
-        JL_Code.setBounds(515, 85, 125, JL_Code.getPreferredSize().height);
+        JL_Code.setBounds(460, 120, 195, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size

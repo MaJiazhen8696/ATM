@@ -75,6 +75,8 @@ public class Saving extends JPanel {
         JL_Code = new JLabel();
 
         //======== this ========
+        setOpaque(false);
+        setPreferredSize(new Dimension(638, 422));
         addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -85,40 +87,50 @@ public class Saving extends JPanel {
 
         //---- JL_Hint ----
         JL_Hint.setText(bundle.getString("Saving.JL_Hint.text"));
+        JL_Hint.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 30));
+        JL_Hint.setForeground(Color.white);
         add(JL_Hint);
-        JL_Hint.setBounds(170, 125, 265, JL_Hint.getPreferredSize().height);
+        JL_Hint.setBounds(105, 150, 390, JL_Hint.getPreferredSize().height);
 
         //---- JL_Time ----
         JL_Time.setText(bundle.getString("Saving.JL_Time.text"));
+        JL_Time.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 22));
+        JL_Time.setForeground(Color.white);
         add(JL_Time);
-        JL_Time.setBounds(130, 260, 120, JL_Time.getPreferredSize().height);
+        JL_Time.setBounds(56, 260, 210, JL_Time.getPreferredSize().height);
 
         //---- JB_Confirm ----
         JB_Confirm.setText(bundle.getString("Saving.JB_Confirm.text"));
         JB_Confirm.addActionListener(e -> JB_Confirm(e));
         add(JB_Confirm);
-        JB_Confirm.setBounds(460, 320, 118, JB_Confirm.getPreferredSize().height);
+        JB_Confirm.setBounds(new Rectangle(new Point(540, 290), JB_Confirm.getPreferredSize()));
 
         //---- JB_Back ----
         JB_Back.setText(bundle.getString("Saving.JB_Back.text"));
         JB_Back.addActionListener(e -> JB_Back(e));
         add(JB_Back);
-        JB_Back.setBounds(465, 380, 110, JB_Back.getPreferredSize().height);
+        JB_Back.setBounds(new Rectangle(new Point(540, 330), JB_Back.getPreferredSize()));
 
         //---- JL_Timer ----
         JL_Timer.setText(bundle.getString("JL_Timer.text"));
+        JL_Timer.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
+        JL_Timer.setForeground(Color.white);
         add(JL_Timer);
-        JL_Timer.setBounds(455, 80, 95, JL_Timer.getPreferredSize().height);
+        JL_Timer.setBounds(470, 40, 170, 25);
 
         //---- JL_Name ----
         JL_Name.setText(bundle.getString("JL_Name.text"));
+        JL_Name.setForeground(Color.white);
+        JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
         add(JL_Name);
-        JL_Name.setBounds(455, 110, 125, JL_Name.getPreferredSize().height);
+        JL_Name.setBounds(470, 80, 170, 25);
 
         //---- JL_Code ----
         JL_Code.setText(bundle.getString("JL_Code.text"));
+        JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
+        JL_Code.setForeground(Color.white);
         add(JL_Code);
-        JL_Code.setBounds(445, 140, 125, JL_Code.getPreferredSize().height);
+        JL_Code.setBounds(460, 120, 195, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size

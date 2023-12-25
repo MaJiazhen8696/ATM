@@ -1,4 +1,4 @@
-JFDML JFormDesigner: "8.2.0.0.331" Java: "17.0.9" encoding: "UTF-8"
+JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.8" encoding: "UTF-8"
 
 new FormModel {
 	"i18n.autoExternalize": true
@@ -8,60 +8,64 @@ new FormModel {
 	root: new FormRoot {
 		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
 			name: "this"
+			"preferredSize": new java.awt.Dimension( 638, 422 )
+			"opaque": false
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "JL_Hint"
 				"text": new FormMessage( null, "JL_Hint.text" )
+				"font": new java.awt.Font( "宋体", 1, 30 )
+				"foreground": new java.awt.Color( 255, 255, 255, 255 )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 225
 				"y": 35
-				"width": 170
+				"width": 215
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "JB_Save"
 				"text": new FormMessage( null, "JB_Save.text" )
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "JB_Save", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 45
-				"y": 110
+				"x": 25
+				"y": 95
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "JB_Withdraw"
 				"text": new FormMessage( null, "JB_Withdraw.text" )
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "JB_Withdraw", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 60
-				"y": 180
+				"x": 25
+				"y": 150
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "JB_MoneyQuery"
 				"text": new FormMessage( null, "JB_MoneyQuery.text" )
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "JB_MoneyQuery", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 70
-				"y": 240
+				"x": 25
+				"y": 205
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "JB_RecordQuery"
 				"text": new FormMessage( null, "JB_RecordQuery.text" )
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "JB_RecordQuery", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 85
-				"y": 305
+				"x": 25
+				"y": 260
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "JB_Password"
 				"text": new FormMessage( null, "JB_Password.text" )
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "JB_Password", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 500
-				"y": 235
+				"x": 505
+				"y": 260
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "JB_Transfer"
 				"text": new FormMessage( null, "JB_Transfer.text" )
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "JB_Transfer", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 515
+				"x": 505
 				"y": 150
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
@@ -69,46 +73,54 @@ new FormModel {
 				"text": new FormMessage( null, "JB_Other.text" )
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "JB_Other", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 520
-				"y": 190
+				"x": 505
+				"y": 205
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "JB_Back"
 				"text": new FormMessage( null, "JB_Back.text" )
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "JB_Back", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 525
-				"y": 310
+				"x": 545
+				"y": 320
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "JL_Timer"
 				"text": new FormMessage( null, "JL_Timer.text" )
+				"font": new java.awt.Font( "宋体", 1, 16 )
+				"foreground": new java.awt.Color( 255, 255, 255, 255 )
 				auxiliary() {
 					"JavaCodeGenerator.variableModifiers": 1
 				}
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"width": 95
-				"x": 525
-				"y": 25
+				"width": 170
+				"x": 470
+				"y": 40
+				"height": 25
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "JL_Name"
 				"text": new FormMessage( null, "JL_Name.text" )
+				"font": new java.awt.Font( "宋体", 1, 16 )
+				"foreground": new java.awt.Color( 255, 255, 255, 255 )
 				auxiliary() {
 					"JavaCodeGenerator.variableModifiers": 1
 				}
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"width": 125
-				"x": 525
-				"y": 55
+				"width": 170
+				"x": 470
+				"y": 80
+				"height": 25
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "JL_Code"
 				"text": new FormMessage( null, "JL_Code.text" )
+				"font": new java.awt.Font( "宋体", 1, 21 )
+				"foreground": new java.awt.Color( 255, 255, 255, 255 )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"width": 125
-				"x": 515
-				"y": 85
+				"width": 195
+				"x": 460
+				"y": 120
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )

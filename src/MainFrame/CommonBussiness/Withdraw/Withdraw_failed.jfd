@@ -1,16 +1,20 @@
-JFDML JFormDesigner: "8.2.0.0.331" Java: "17.0.9" encoding: "UTF-8"
+JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.8" encoding: "UTF-8"
 
 new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
 			name: "this"
+			"opaque": false
+			"preferredSize": new java.awt.Dimension( 638, 422 )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label1"
 				"text": "余额不足!!!!!"
+				"foreground": new java.awt.Color( 255, 255, 255, 255 )
+				"font": new java.awt.Font( "宋体", 1, 30 )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 185
-				"y": 110
+				"x": 180
+				"y": 170
 				"width": 240
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
@@ -18,38 +22,46 @@ new FormModel {
 				"text": "返回"
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "JB_Back", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 375
-				"y": 260
+				"x": 540
+				"y": 330
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "JL_Timer"
 				"text": "text"
+				"font": new java.awt.Font( "宋体", 1, 16 )
+				"foreground": new java.awt.Color( 255, 255, 255, 255 )
 				auxiliary() {
 					"JavaCodeGenerator.variableModifiers": 1
 				}
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"width": 95
-				"x": 435
-				"y": 45
+				"width": 170
+				"x": 470
+				"y": 40
+				"height": 25
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "JL_Name"
 				"text": "text"
+				"font": new java.awt.Font( "宋体", 1, 16 )
+				"foreground": new java.awt.Color( 255, 255, 255, 255 )
 				auxiliary() {
 					"JavaCodeGenerator.variableModifiers": 1
 				}
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"width": 125
-				"x": 435
-				"y": 75
+				"width": 170
+				"x": 470
+				"y": 80
+				"height": 25
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "JL_Code"
 				"text": "机器号：CUMT2023"
+				"font": new java.awt.Font( "宋体", 1, 21 )
+				"foreground": new java.awt.Color( 255, 255, 255, 255 )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"width": 125
-				"x": 425
-				"y": 105
+				"width": 195
+				"x": 460
+				"y": 120
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )

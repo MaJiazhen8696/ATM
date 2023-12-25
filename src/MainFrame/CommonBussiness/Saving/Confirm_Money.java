@@ -71,13 +71,15 @@ public class Confirm_Money extends JPanel {
         JL_Code = new JLabel();
 
         //======== this ========
-        setPreferredSize(new Dimension(800, 600));
+        setPreferredSize(new Dimension(638, 422));
         setLayout(null);
 
         //---- label1 ----
         label1.setText(bundle.getString("Saving.Confirm_Money.label1.text"));
+        label1.setForeground(Color.white);
+        label1.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 28));
         add(label1);
-        label1.setBounds(180, 55, 105, label1.getPreferredSize().height);
+        label1.setBounds(180, 55, 230, label1.getPreferredSize().height);
 
         //======== JP_Table ========
         {
@@ -86,55 +88,86 @@ public class Confirm_Money extends JPanel {
 
             //---- JL_MoneyValue ----
             JL_MoneyValue.setText(bundle.getString("Saving.Confirm_Money.JL_MoneyValue.text"));
+            JL_MoneyValue.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 22));
+            JL_MoneyValue.setHorizontalAlignment(SwingConstants.CENTER);
+            JL_MoneyValue.setForeground(Color.black);
             JP_Table.add(JL_MoneyValue);
 
             //---- JL_MoneyCount ----
             JL_MoneyCount.setText(bundle.getString("Saving.Confirm_Money.JL_MoneyCount.text"));
+            JL_MoneyCount.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 22));
+            JL_MoneyCount.setHorizontalAlignment(SwingConstants.CENTER);
+            JL_MoneyCount.setForeground(Color.black);
             JP_Table.add(JL_MoneyCount);
 
             //---- JL_MoneyTotal ----
             JL_MoneyTotal.setText(bundle.getString("Saving.Confirm_Money.JL_MoneyTotal.text"));
+            JL_MoneyTotal.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 22));
+            JL_MoneyTotal.setHorizontalAlignment(SwingConstants.CENTER);
+            JL_MoneyTotal.setForeground(Color.black);
             JP_Table.add(JL_MoneyTotal);
 
             //---- JL_Value ----
             JL_Value.setText(bundle.getString("Saving.Confirm_Money.JL_Value.text"));
+            JL_Value.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 19));
+            JL_Value.setHorizontalAlignment(SwingConstants.CENTER);
+            JL_Value.setForeground(Color.black);
             JP_Table.add(JL_Value);
+
+            //---- JL_Count ----
+            JL_Count.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 22));
+            JL_Count.setHorizontalAlignment(SwingConstants.CENTER);
+            JL_Count.setForeground(Color.black);
             JP_Table.add(JL_Count);
+
+            //---- JL_Total ----
+            JL_Total.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 22));
+            JL_Total.setHorizontalAlignment(SwingConstants.CENTER);
+            JL_Total.setForeground(Color.black);
             JP_Table.add(JL_Total);
         }
         add(JP_Table);
-        JP_Table.setBounds(120, 120, 265, JP_Table.getPreferredSize().height);
+        JP_Table.setBounds(110, 120, 335, 190);
 
         //---- JB_Confirm ----
         JB_Confirm.setText(bundle.getString("Saving.Confirm_Money.JB_Confirm.text"));
         JB_Confirm.addActionListener(e -> JB_Confirm(e));
         add(JB_Confirm);
-        JB_Confirm.setBounds(new Rectangle(new Point(415, 215), JB_Confirm.getPreferredSize()));
+        JB_Confirm.setBounds(new Rectangle(new Point(540, 290), JB_Confirm.getPreferredSize()));
 
         //---- JB_Cancel ----
         JB_Cancel.setText(bundle.getString("Saving.Confirm_Money.JB_Cancel.text"));
         add(JB_Cancel);
-        JB_Cancel.setBounds(new Rectangle(new Point(415, 255), JB_Cancel.getPreferredSize()));
+        JB_Cancel.setBounds(new Rectangle(new Point(540, 330), JB_Cancel.getPreferredSize()));
 
         //---- JL_Success ----
         JL_Success.setText(bundle.getString("Saving.Confirm_Money.JL_Success.text"));
+        JL_Success.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 28));
+        JL_Success.setForeground(Color.white);
+        JL_Success.setHorizontalAlignment(SwingConstants.CENTER);
         add(JL_Success);
-        JL_Success.setBounds(150, 240, 70, JL_Success.getPreferredSize().height);
+        JL_Success.setBounds(195, 320, 145, JL_Success.getPreferredSize().height);
 
         //---- JL_Timer ----
         JL_Timer.setText(bundle.getString("Saving.Confirm_Money.JL_Timer.text"));
+        JL_Timer.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
+        JL_Timer.setForeground(Color.white);
         add(JL_Timer);
-        JL_Timer.setBounds(445, 20, 95, JL_Timer.getPreferredSize().height);
+        JL_Timer.setBounds(470, 40, 170, 25);
 
         //---- JL_Name ----
         JL_Name.setText(bundle.getString("Saving.Confirm_Money.JL_Name.text"));
+        JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
+        JL_Name.setForeground(Color.white);
         add(JL_Name);
-        JL_Name.setBounds(445, 50, 125, JL_Name.getPreferredSize().height);
+        JL_Name.setBounds(470, 80, 170, 25);
 
         //---- JL_Code ----
         JL_Code.setText(bundle.getString("Saving.Confirm_Money.JL_Code.text"));
+        JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
+        JL_Code.setForeground(Color.white);
         add(JL_Code);
-        JL_Code.setBounds(435, 80, 125, JL_Code.getPreferredSize().height);
+        JL_Code.setBounds(460, 120, 195, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size

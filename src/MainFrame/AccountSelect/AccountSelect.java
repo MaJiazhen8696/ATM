@@ -60,30 +60,34 @@ public class AccountSelect extends JPanel {
         JL_Code = new JLabel();
 
         //======== this ========
+        setOpaque(false);
+        setPreferredSize(new Dimension(638, 422));
         setLayout(null);
 
         //---- JL_Hint ----
         JL_Hint.setText(bundle.getString("JL_Hint.text"));
+        JL_Hint.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 30));
+        JL_Hint.setForeground(Color.white);
         add(JL_Hint);
-        JL_Hint.setBounds(280, 80, 90, JL_Hint.getPreferredSize().height);
+        JL_Hint.setBounds(235, 85, 170, JL_Hint.getPreferredSize().height);
 
         //---- JB_SavingsAccount ----
         JB_SavingsAccount.setText(bundle.getString("JB_SavingsAccount.text"));
         JB_SavingsAccount.addActionListener(e -> JB_SavingsAccount(e));
         add(JB_SavingsAccount);
-        JB_SavingsAccount.setBounds(40, 180, 120, JB_SavingsAccount.getPreferredSize().height);
+        JB_SavingsAccount.setBounds(new Rectangle(new Point(40, 180), JB_SavingsAccount.getPreferredSize()));
 
         //---- JB_CheckAccount ----
         JB_CheckAccount.setText(bundle.getString("JB_CheckAccount.text"));
         JB_CheckAccount.addActionListener(e -> JB_CheckAccount(e));
         add(JB_CheckAccount);
-        JB_CheckAccount.setBounds(35, 245, 120, 30);
+        JB_CheckAccount.setBounds(new Rectangle(new Point(40, 245), JB_CheckAccount.getPreferredSize()));
 
         //---- JB_CreditsAccount ----
         JB_CreditsAccount.setText(bundle.getString("JB_CreditsAccount.text"));
         JB_CreditsAccount.addActionListener(e -> JB_CreditsAccount(e));
         add(JB_CreditsAccount);
-        JB_CreditsAccount.setBounds(545, 200, 120, 30);
+        JB_CreditsAccount.setBounds(new Rectangle(new Point(545, 200), JB_CreditsAccount.getPreferredSize()));
 
         //---- JB_Quit ----
         JB_Quit.setText(bundle.getString("JB_Quit.text"));
@@ -93,18 +97,24 @@ public class AccountSelect extends JPanel {
 
         //---- JL_Timer ----
         JL_Timer.setText(bundle.getString("JL_Timer.text"));
+        JL_Timer.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
+        JL_Timer.setForeground(Color.white);
         add(JL_Timer);
-        JL_Timer.setBounds(550, 25, 95, JL_Timer.getPreferredSize().height);
+        JL_Timer.setBounds(470, 40, 170, 25);
 
         //---- JL_Name ----
         JL_Name.setText(bundle.getString("JL_Name.text"));
+        JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
+        JL_Name.setForeground(Color.white);
         add(JL_Name);
-        JL_Name.setBounds(550, 55, 125, JL_Name.getPreferredSize().height);
+        JL_Name.setBounds(470, 80, 170, 25);
 
         //---- JL_Code ----
         JL_Code.setText(bundle.getString("JL_Code.text"));
+        JL_Code.setForeground(Color.white);
+        JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
         add(JL_Code);
-        JL_Code.setBounds(540, 85, 125, JL_Code.getPreferredSize().height);
+        JL_Code.setBounds(460, 120, 195, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size

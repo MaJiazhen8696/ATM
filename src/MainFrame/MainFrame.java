@@ -73,6 +73,29 @@ public class MainFrame extends JFrame {
     LOG log=new LOG(this);
     Interval interval=new Interval(this);
     public MainFrame() {
+        super("ATM机系统");
+
+        //设置大小
+        setSize(638, 422);
+        //设置位置
+        //setLocation(0, 0);
+        //背景图片的路径。（相对路径或者绝对路径。本例图片放于"java项目名"的文件下）
+        String path = "background.png";
+        // 背景图片
+        ImageIcon background = new ImageIcon(path);
+        // 把背景图片显示在一个标签里面
+        JLabel label = new JLabel(background);
+        // 把标签的大小位置设置为图片刚好填充整个面板
+        label.setBounds(0, 0, this.getWidth(), this.getHeight());
+        // 把内容窗格转化为JPanel，否则不能用方法setOpaque()来使内容窗格透明
+        JPanel imagePanel = (JPanel) this.getContentPane();
+        imagePanel.setOpaque(false);
+        // 把背景图片添加到分层窗格的最底层作为背景
+        this.getLayeredPane().add(label, new Integer(Integer.MIN_VALUE));
+        //设置可见
+        setVisible(true);
+        //点关闭按钮时退
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         bundle = global.BUNDLE;
         initComponents();
         add(wel);add(login);
@@ -130,7 +153,7 @@ public class MainFrame extends JFrame {
         global.Disable(interval);
         global.Disable(printReceipt);
 
-
+        global.T=wel.JL_Timer;
         global.Enable(wel);
 
 
@@ -282,7 +305,7 @@ public class MainFrame extends JFrame {
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         //======== this ========
-        setPreferredSize(new Dimension(800, 600));
+        setPreferredSize(new Dimension(652, 459));
         var contentPane = getContentPane();
         contentPane.setLayout(new FlowLayout());
         pack();

@@ -109,54 +109,58 @@ public class Withdraw extends JPanel {
         JL_Code = new JLabel();
 
         //======== this ========
+        setOpaque(false);
+        setPreferredSize(new Dimension(638, 422));
         setLayout(null);
 
         //---- label1 ----
         label1.setText("\u8bf7\u8f93\u5165\u53d6\u6b3e\u91d1\u989d");
+        label1.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 30));
+        label1.setForeground(Color.white);
         add(label1);
-        label1.setBounds(240, 60, 135, label1.getPreferredSize().height);
+        label1.setBounds(205, 60, 230, label1.getPreferredSize().height);
 
         //---- button1 ----
         button1.setText("100");
         button1.addActionListener(e -> Withdraw_100(e));
         add(button1);
-        button1.setBounds(new Rectangle(new Point(40, 120), button1.getPreferredSize()));
+        button1.setBounds(new Rectangle(new Point(25, 95), button1.getPreferredSize()));
 
         //---- button2 ----
         button2.setText("200");
         button2.addActionListener(e -> Withdraw_200(e));
         add(button2);
-        button2.setBounds(new Rectangle(new Point(45, 185), button2.getPreferredSize()));
+        button2.setBounds(new Rectangle(new Point(25, 150), button2.getPreferredSize()));
 
         //---- button3 ----
         button3.setText("500");
         button3.addActionListener(e -> button3(e));
         add(button3);
-        button3.setBounds(new Rectangle(new Point(45, 255), button3.getPreferredSize()));
+        button3.setBounds(new Rectangle(new Point(25, 205), button3.getPreferredSize()));
 
         //---- button4 ----
         button4.setText("800");
         button4.addActionListener(e -> Withdraw_800(e));
         add(button4);
-        button4.setBounds(new Rectangle(new Point(45, 340), button4.getPreferredSize()));
+        button4.setBounds(new Rectangle(new Point(25, 260), button4.getPreferredSize()));
 
         //---- button5 ----
         button5.setText("1000");
         button5.addActionListener(e -> Withdraw_1000(e));
         add(button5);
-        button5.setBounds(new Rectangle(new Point(490, 135), button5.getPreferredSize()));
+        button5.setBounds(new Rectangle(new Point(505, 150), button5.getPreferredSize()));
 
         //---- button6 ----
         button6.setText("1500");
         button6.addActionListener(e -> Withdraw_1500(e));
         add(button6);
-        button6.setBounds(new Rectangle(new Point(495, 215), button6.getPreferredSize()));
+        button6.setBounds(new Rectangle(new Point(505, 205), button6.getPreferredSize()));
 
         //---- button7 ----
         button7.setText("\u8f93\u5165\u91d1\u989d");
         button7.addActionListener(e -> Withdraw_custom(e));
         add(button7);
-        button7.setBounds(new Rectangle(new Point(490, 310), button7.getPreferredSize()));
+        button7.setBounds(new Rectangle(new Point(505, 260), button7.getPreferredSize()));
 
         //---- button8 ----
         button8.setText("\u53d6\u5361");
@@ -166,18 +170,24 @@ public class Withdraw extends JPanel {
 
         //---- JL_Timer ----
         JL_Timer.setText("text");
+        JL_Timer.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
+        JL_Timer.setForeground(Color.white);
         add(JL_Timer);
-        JL_Timer.setBounds(570, 30, 95, JL_Timer.getPreferredSize().height);
+        JL_Timer.setBounds(470, 40, 170, 25);
 
         //---- JL_Name ----
         JL_Name.setText("text");
+        JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
+        JL_Name.setForeground(Color.white);
         add(JL_Name);
-        JL_Name.setBounds(570, 60, 125, JL_Name.getPreferredSize().height);
+        JL_Name.setBounds(470, 80, 170, 25);
 
         //---- JL_Code ----
         JL_Code.setText("\u673a\u5668\u53f7\uff1aCUMT2023");
+        JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
+        JL_Code.setForeground(Color.white);
         add(JL_Code);
-        JL_Code.setBounds(560, 90, 125, JL_Code.getPreferredSize().height);
+        JL_Code.setBounds(460, 120, 195, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size
