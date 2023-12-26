@@ -14,6 +14,7 @@ public class User {
     public Account CurrentAccount;
     private Account Savings_Account, Credits_Account, Check_Account;
     private String ID;
+    public  String Name;
     public User(String id){
         ID=id;
         try {
@@ -31,6 +32,7 @@ public class User {
                         result.getString("Check_Account"),
                         result.getDouble("Check_Account_money"));
                 }
+                Name=result.getString("Name");
             }catch (Exception e){
 
         }

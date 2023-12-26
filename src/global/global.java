@@ -41,6 +41,7 @@ public class global {
     public static Calendar calendar= Calendar.getInstance();
     public static SimpleDateFormat dateFormat= new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
     public static JLabel T;
+    public static JLabel NM;
     public global(){
 
         LOCALE=Locale.getDefault();
@@ -55,6 +56,9 @@ public class global {
 
                 //System.out.print(1);
                 if(T!=null) T.setText(dateFormat.format(new Date()));
+//                if(NM!=null&&USER!=null){
+//                    NM.setText("name");
+//                }
 
             }
         },0,33);

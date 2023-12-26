@@ -83,7 +83,7 @@ public class LOG extends JPanel {
     }
 
     private void JB_Card(ActionEvent e) {
-
+        Father.toTakeCard(this);
     }
 
     private void createUIComponents() {

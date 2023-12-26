@@ -178,12 +178,14 @@ public class MainFrame extends JFrame {
         global.Disable(p);
         global.Enable(interval);
         global.T=interval.JL_Timer;
+        interval.JL_Name.setText(global.USER.Name);
         interval.ST();
 
     }
     public void toSaving(JPanel p){
         global.Disable(p);
         global.T=saving.JL_Timer;
+        saving.JL_Name.setText(global.USER.Name);
         global.Enable(saving);
 
         saving.Timer_Start();
@@ -191,65 +193,77 @@ public class MainFrame extends JFrame {
     public void toWithdraw_custom(JPanel p){
         global.Disable(p);
         global.T=withdraw_custom.JL_Timer;
+        withdraw_custom.JL_Name.setText(global.USER.Name);
         global.Enable(withdraw_custom);
     }
     public void toWithdraw(JPanel p){
         global.Disable(p);
         global.T=withdraw.JL_Timer;
+        withdraw.JL_Name.setText(global.USER.Name);
         global.Enable(withdraw);
     }
     public void toWithdraw_failed(JPanel p){
         global.Disable(p);
         global.T=withdraw_failed.JL_Timer;
+        withdraw_failed.JL_Name.setText(global.USER.Name);
         global.Enable(withdraw_failed);
     }
     public void tolog(JPanel p){
         global.Disable(p);
         global.T=log.JL_Timer;
+        log.JL_Name.setText(global.USER.Name);
         global.Enable(log);
         log.Show();
     }
     public void toWithdraw_success(JPanel p){
         global.Disable(p);
         global.T=withdraw_success.JL_Timer;
+        withdraw_success.JL_Name.setText(global.USER.Name);
         global.Enable(withdraw_success);
     }
     public void toSavingConfirm(JPanel p,int money){
         global.Disable(p);
         global.T=confirmMoney.JL_Timer;
+        confirmMoney.JL_Name.setText(global.USER.Name);
         global.Enable(confirmMoney);
         confirmMoney.SetMoney(money);
     }
     public void toQuery(JPanel p){
         global.Disable(p);
         global.T=query.JL_Timer;
+        query.JL_Name.setText(global.USER.Name);
         global.Enable(query);
         query.setMoney();
     }
     public void toTransfer_admin(JPanel p){
         global.Disable(p);
         global.T=transfer_admin.JL_Timer;
+        transfer_admin.JL_Name.setText(global.USER.Name);
         global.Enable(transfer_admin);
     }
     public void toTransfer_amount(JPanel p){
         global.Disable(p);
         global.T=transfer_amount.JL_Timer;
+        transfer_amount.JL_Name.setText(global.USER.Name);
         global.Enable(transfer_amount);
     }
     public void toTransfer_success(JPanel p){
         global.Disable(p);
         global.T=transfer_success.JL_Timer;
+        transfer_success.JL_Name.setText(global.USER.Name);
         global.Enable(transfer_success);
     }
 
     public void toTransfer_failed(JPanel p){
         global.Disable(p);
         global.T=transfer_failed.JL_Timer;
+        transfer_failed.JL_Name.setText(global.USER.Name);
         global.Enable(transfer_failed);
     }
     public void toOther_page1(JPanel p){
         global.Disable(p);
         global.T=other_page1.JL_Timer;
+        other_page1.JL_Name.setText(global.USER.Name);
         global.Enable(other_page1);
     }
     public void toOther_page2(JPanel p){
@@ -264,21 +278,25 @@ public class MainFrame extends JFrame {
     public void toChange_failed(JPanel p){
         global.Disable(p);
         global.T=change_failed.JL_Timer;
+        change_failed.JL_Name.setText(global.USER.Name);
         global.Enable(change_failed);
     }
     public void toChange_success(JPanel p){
         global.Disable(p);
         global.T=change_success.JL_Timer;
+        change_success.JL_Name.setText(global.USER.Name);
         global.Enable(change_success);
     }
     public void toConfirm_pwd(JPanel p){
         global.Disable(p);
         global.T=confirm_pwd.JL_Timer;
+        confirm_pwd.JL_Name.setText(global.USER.Name);
         global.Enable(confirm_pwd);
     }
     public void toReConfirm_pwd(JPanel p){
         global.Disable(p);
         global.T=reConfirm_pwd.JL_Timer;
+        reConfirm_pwd.JL_Name.setText(global.USER.Name);
         global.Enable(reConfirm_pwd);
     }
     public void toTakeCard(JPanel p){
@@ -302,16 +320,19 @@ public class MainFrame extends JFrame {
     public void toAccountSelect(JPanel p){
         global.Disable(p);
         global.T=accountSelect.JL_Timer;
+        accountSelect.JL_Name.setText(global.USER.Name);
         global.Enable(accountSelect);
     }
     public void toBussinessSelect(JPanel p){
         global.Disable(p);
         global.T=bussinessSelect.JL_Timer;
+        bussinessSelect.JL_Name.setText(global.USER.Name);
         global.Enable(bussinessSelect);
     }
     public void toPrintReceipt(JPanel p){
         global.Disable(p);
         global.T=printReceipt.JL_Timer;
+        printReceipt.JL_Name.setText(global.USER.Name);
         global.Enable(printReceipt);
     }
     private void initComponents() {
