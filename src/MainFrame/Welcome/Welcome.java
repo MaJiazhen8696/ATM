@@ -30,11 +30,15 @@ public class Welcome extends JPanel {
 
 
     private void button1(ActionEvent e) {
-        // TODO add your code here
+        Father.Change_ZH();
     }
 
     private void Active(KeyEvent e) {
         // TODO add your code here
+    }
+
+    private void button2(ActionEvent e) {
+        Father.Change_EN();
     }
 
     private void initComponents() {
@@ -71,6 +75,7 @@ public class Welcome extends JPanel {
 
         //---- button2 ----
         button2.setText(bundle.getString("Welcome.button2.text"));
+        button2.addActionListener(e -> button2(e));
         add(button2);
         button2.setBounds(540, 330, 80, button2.getPreferredSize().height);
 

@@ -1,5 +1,6 @@
 package global;
 
+import MainFrame.MainFrame;
 import User.User;
 
 import javax.swing.*;
@@ -20,7 +21,7 @@ public class global {
     public final static int Failed_Three_Times=1;
     public final static int AFK=2;
     public final  static  int SAFE=0;
-
+    public static MainFrame MF;
 
 
     public final static int Savings = 1;
@@ -66,7 +67,11 @@ public class global {
         p.setEnabled(true);
         p.setVisible(true);
     }
-
+    public static void Change(){
+        MF.dispose();
+        MF=new MainFrame();
+        MF.setVisible(true);
+    }
 
 
 }

@@ -31,11 +31,13 @@ import MainFrame.CommonBussiness.Transfer.Transfer_amount;
 import MainFrame.CommonBussiness.Transfer.Transfer_success;
 import MainFrame.Welcome.Welcome;
 import MainFrame.takeCard.TakeCard;
+import com.sun.tools.javac.Main;
 import global.global;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Locale;
 import java.util.ResourceBundle;
 import javax.swing.*;
 
@@ -74,6 +76,7 @@ public class MainFrame extends JFrame {
     Interval interval=new Interval(this);
     public MainFrame() {
         super("ATM机系统");
+
 
         //设置大小
         setSize(638, 422);
@@ -157,6 +160,14 @@ public class MainFrame extends JFrame {
         global.Enable(wel);
 
 
+    }
+    public void Change_ZH(){
+        Locale.setDefault(new Locale("zh"));
+        global.Change();
+    }
+    public void Change_EN(){
+        Locale.setDefault(new Locale("eu"));
+        global.Change();
     }
     public void toLogin(JPanel p){
         global.Disable(p);

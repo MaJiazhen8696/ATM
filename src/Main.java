@@ -40,9 +40,12 @@ public class Main {
 
         //通过mysql读入用户数据
         //会抛出异常记得处理
+        UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
 
-        MainFrame cur=new MainFrame();
-        cur.setVisible(true);
+        global.MF=new MainFrame();
+
+        global.MF.setVisible(true);
 
     }
+
 }
