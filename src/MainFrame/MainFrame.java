@@ -166,7 +166,7 @@ public class MainFrame extends JFrame {
         global.Change();
     }
     public void Change_EN(){
-        Locale.setDefault(new Locale("eu"));
+        Locale.setDefault(new Locale("en"));
         global.Change();
     }
     public void toLogin(JPanel p){
