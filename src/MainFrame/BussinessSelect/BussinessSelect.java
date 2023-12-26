@@ -86,8 +86,9 @@ public class BussinessSelect extends JPanel {
         JL_Hint.setText(bundle.getString("BussinessSelect.JL_Hint.text"));
         JL_Hint.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 30));
         JL_Hint.setForeground(Color.white);
+        JL_Hint.setHorizontalAlignment(SwingConstants.CENTER);
         add(JL_Hint);
-        JL_Hint.setBounds(185, 35, 255, JL_Hint.getPreferredSize().height);
+        JL_Hint.setBounds(90, 35, 435, JL_Hint.getPreferredSize().height);
 
         //---- JB_Save ----
         JB_Save.setText(bundle.getString("BussinessSelect.JB_Save.text"));

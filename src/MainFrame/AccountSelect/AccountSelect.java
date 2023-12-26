@@ -68,8 +68,9 @@ public class AccountSelect extends JPanel {
         JL_Hint.setText(bundle.getString("AccountSelect.JL_Hint.text"));
         JL_Hint.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 30));
         JL_Hint.setForeground(Color.white);
+        JL_Hint.setHorizontalAlignment(SwingConstants.CENTER);
         add(JL_Hint);
-        JL_Hint.setBounds(235, 30, 170, JL_Hint.getPreferredSize().height);
+        JL_Hint.setBounds(100, 30, 400, JL_Hint.getPreferredSize().height);
 
         //---- JB_SavingsAccount ----
         JB_SavingsAccount.setText(bundle.getString("AccountSelect.JB_SavingsAccount.text"));

@@ -1,4 +1,4 @@
-JFDML JFormDesigner: "8.2.0.0.331" Java: "17.0.9" encoding: "UTF-8"
+JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.8" encoding: "UTF-8"
 
 new FormModel {
 	"i18n.bundleName": "lang"
@@ -15,10 +15,11 @@ new FormModel {
 				"text": new FormMessage( null, "BussinessSelect.JL_Hint.text" )
 				"font": new java.awt.Font( "宋体", 1, 30 )
 				"foreground": new java.awt.Color( 255, 255, 255, 255 )
+				"horizontalAlignment": 0
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 185
+				"x": 90
 				"y": 35
-				"width": 255
+				"width": 435
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "JB_Save"

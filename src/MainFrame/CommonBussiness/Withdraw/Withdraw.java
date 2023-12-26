@@ -125,43 +125,43 @@ public class Withdraw extends JPanel {
         button1.setText(bundle.getString("Withdraw.button1.text"));
         button1.addActionListener(e -> Withdraw_100(e));
         add(button1);
-        button1.setBounds(new Rectangle(new Point(25, 95), button1.getPreferredSize()));
+        button1.setBounds(25, 95, 85, button1.getPreferredSize().height);
 
         //---- button2 ----
         button2.setText(bundle.getString("Withdraw.button2.text"));
         button2.addActionListener(e -> Withdraw_200(e));
         add(button2);
-        button2.setBounds(new Rectangle(new Point(25, 150), button2.getPreferredSize()));
+        button2.setBounds(25, 150, 85, button2.getPreferredSize().height);
 
         //---- button3 ----
         button3.setText(bundle.getString("Withdraw.button3.text"));
         button3.addActionListener(e -> button3(e));
         add(button3);
-        button3.setBounds(new Rectangle(new Point(25, 205), button3.getPreferredSize()));
+        button3.setBounds(25, 205, 85, button3.getPreferredSize().height);
 
         //---- button4 ----
         button4.setText(bundle.getString("Withdraw.button4.text"));
         button4.addActionListener(e -> Withdraw_800(e));
         add(button4);
-        button4.setBounds(new Rectangle(new Point(25, 260), button4.getPreferredSize()));
+        button4.setBounds(25, 260, 85, button4.getPreferredSize().height);
 
         //---- button5 ----
         button5.setText(bundle.getString("Withdraw.button5.text"));
         button5.addActionListener(e -> Withdraw_1000(e));
         add(button5);
-        button5.setBounds(new Rectangle(new Point(505, 150), button5.getPreferredSize()));
+        button5.setBounds(505, 150, 85, button5.getPreferredSize().height);
 
         //---- button6 ----
         button6.setText(bundle.getString("Withdraw.button6.text"));
         button6.addActionListener(e -> Withdraw_1500(e));
         add(button6);
-        button6.setBounds(new Rectangle(new Point(505, 205), button6.getPreferredSize()));
+        button6.setBounds(505, 205, 85, button6.getPreferredSize().height);
 
         //---- button7 ----
         button7.setText(bundle.getString("Withdraw.button7.text"));
         button7.addActionListener(e -> Withdraw_custom(e));
         add(button7);
-        button7.setBounds(new Rectangle(new Point(505, 260), button7.getPreferredSize()));
+        button7.setBounds(505, 260, 85, button7.getPreferredSize().height);
 
         //---- button8 ----
         button8.setText(bundle.getString("Withdraw.button8.text"));

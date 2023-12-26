@@ -84,7 +84,7 @@ public class Welcome extends JPanel {
         label1.setForeground(Color.white);
         label1.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 36));
         add(label1);
-        label1.setBounds(new Rectangle(new Point(245, 185), label1.getPreferredSize()));
+        label1.setBounds(245, 185, 360, label1.getPreferredSize().height);
 
         //---- JL_Timer ----
         JL_Timer.setText(bundle.getString("Welcome.JL_Timer.text"));

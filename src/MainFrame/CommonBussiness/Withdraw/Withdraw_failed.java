@@ -44,7 +44,7 @@ public class Withdraw_failed extends JPanel {
         label1.setForeground(Color.white);
         label1.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 30));
         add(label1);
-        label1.setBounds(180, 170, 240, label1.getPreferredSize().height);
+        label1.setBounds(210, 180, 240, label1.getPreferredSize().height);
 
         //---- button1 ----
         button1.setText(bundle.getString("Withdraw_failed.button1.text"));

@@ -80,7 +80,7 @@ public class Confirm_Money extends JPanel {
         label1.setForeground(Color.white);
         label1.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 28));
         add(label1);
-        label1.setBounds(200, 30, 230, label1.getPreferredSize().height);
+        label1.setBounds(215, 30, 230, label1.getPreferredSize().height);
 
         //======== JP_Table ========
         {
@@ -135,7 +135,7 @@ public class Confirm_Money extends JPanel {
             JP_Table.add(JL_Total);
         }
         add(JP_Table);
-        JP_Table.setBounds(135, 125, 335, 170);
+        JP_Table.setBounds(140, 125, 335, 170);
 
         //---- JB_Confirm ----
         JB_Confirm.setText(bundle.getString("Saving.Confirm_Money.JB_Confirm.text"));
@@ -152,9 +152,8 @@ public class Confirm_Money extends JPanel {
         JL_Success.setText(bundle.getString("Saving.Confirm_Money.JL_Success.text"));
         JL_Success.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 28));
         JL_Success.setForeground(Color.white);
-        JL_Success.setHorizontalAlignment(SwingConstants.CENTER);
         add(JL_Success);
-        JL_Success.setBounds(240, 360, 145, JL_Success.getPreferredSize().height);
+        JL_Success.setBounds(240, 360, 295, JL_Success.getPreferredSize().height);
 
         //---- JL_Timer ----
         JL_Timer.setText(bundle.getString("Saving.Confirm_Money.JL_Timer.text"));

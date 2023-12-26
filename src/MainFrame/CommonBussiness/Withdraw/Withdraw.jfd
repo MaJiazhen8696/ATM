@@ -1,4 +1,4 @@
-JFDML JFormDesigner: "8.2.0.0.331" Java: "17.0.9" encoding: "UTF-8"
+JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.8" encoding: "UTF-8"
 
 new FormModel {
 	"i18n.bundleName": "lang"
@@ -27,6 +27,7 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 25
 				"y": 95
+				"width": 85
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button2"
@@ -35,6 +36,7 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 25
 				"y": 150
+				"width": 85
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button3"
@@ -43,6 +45,7 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 25
 				"y": 205
+				"width": 85
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button4"
@@ -51,6 +54,7 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 25
 				"y": 260
+				"width": 85
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button5"
@@ -59,6 +63,7 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 505
 				"y": 150
+				"width": 85
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button6"
@@ -67,6 +72,7 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 505
 				"y": 205
+				"width": 85
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button7"
@@ -75,6 +81,7 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 505
 				"y": 260
+				"width": 85
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button8"

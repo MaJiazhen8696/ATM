@@ -64,7 +64,7 @@ public class Withdraw_custom extends JPanel {
 
         //---- button1 ----
         button1.setText(bundle.getString("Withdraw_custom.button1.text"));
-        button1.addActionListener(e -> Withdraw_custom(e));
+        button1.addActionListener(e -> confirm(e));
         add(button1);
         button1.setBounds(new Rectangle(new Point(540, 330), button1.getPreferredSize()));
 

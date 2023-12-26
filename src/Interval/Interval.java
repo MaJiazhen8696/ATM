@@ -61,6 +61,7 @@ public class Interval extends JPanel {
         JL_waiting.setText(bundle.getString("Interval.JL_waiting.text"));
         JL_waiting.setForeground(Color.white);
         JL_waiting.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 36));
+        JL_waiting.setHorizontalAlignment(SwingConstants.CENTER);
         add(JL_waiting);
         JL_waiting.setBounds(135, 180, 370, JL_waiting.getPreferredSize().height);
 
