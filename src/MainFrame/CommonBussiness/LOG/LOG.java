@@ -52,7 +52,7 @@ public class LOG extends JPanel {
         JT.setDefaultRenderer(Object.class,dftc);
         JT.getTableHeader().setBackground(new Color(0x3e45a8));
 
-        JT.getTableHeader().setForeground(Color.white);
+        JT.getTableHeader().setForeground(Color.black);
 
 
         try{
@@ -111,10 +111,9 @@ public class LOG extends JPanel {
             SP.setOpaque(false);
 
             //---- JT ----
-            JT.setForeground(Color.black);
+            JT.setForeground(Color.white);
             JT.setBackground(Color.white);
             JT.setAutoscrolls(false);
-            JT.setOpaque(false);
             SP.setViewportView(JT);
         }
         add(SP);
