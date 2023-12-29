@@ -73,17 +73,17 @@ public class Other_page2 extends JPanel {
         //---- button5 ----
         button5.setText(bundle.getString("Other_page2.button5.text"));
         add(button5);
-        button5.setBounds(new Rectangle(new Point(538, 95), button5.getPreferredSize()));
+        button5.setBounds(538, 95, 100, button5.getPreferredSize().height);
 
         //---- button6 ----
         button6.setText(bundle.getString("Other_page2.button6.text"));
         add(button6);
-        button6.setBounds(new Rectangle(new Point(538, 150), button6.getPreferredSize()));
+        button6.setBounds(538, 150, 100, button6.getPreferredSize().height);
 
         //---- button7 ----
         button7.setText(bundle.getString("Other_page2.button7.text"));
         add(button7);
-        button7.setBounds(new Rectangle(new Point(538, 205), button7.getPreferredSize()));
+        button7.setBounds(538, 205, 100, button7.getPreferredSize().height);
 
         //---- button8 ----
         button8.setText(bundle.getString("Other_page2.button8.text"));
