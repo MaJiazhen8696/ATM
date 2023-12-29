@@ -26,12 +26,13 @@ public class Confirm_Money extends JPanel {
         initComponents();
         Father = fa;
         THIS=this;
-
+        JL_Success.setVisible(false);
     }
 
     private void JB_Confirm(ActionEvent e) {
         global.USER.CurrentAccount.ChangeMoney(global.Income,global.USER.CurrentAccount.getAccountID(),null,MoneyTotal);
         MoneyCount=0;MoneyTotal=0;
+        JL_Success.setVisible(true);
         Timer counter = new Timer(1000, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

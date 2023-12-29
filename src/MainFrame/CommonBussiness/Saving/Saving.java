@@ -90,14 +90,14 @@ public class Saving extends JPanel {
         JL_Hint.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 30));
         JL_Hint.setForeground(Color.white);
         add(JL_Hint);
-        JL_Hint.setBounds(105, 150, 390, JL_Hint.getPreferredSize().height);
+        JL_Hint.setBounds(140, 150, 390, JL_Hint.getPreferredSize().height);
 
         //---- JL_Time ----
         JL_Time.setText(bundle.getString("Saving.JL_Time.text"));
         JL_Time.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 22));
         JL_Time.setForeground(Color.white);
         add(JL_Time);
-        JL_Time.setBounds(55, 250, 210, JL_Time.getPreferredSize().height);
+        JL_Time.setBounds(210, 250, 210, JL_Time.getPreferredSize().height);
 
         //---- JB_Confirm ----
         JB_Confirm.setText(bundle.getString("Saving.JB_Confirm.text"));
