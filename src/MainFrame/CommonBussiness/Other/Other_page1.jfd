@@ -1,4 +1,4 @@
-JFDML JFormDesigner: "8.2.0.0.331" Java: "17.0.9" encoding: "UTF-8"
+JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.8" encoding: "UTF-8"
 
 new FormModel {
 	"i18n.bundleName": "lang"
@@ -14,59 +14,67 @@ new FormModel {
 				name: "button1"
 				"text": new FormMessage( null, "Other_page1.button1.text" )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 25
-				"y": 150
+				"x": 0
+				"y": 95
+				"width": 100
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button2"
 				"text": new FormMessage( null, "Other_page1.button2.text" )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 25
-				"y": 205
+				"x": 0
+				"y": 150
+				"width": 100
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button3"
 				"text": new FormMessage( null, "Other_page1.button3.text" )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 25
-				"y": 260
+				"x": 0
+				"y": 205
+				"width": 100
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button4"
 				"text": new FormMessage( null, "Other_page1.button4.text" )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 505
-				"y": 150
+				"x": 538
+				"y": 95
+				"width": 100
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button5"
 				"text": new FormMessage( null, "Other_page1.button5.text" )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 505
-				"y": 205
+				"x": 538
+				"y": 150
+				"width": 100
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button6"
 				"text": new FormMessage( null, "Other_page1.button6.text" )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 505
-				"y": 260
+				"x": 538
+				"y": 205
+				"width": 100
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button7"
 				"text": new FormMessage( null, "Other_page1.button7.text" )
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "BT_Back", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 15
-				"y": 330
+				"x": 0
+				"y": 260
+				"width": 100
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button8"
 				"text": new FormMessage( null, "Other_page1.button8.text" )
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "getNextPage", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 540
-				"y": 330
+				"x": 538
+				"y": 255
+				"width": 100
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "JL_Timer"
@@ -84,8 +92,9 @@ new FormModel {
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "JL_Name"
 				"text": new FormMessage( null, "Other_page1.JL_Name.text" )
-				"font": new java.awt.Font( "宋体", 1, 16 )
+				"font": new java.awt.Font( "宋体", 1, 22 )
 				"foreground": new java.awt.Color( 255, 255, 255, 255 )
+				"horizontalAlignment": 4
 				auxiliary() {
 					"JavaCodeGenerator.variableModifiers": 1
 				}
@@ -102,8 +111,7 @@ new FormModel {
 				"foreground": new java.awt.Color( 255, 255, 255, 255 )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 195
-				"x": 460
-				"y": 80
+				"y": 395
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )

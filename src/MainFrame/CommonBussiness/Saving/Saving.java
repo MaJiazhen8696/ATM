@@ -90,26 +90,26 @@ public class Saving extends JPanel {
         JL_Hint.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 30));
         JL_Hint.setForeground(Color.white);
         add(JL_Hint);
-        JL_Hint.setBounds(140, 150, 390, JL_Hint.getPreferredSize().height);
+        JL_Hint.setBounds(150, 150, 390, JL_Hint.getPreferredSize().height);
 
         //---- JL_Time ----
         JL_Time.setText(bundle.getString("Saving.JL_Time.text"));
         JL_Time.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 22));
         JL_Time.setForeground(Color.white);
         add(JL_Time);
-        JL_Time.setBounds(210, 250, 210, JL_Time.getPreferredSize().height);
+        JL_Time.setBounds(240, 255, 210, JL_Time.getPreferredSize().height);
 
         //---- JB_Confirm ----
         JB_Confirm.setText(bundle.getString("Saving.JB_Confirm.text"));
         JB_Confirm.addActionListener(e -> JB_Confirm(e));
         add(JB_Confirm);
-        JB_Confirm.setBounds(new Rectangle(new Point(540, 290), JB_Confirm.getPreferredSize()));
+        JB_Confirm.setBounds(558, 290, 80, JB_Confirm.getPreferredSize().height);
 
         //---- JB_Back ----
         JB_Back.setText(bundle.getString("Saving.JB_Back.text"));
         JB_Back.addActionListener(e -> JB_Back(e));
         add(JB_Back);
-        JB_Back.setBounds(new Rectangle(new Point(540, 330), JB_Back.getPreferredSize()));
+        JB_Back.setBounds(558, 330, 80, JB_Back.getPreferredSize().height);
 
         //---- JL_Timer ----
         JL_Timer.setText(bundle.getString("Saving.JL_Timer.text"));
@@ -121,7 +121,8 @@ public class Saving extends JPanel {
         //---- JL_Name ----
         JL_Name.setText(bundle.getString("Saving.JL_Name.text"));
         JL_Name.setForeground(Color.white);
-        JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
+        JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 22));
+        JL_Name.setHorizontalAlignment(SwingConstants.RIGHT);
         add(JL_Name);
         JL_Name.setBounds(470, 40, 170, 25);
 
@@ -130,7 +131,7 @@ public class Saving extends JPanel {
         JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
         JL_Code.setForeground(Color.white);
         add(JL_Code);
-        JL_Code.setBounds(460, 80, 195, JL_Code.getPreferredSize().height);
+        JL_Code.setBounds(0, 395, 195, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size

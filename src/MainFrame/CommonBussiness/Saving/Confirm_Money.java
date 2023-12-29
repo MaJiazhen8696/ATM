@@ -56,7 +56,6 @@ public class Confirm_Money extends JPanel {
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         ResourceBundle bundle = ResourceBundle.getBundle("lang");
-        label1 = new JLabel();
         JP_Table = new JPanel();
         JL_MoneyValue = new JLabel();
         JL_MoneyCount = new JLabel();
@@ -75,13 +74,6 @@ public class Confirm_Money extends JPanel {
         setPreferredSize(new Dimension(638, 422));
         setOpaque(false);
         setLayout(null);
-
-        //---- label1 ----
-        label1.setText(bundle.getString("Saving.Confirm_Money.label1.text"));
-        label1.setForeground(Color.white);
-        label1.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 28));
-        add(label1);
-        label1.setBounds(215, 30, 230, label1.getPreferredSize().height);
 
         //======== JP_Table ========
         {
@@ -136,25 +128,25 @@ public class Confirm_Money extends JPanel {
             JP_Table.add(JL_Total);
         }
         add(JP_Table);
-        JP_Table.setBounds(140, 125, 335, 170);
+        JP_Table.setBounds(155, 125, 335, 170);
 
         //---- JB_Confirm ----
         JB_Confirm.setText(bundle.getString("Saving.Confirm_Money.JB_Confirm.text"));
         JB_Confirm.addActionListener(e -> JB_Confirm(e));
         add(JB_Confirm);
-        JB_Confirm.setBounds(new Rectangle(new Point(540, 290), JB_Confirm.getPreferredSize()));
+        JB_Confirm.setBounds(558, 290, 80, JB_Confirm.getPreferredSize().height);
 
         //---- JB_Cancel ----
         JB_Cancel.setText(bundle.getString("Saving.Confirm_Money.JB_Cancel.text"));
         add(JB_Cancel);
-        JB_Cancel.setBounds(new Rectangle(new Point(540, 330), JB_Cancel.getPreferredSize()));
+        JB_Cancel.setBounds(558, 330, 80, JB_Cancel.getPreferredSize().height);
 
         //---- JL_Success ----
         JL_Success.setText(bundle.getString("Saving.Confirm_Money.JL_Success.text"));
         JL_Success.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 28));
         JL_Success.setForeground(Color.white);
         add(JL_Success);
-        JL_Success.setBounds(240, 360, 295, JL_Success.getPreferredSize().height);
+        JL_Success.setBounds(255, 360, 295, JL_Success.getPreferredSize().height);
 
         //---- JL_Timer ----
         JL_Timer.setText(bundle.getString("Saving.Confirm_Money.JL_Timer.text"));
@@ -165,8 +157,9 @@ public class Confirm_Money extends JPanel {
 
         //---- JL_Name ----
         JL_Name.setText(bundle.getString("Saving.Confirm_Money.JL_Name.text"));
-        JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
+        JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 22));
         JL_Name.setForeground(Color.white);
+        JL_Name.setHorizontalAlignment(SwingConstants.RIGHT);
         add(JL_Name);
         JL_Name.setBounds(470, 40, 170, 25);
 
@@ -175,7 +168,7 @@ public class Confirm_Money extends JPanel {
         JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
         JL_Code.setForeground(Color.white);
         add(JL_Code);
-        JL_Code.setBounds(460, 80, 195, JL_Code.getPreferredSize().height);
+        JL_Code.setBounds(0, 395, 195, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size
@@ -195,7 +188,6 @@ public class Confirm_Money extends JPanel {
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
-    private JLabel label1;
     private JPanel JP_Table;
     private JLabel JL_MoneyValue;
     private JLabel JL_MoneyCount;

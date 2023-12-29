@@ -62,7 +62,7 @@ public class MoneyQuery extends JPanel {
         button1.setText(bundle.getString("MoneyQuery.button1.text"));
         button1.addActionListener(e -> BT_Back(e));
         add(button1);
-        button1.setBounds(new Rectangle(new Point(540, 330), button1.getPreferredSize()));
+        button1.setBounds(558, 330, 80, button1.getPreferredSize().height);
 
         //---- JL_Timer ----
         JL_Timer.setText(bundle.getString("MoneyQuery.JL_Timer.text"));
@@ -83,7 +83,7 @@ public class MoneyQuery extends JPanel {
         JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
         JL_Code.setForeground(Color.white);
         add(JL_Code);
-        JL_Code.setBounds(460, 80, 195, JL_Code.getPreferredSize().height);
+        JL_Code.setBounds(0, 395, 195, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size

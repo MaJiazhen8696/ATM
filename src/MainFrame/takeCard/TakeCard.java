@@ -51,7 +51,7 @@ public class TakeCard extends JPanel {
         JL_Code.setForeground(Color.white);
         JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
         add(JL_Code);
-        JL_Code.setBounds(460, 40, 195, JL_Code.getPreferredSize().height);
+        JL_Code.setBounds(0, 395, 195, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size

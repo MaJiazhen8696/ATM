@@ -120,17 +120,17 @@ public class Login extends JPanel {
 
         //---- BT_Confirm ----
         BT_Confirm.setText(bundle.getString("Login.BT_Confirm.text"));
-        BT_Confirm.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 13));
+        BT_Confirm.setFont(new Font("\u5b8b\u4f53", Font.PLAIN, 13));
         BT_Confirm.addActionListener(e -> BT_Confirm(e));
         add(BT_Confirm);
-        BT_Confirm.setBounds(new Rectangle(new Point(540, 290), BT_Confirm.getPreferredSize()));
+        BT_Confirm.setBounds(558, 290, 80, BT_Confirm.getPreferredSize().height);
 
         //---- BT_Modify ----
         BT_Modify.setText(bundle.getString("Login.BT_Modify.text"));
-        BT_Modify.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 13));
+        BT_Modify.setFont(new Font("\u5b8b\u4f53", Font.PLAIN, 13));
         BT_Modify.addActionListener(e -> Modify_Password(e));
         add(BT_Modify);
-        BT_Modify.setBounds(new Rectangle(new Point(540, 330), BT_Modify.getPreferredSize()));
+        BT_Modify.setBounds(558, 330, 80, BT_Modify.getPreferredSize().height);
         add(JT_Password);
         JT_Password.setBounds(295, 230, 130, 30);
 
@@ -139,7 +139,7 @@ public class Login extends JPanel {
         JL_Failed.setForeground(Color.white);
         JL_Failed.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 18));
         add(JL_Failed);
-        JL_Failed.setBounds(180, 375, 215, JL_Failed.getPreferredSize().height);
+        JL_Failed.setBounds(175, 360, 215, JL_Failed.getPreferredSize().height);
         add(JT_User);
         JT_User.setBounds(295, 180, 130, 30);
 
@@ -162,7 +162,7 @@ public class Login extends JPanel {
         JL_Code.setForeground(Color.white);
         JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
         add(JL_Code);
-        JL_Code.setBounds(460, 40, 195, JL_Code.getPreferredSize().height);
+        JL_Code.setBounds(0, 395, 195, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size

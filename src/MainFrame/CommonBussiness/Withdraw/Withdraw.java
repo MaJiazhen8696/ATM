@@ -125,43 +125,43 @@ public class Withdraw extends JPanel {
         button1.setText(bundle.getString("Withdraw.button1.text"));
         button1.addActionListener(e -> Withdraw_100(e));
         add(button1);
-        button1.setBounds(25, 95, 85, button1.getPreferredSize().height);
+        button1.setBounds(0, 95, 85, button1.getPreferredSize().height);
 
         //---- button2 ----
         button2.setText(bundle.getString("Withdraw.button2.text"));
         button2.addActionListener(e -> Withdraw_200(e));
         add(button2);
-        button2.setBounds(25, 150, 85, button2.getPreferredSize().height);
+        button2.setBounds(0, 150, 85, button2.getPreferredSize().height);
 
         //---- button3 ----
         button3.setText(bundle.getString("Withdraw.button3.text"));
         button3.addActionListener(e -> button3(e));
         add(button3);
-        button3.setBounds(25, 205, 85, button3.getPreferredSize().height);
+        button3.setBounds(0, 205, 85, button3.getPreferredSize().height);
 
         //---- button4 ----
         button4.setText(bundle.getString("Withdraw.button4.text"));
         button4.addActionListener(e -> Withdraw_800(e));
         add(button4);
-        button4.setBounds(25, 260, 85, button4.getPreferredSize().height);
+        button4.setBounds(0, 260, 85, button4.getPreferredSize().height);
 
         //---- button5 ----
         button5.setText(bundle.getString("Withdraw.button5.text"));
         button5.addActionListener(e -> Withdraw_1000(e));
         add(button5);
-        button5.setBounds(505, 150, 85, button5.getPreferredSize().height);
+        button5.setBounds(553, 95, 85, button5.getPreferredSize().height);
 
         //---- button6 ----
         button6.setText(bundle.getString("Withdraw.button6.text"));
         button6.addActionListener(e -> Withdraw_1500(e));
         add(button6);
-        button6.setBounds(505, 205, 85, button6.getPreferredSize().height);
+        button6.setBounds(553, 150, 85, button6.getPreferredSize().height);
 
         //---- button7 ----
         button7.setText(bundle.getString("Withdraw.button7.text"));
         button7.addActionListener(e -> Withdraw_custom(e));
         add(button7);
-        button7.setBounds(505, 260, 85, button7.getPreferredSize().height);
+        button7.setBounds(553, 205, 85, button7.getPreferredSize().height);
 
         //---- button8 ----
         button8.setText(bundle.getString("Withdraw.button8.text"));
@@ -178,8 +178,9 @@ public class Withdraw extends JPanel {
 
         //---- JL_Name ----
         JL_Name.setText(bundle.getString("Withdraw.JL_Name.text"));
-        JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
+        JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 22));
         JL_Name.setForeground(Color.white);
+        JL_Name.setHorizontalAlignment(SwingConstants.RIGHT);
         add(JL_Name);
         JL_Name.setBounds(470, 40, 170, 25);
 
@@ -188,7 +189,7 @@ public class Withdraw extends JPanel {
         JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
         JL_Code.setForeground(Color.white);
         add(JL_Code);
-        JL_Code.setBounds(460, 80, 195, JL_Code.getPreferredSize().height);
+        JL_Code.setBounds(0, 395, 195, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size

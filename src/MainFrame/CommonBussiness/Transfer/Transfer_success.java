@@ -55,13 +55,13 @@ public class Transfer_success extends JPanel {
         JB_Print.setText(bundle.getString("Transfer_success.JB_Print.text"));
         JB_Print.addActionListener(e -> JB_Print(e));
         add(JB_Print);
-        JB_Print.setBounds(540, 290, 85, JB_Print.getPreferredSize().height);
+        JB_Print.setBounds(553, 290, 85, JB_Print.getPreferredSize().height);
 
         //---- JB_Back ----
         JB_Back.setText(bundle.getString("Transfer_success.JB_Back.text"));
         JB_Back.addActionListener(e -> JB_Back(e));
         add(JB_Back);
-        JB_Back.setBounds(540, 330, 85, JB_Back.getPreferredSize().height);
+        JB_Back.setBounds(553, 330, 85, JB_Back.getPreferredSize().height);
 
         //---- JL_Timer ----
         JL_Timer.setText(bundle.getString("Transfer_success.JL_Timer.text"));
@@ -72,7 +72,9 @@ public class Transfer_success extends JPanel {
 
         //---- JL_Name ----
         JL_Name.setText(bundle.getString("Transfer_success.JL_Name.text"));
-        JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
+        JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 22));
+        JL_Name.setForeground(Color.white);
+        JL_Name.setHorizontalAlignment(SwingConstants.RIGHT);
         add(JL_Name);
         JL_Name.setBounds(470, 40, 170, 25);
 
@@ -81,7 +83,7 @@ public class Transfer_success extends JPanel {
         JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
         JL_Code.setForeground(Color.white);
         add(JL_Code);
-        JL_Code.setBounds(460, 80, 195, JL_Code.getPreferredSize().height);
+        JL_Code.setBounds(0, 395, 195, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size

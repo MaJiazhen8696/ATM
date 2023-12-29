@@ -48,24 +48,24 @@ public class Other_page3 extends JPanel {
         //---- button1 ----
         button1.setText(bundle.getString("Other_page3.button1.text"));
         add(button1);
-        button1.setBounds(new Rectangle(new Point(25, 150), button1.getPreferredSize()));
+        button1.setBounds(0, 150, 100, button1.getPreferredSize().height);
 
         //---- button2 ----
         button2.setText(bundle.getString("Other_page3.button2.text"));
         add(button2);
-        button2.setBounds(new Rectangle(new Point(25, 205), button2.getPreferredSize()));
+        button2.setBounds(0, 205, 100, button2.getPreferredSize().height);
 
         //---- button3 ----
         button3.setText(bundle.getString("Other_page3.button3.text"));
         button3.addActionListener(e -> getPriorPage(e));
         add(button3);
-        button3.setBounds(new Rectangle(new Point(15, 330), button3.getPreferredSize()));
+        button3.setBounds(0, 330, 85, button3.getPreferredSize().height);
 
         //---- button4 ----
         button4.setText(bundle.getString("Other_page3.button4.text"));
         button4.addActionListener(e -> BT_Back(e));
         add(button4);
-        button4.setBounds(new Rectangle(new Point(540, 330), button4.getPreferredSize()));
+        button4.setBounds(553, 330, 85, button4.getPreferredSize().height);
 
         //---- JL_Timer ----
         JL_Timer.setText(bundle.getString("Other_page3.JL_Timer.text"));
@@ -76,8 +76,9 @@ public class Other_page3 extends JPanel {
 
         //---- JL_Name ----
         JL_Name.setText(bundle.getString("Other_page3.JL_Name.text"));
-        JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
+        JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 22));
         JL_Name.setForeground(Color.white);
+        JL_Name.setHorizontalAlignment(SwingConstants.RIGHT);
         add(JL_Name);
         JL_Name.setBounds(470, 40, 170, 25);
 
@@ -86,7 +87,7 @@ public class Other_page3 extends JPanel {
         JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
         JL_Code.setForeground(Color.white);
         add(JL_Code);
-        JL_Code.setBounds(460, 80, 195, JL_Code.getPreferredSize().height);
+        JL_Code.setBounds(0, 395, 195, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size

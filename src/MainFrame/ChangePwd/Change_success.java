@@ -55,13 +55,13 @@ public class Change_success extends JPanel {
         button1.setText(bundle.getString("Change_success.button1.text"));
         button1.addActionListener(e -> Continue(e));
         add(button1);
-        button1.setBounds(new Rectangle(new Point(540, 290), button1.getPreferredSize()));
+        button1.setBounds(558, 290, 80, button1.getPreferredSize().height);
 
         //---- button2 ----
         button2.setText(bundle.getString("Change_success.button2.text"));
         button2.addActionListener(e -> TakeCard(e));
         add(button2);
-        button2.setBounds(new Rectangle(new Point(540, 330), button2.getPreferredSize()));
+        button2.setBounds(558, 330, 80, button2.getPreferredSize().height);
 
         //---- JL_Timer ----
         JL_Timer.setText(bundle.getString("Change_success.JL_Timer.text"));
@@ -72,8 +72,9 @@ public class Change_success extends JPanel {
 
         //---- JL_Name ----
         JL_Name.setText(bundle.getString("Change_success.JL_Name.text"));
-        JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
+        JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 22));
         JL_Name.setForeground(Color.white);
+        JL_Name.setHorizontalAlignment(SwingConstants.RIGHT);
         add(JL_Name);
         JL_Name.setBounds(470, 40, 170, 25);
 
@@ -82,7 +83,7 @@ public class Change_success extends JPanel {
         JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
         JL_Code.setForeground(Color.white);
         add(JL_Code);
-        JL_Code.setBounds(460, 80, 195, JL_Code.getPreferredSize().height);
+        JL_Code.setBounds(0, 395, 195, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size

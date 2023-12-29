@@ -88,55 +88,55 @@ public class BussinessSelect extends JPanel {
         JL_Hint.setForeground(Color.white);
         JL_Hint.setHorizontalAlignment(SwingConstants.CENTER);
         add(JL_Hint);
-        JL_Hint.setBounds(90, 35, 435, JL_Hint.getPreferredSize().height);
+        JL_Hint.setBounds(105, 35, 435, JL_Hint.getPreferredSize().height);
 
         //---- JB_Save ----
         JB_Save.setText(bundle.getString("BussinessSelect.JB_Save.text"));
         JB_Save.addActionListener(e -> JB_Save(e));
         add(JB_Save);
-        JB_Save.setBounds(25, 95, 85, JB_Save.getPreferredSize().height);
+        JB_Save.setBounds(0, 95, 85, JB_Save.getPreferredSize().height);
 
         //---- JB_Withdraw ----
         JB_Withdraw.setText(bundle.getString("BussinessSelect.JB_Withdraw.text"));
         JB_Withdraw.addActionListener(e -> JB_Withdraw(e));
         add(JB_Withdraw);
-        JB_Withdraw.setBounds(25, 150, 85, JB_Withdraw.getPreferredSize().height);
+        JB_Withdraw.setBounds(0, 150, 85, JB_Withdraw.getPreferredSize().height);
 
         //---- JB_MoneyQuery ----
         JB_MoneyQuery.setText(bundle.getString("BussinessSelect.JB_MoneyQuery.text"));
         JB_MoneyQuery.addActionListener(e -> JB_MoneyQuery(e));
         add(JB_MoneyQuery);
-        JB_MoneyQuery.setBounds(25, 205, 85, JB_MoneyQuery.getPreferredSize().height);
+        JB_MoneyQuery.setBounds(0, 205, 85, JB_MoneyQuery.getPreferredSize().height);
 
         //---- JB_RecordQuery ----
         JB_RecordQuery.setText(bundle.getString("BussinessSelect.JB_RecordQuery.text"));
         JB_RecordQuery.addActionListener(e -> JB_RecordQuery(e));
         add(JB_RecordQuery);
-        JB_RecordQuery.setBounds(25, 260, 85, JB_RecordQuery.getPreferredSize().height);
+        JB_RecordQuery.setBounds(0, 260, 85, JB_RecordQuery.getPreferredSize().height);
 
         //---- JB_Password ----
         JB_Password.setText(bundle.getString("BussinessSelect.JB_Password.text"));
         JB_Password.addActionListener(e -> JB_Password(e));
         add(JB_Password);
-        JB_Password.setBounds(505, 260, 85, JB_Password.getPreferredSize().height);
+        JB_Password.setBounds(553, 205, 85, JB_Password.getPreferredSize().height);
 
         //---- JB_Transfer ----
         JB_Transfer.setText(bundle.getString("BussinessSelect.JB_Transfer.text"));
         JB_Transfer.addActionListener(e -> JB_Transfer(e));
         add(JB_Transfer);
-        JB_Transfer.setBounds(505, 150, 85, JB_Transfer.getPreferredSize().height);
+        JB_Transfer.setBounds(553, 95, 85, JB_Transfer.getPreferredSize().height);
 
         //---- JB_Other ----
         JB_Other.setText(bundle.getString("BussinessSelect.JB_Other.text"));
         JB_Other.addActionListener(e -> JB_Other(e));
         add(JB_Other);
-        JB_Other.setBounds(505, 205, 85, JB_Other.getPreferredSize().height);
+        JB_Other.setBounds(553, 150, 85, JB_Other.getPreferredSize().height);
 
         //---- JB_Back ----
         JB_Back.setText(bundle.getString("BussinessSelect.JB_Back.text"));
         JB_Back.addActionListener(e -> JB_Back(e));
         add(JB_Back);
-        JB_Back.setBounds(new Rectangle(new Point(545, 320), JB_Back.getPreferredSize()));
+        JB_Back.setBounds(553, 260, 85, JB_Back.getPreferredSize().height);
 
         //---- JL_Timer ----
         JL_Timer.setText("text");
@@ -147,8 +147,9 @@ public class BussinessSelect extends JPanel {
 
         //---- JL_Name ----
         JL_Name.setText("text");
-        JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
+        JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 22));
         JL_Name.setForeground(Color.white);
+        JL_Name.setHorizontalAlignment(SwingConstants.RIGHT);
         add(JL_Name);
         JL_Name.setBounds(470, 40, 170, 25);
 
@@ -157,7 +158,7 @@ public class BussinessSelect extends JPanel {
         JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
         JL_Code.setForeground(Color.white);
         add(JL_Code);
-        JL_Code.setBounds(460, 80, 195, JL_Code.getPreferredSize().height);
+        JL_Code.setBounds(0, 395, 195, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size

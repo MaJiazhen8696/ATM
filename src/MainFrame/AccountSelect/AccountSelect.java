@@ -76,25 +76,25 @@ public class AccountSelect extends JPanel {
         JB_SavingsAccount.setText(bundle.getString("AccountSelect.JB_SavingsAccount.text"));
         JB_SavingsAccount.addActionListener(e -> JB_SavingsAccount(e));
         add(JB_SavingsAccount);
-        JB_SavingsAccount.setBounds(new Rectangle(new Point(40, 180), JB_SavingsAccount.getPreferredSize()));
+        JB_SavingsAccount.setBounds(0, 180, 100, JB_SavingsAccount.getPreferredSize().height);
 
         //---- JB_CheckAccount ----
         JB_CheckAccount.setText(bundle.getString("AccountSelect.JB_CheckAccount.text"));
         JB_CheckAccount.addActionListener(e -> JB_CheckAccount(e));
         add(JB_CheckAccount);
-        JB_CheckAccount.setBounds(new Rectangle(new Point(40, 245), JB_CheckAccount.getPreferredSize()));
+        JB_CheckAccount.setBounds(0, 245, 100, JB_CheckAccount.getPreferredSize().height);
 
         //---- JB_CreditsAccount ----
         JB_CreditsAccount.setText(bundle.getString("AccountSelect.JB_CreditsAccount.text"));
         JB_CreditsAccount.addActionListener(e -> JB_CreditsAccount(e));
         add(JB_CreditsAccount);
-        JB_CreditsAccount.setBounds(new Rectangle(new Point(545, 200), JB_CreditsAccount.getPreferredSize()));
+        JB_CreditsAccount.setBounds(538, 200, 100, JB_CreditsAccount.getPreferredSize().height);
 
         //---- JB_Quit ----
         JB_Quit.setText(bundle.getString("AccountSelect.JB_Quit.text"));
         JB_Quit.addActionListener(e -> JB_Quit(e));
         add(JB_Quit);
-        JB_Quit.setBounds(new Rectangle(new Point(580, 370), JB_Quit.getPreferredSize()));
+        JB_Quit.setBounds(558, 370, 80, JB_Quit.getPreferredSize().height);
 
         //---- JL_Timer ----
         JL_Timer.setText(bundle.getString("AccountSelect.JL_Timer.text"));
@@ -105,8 +105,9 @@ public class AccountSelect extends JPanel {
 
         //---- JL_Name ----
         JL_Name.setText(bundle.getString("AccountSelect.JL_Name.text"));
-        JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 16));
+        JL_Name.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 22));
         JL_Name.setForeground(Color.white);
+        JL_Name.setHorizontalAlignment(SwingConstants.RIGHT);
         add(JL_Name);
         JL_Name.setBounds(470, 40, 170, 25);
 
@@ -115,7 +116,7 @@ public class AccountSelect extends JPanel {
         JL_Code.setForeground(Color.white);
         JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
         add(JL_Code);
-        JL_Code.setBounds(460, 80, 195, JL_Code.getPreferredSize().height);
+        JL_Code.setBounds(0, 395, 195, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size

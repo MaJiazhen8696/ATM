@@ -1,4 +1,4 @@
-JFDML JFormDesigner: "8.2.0.0.331" Java: "17.0.9" encoding: "UTF-8"
+JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.8" encoding: "UTF-8"
 
 new FormModel {
 	"i18n.bundleName": "lang"
@@ -36,8 +36,9 @@ new FormModel {
 				"text": new FormMessage( null, "PrintReceipt.JB_Back.text" )
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "JB_Back", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 540
+				"x": 558
 				"y": 330
+				"width": 80
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "JL_Timer"
@@ -55,8 +56,9 @@ new FormModel {
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "JL_Name"
 				"text": new FormMessage( null, "PrintReceipt.JL_Name.text" )
-				"font": new java.awt.Font( "宋体", 1, 16 )
+				"font": new java.awt.Font( "宋体", 1, 22 )
 				"foreground": new java.awt.Color( 255, 255, 255, 255 )
+				"horizontalAlignment": 4
 				auxiliary() {
 					"JavaCodeGenerator.variableModifiers": 1
 				}
@@ -73,12 +75,11 @@ new FormModel {
 				"foreground": new java.awt.Color( 255, 255, 255, 255 )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 195
-				"x": 460
-				"y": 80
+				"y": 395
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 580, 385 )
+			"size": new java.awt.Dimension( 580, 415 )
 		} )
 	}
 }

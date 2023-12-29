@@ -71,13 +71,13 @@ public class Welcome extends JPanel {
         button1.setText(bundle.getString("Welcome.button1.text"));
         button1.addActionListener(e -> button1(e));
         add(button1);
-        button1.setBounds(540, 290, 80, button1.getPreferredSize().height);
+        button1.setBounds(558, 290, 80, button1.getPreferredSize().height);
 
         //---- button2 ----
         button2.setText(bundle.getString("Welcome.button2.text"));
         button2.addActionListener(e -> button2(e));
         add(button2);
-        button2.setBounds(540, 330, 80, button2.getPreferredSize().height);
+        button2.setBounds(558, 330, 80, button2.getPreferredSize().height);
 
         //---- label1 ----
         label1.setText(bundle.getString("Welcome.label1.text"));
@@ -98,7 +98,7 @@ public class Welcome extends JPanel {
         JL_Code.setFont(new Font("\u5b8b\u4f53", Font.BOLD, 21));
         JL_Code.setForeground(Color.white);
         add(JL_Code);
-        JL_Code.setBounds(460, 40, 195, JL_Code.getPreferredSize().height);
+        JL_Code.setBounds(0, 395, 195, JL_Code.getPreferredSize().height);
 
         {
             // compute preferred size
